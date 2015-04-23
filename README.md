@@ -17,7 +17,7 @@ Implemented using Nodejs, it get's rss from any source of RSS and bulks the data
 
 I will keep updating the project often
 
-Enjoy!
+Enjoy!  (_̅_̅_̅(̅_̅_̅_̅_̅_̅_̅_̅_̅_̅_̅()ڪڪڪ
 ===
 
 ### To build:
