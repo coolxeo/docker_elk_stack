@@ -1,10 +1,8 @@
 kibana:
 
- build: /home/sloppy/dockers/kibana
+ build: ./kibana
 
  restart: always
- #dns_search: 
- #-  kibana 
  ports:
  - "5601:5601"
  links:
@@ -12,10 +10,8 @@ kibana:
 
 elasticsearch:
 
- build: /home/sloppy/dockers/elasticsearch
+ build: ./elasticsearch
  restart: always
- #dns_search: 
- #- elasticsearch
  ports:
  - "9200:9200"
  - "9300:9300"
@@ -24,10 +20,8 @@ elasticsearch:
 
 logstash:
 
- build: /home/sloppy/dockers/logstash
+ build: ./logstash
  restart: always
- #dns_search:
- #- logstash
  ports:
  - "4545:4545"
  - "4546:4546"
