@@ -17,12 +17,11 @@ Implemented using Nodejs, it get's rss from any source of RSS and bulks the data
 
 ##dockers
 This is the FUN part, based on this article (http://thepracticalsysadmin.com/running-elk-on-docker/)
-It's 3 virtual machines one per each element of the stack, connected between them with minimum configuration, if you check inside each folder there is one the DOckerfile to create each
+It's 3 virtual machines one per each element of the stack, connected between them with minimum configuration, if you check inside each folder there is one the Dockerfile to create each
 container, plus the instructions to download and configure,USING the rest of the files of each folder to have a complete running setup once all dependencies have been downloaded by Docker
-*Use the run scripts in the folder to run it
+*Use the run scripts in the folder to run it, it should work out of the box
 
-
-
+PULL AND PLAY!!!!
 
 I will keep updating the project often
 
