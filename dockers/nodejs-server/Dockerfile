@@ -4,6 +4,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV NGINX_VER 1.5.0.rc2
 ENV GIT_PROJECT=docker_elk_stack
 ENV GIT_USER=sloppylopez
+ENV NODE_SERVER=node_rss_parser_elastic
 WORKDIR /opt
 
 # Dependencies
@@ -16,11 +17,8 @@ RUN apt-get update -qq && \
 
 RUN curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -
 RUN sudo apt-get install -y nodejs
-RUN sudo mkdir node_rss_parser_elastic
-RUN cd node_rss_parser_elastic
-RUN git clone https://github.com/$GIT_USER/$GIT_PROJECT.git
-RUN cd $GIT_PROJECT
-RUN nodejs index.js
+RUN git clone https://github.com/sloppylopez/docker_elk_stack.git
+RUN cd /opt/docker_elk_stack/node_rss_parser_elastic;npm install
 
 
 
