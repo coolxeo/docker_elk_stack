@@ -25,3 +25,12 @@ logstash:
  ports:
  - "4545:4545"
  - "4546:4546"
+
+nodeserver:
+
+ build: ./nodeserver
+ restart: always
+ ports:
+ - "3000:3000"
+ links:
+  - elasticsearch

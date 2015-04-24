@@ -1,5 +1,5 @@
 var should = require('chai').should(),
-    esLoadHandler = require('../handlers/esLoadHandler.js');
+    esLoadHandler = require('./esLoadHandler.js');
 
 //TODO fill with tests :)
 describe('#esLoadHandler', function () {

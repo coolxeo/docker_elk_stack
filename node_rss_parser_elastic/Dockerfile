@@ -1,9 +1,14 @@
 FROM ubuntu:14.04
 
+# Env Variables
 ENV GIT_PROJECT=docker_elk_stack
 ENV GIT_USER=sloppylopez
 ENV NODE_SERVER=node_rss_parser_elastic
-WORKDIR /opt
+ENV ROOT=opt
+ENV DESTINATION_FOLDER=src
+
+# Workdir
+WORKDIR $ROOT
 
 # Dependencies
 RUN apt-get update -qq && \
@@ -12,14 +17,16 @@ RUN apt-get update -qq && \
     git \
     python
 
+# Install
 RUN curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -
-RUN sudo apt-get install -y nodejs
+RUN apt-get install -y nodejs
 RUN git clone https://github.com/$GIT_USER/$GIT_PROJECT.git
-RUN cd ./$GIT_PROJECT/$NODE_SERVER
+RUN cd /$ROOT/$GIT_PROJECT/$NODE_SERVER/$DESTINATION_FOLDER;
+
+# Install app dependencies
+RUN npm install
 
 # nodejs port
-EXPOSE 3000
+EXPOSE  8080
 
-CMD npm install
-CMD nodejs index.js
-
+CMD ["nodejs", "/$ROOT/$GIT_PROJECT/$NODE_SERVER/$DESTINATION_FOLDER/index.js"]

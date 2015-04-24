@@ -2,7 +2,7 @@ var Hapi = require('hapi');
 var Good = require('good');
 var esLoadHandler = require('./handlers/esLoadHandler.js');
 var targets = require('./constants/targets.json');
-var mocks = require('./mocks/');
+var mocks = require('./mocks/index');
 var server = new Hapi.Server();
 
 //elastica search
