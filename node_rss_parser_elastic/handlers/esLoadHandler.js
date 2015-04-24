@@ -3,7 +3,7 @@ var FeedParser = require('feedparser'),
     async = require("async"),
     _ = require('lodash');
 
-module.exports = function (targets,esClient,rssasticOpts,esBulkAction,mapper,next) {
+module.exports = function (targets, esClient, rssOpts, esBulkAction, mapper, next) {
     try {
         var asyncTasks = [], esCommands = [], req, defaultMapper = function(rss){return rss};
 
@@ -29,7 +29,7 @@ module.exports = function (targets,esClient,rssasticOpts,esBulkAction,mapper,nex
                 });
                 feedParser.on('end', function () {
                     console.log('finished stream on index ' + targetId + ' length ' + feeds.length);
-                    callback(null, rssasticOpts.orderBy?_.sortByAll(feeds, rssasticOpts.orderBy):feeds);
+                    callback(null, rssOpts.orderBy ? _.sortByAll(feeds, rssOpts.orderBy) : feeds);
                 });
             });
         });
@@ -37,7 +37,7 @@ module.exports = function (targets,esClient,rssasticOpts,esBulkAction,mapper,nex
         async.parallel(asyncTasks, function (err, feeds) {
             if (err) throw err;
             _.flatten(feeds).forEach(function (feed) {
-                var esBulkAct = esBulkAction(feed,rssasticOpts);
+                var esBulkAct = esBulkAction(feed, rssOpts);
                 esCommands.push(esBulkAct);
                 esCommands.push(Object.keys(esBulkAct)[0]==='update'?{doc: feed}:feed);
             });

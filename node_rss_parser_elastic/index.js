@@ -1,6 +1,6 @@
 var Hapi = require('hapi');
 var Good = require('good');
-var rssasticSearch = require('./handlers/esLoadHandler.js');
+var esLoadHandler = require('./handlers/esLoadHandler.js');
 var targets = require('./constants/targets.json');
 var mocks = require('./mocks/');
 var server = new Hapi.Server();
@@ -12,7 +12,7 @@ var esClient = new elasticsearch.Client({
     log: 'error'
 });
 
-var rssasticOptions={
+var rssOptions = {
     type: 'rss',
     orderBy: 'pubdate'
 };
@@ -57,7 +57,7 @@ server.route({
     method: 'GET',
     path: '/rssload',
     handler: function (request, reply) {
-        rssasticSearch(targets,esClient,rssasticOptions,esBulkAction,mapper,function(error,feeds){
+        esLoadHandler(targets, esClient, rssOptions, esBulkAction, mapper, function (error, feeds) {
             reply(error||feeds);
         });
     }
