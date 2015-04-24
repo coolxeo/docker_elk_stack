@@ -26,9 +26,9 @@ logstash:
  - "4545:4545"
  - "4546:4546"
 
-nodeserver:
+node_rss_api:
 
- build: ./nodeserver
+ build: ../node_rss_api
  restart: always
  ports:
  - "3000:3000"
