@@ -20,7 +20,7 @@ RUN sudo mkdir node_rss_parser_elastic
 RUN cd node_rss_parser_elastic
 RUN git clone https://github.com/$GIT_USER/$GIT_PROJECT.git
 RUN cd $GIT_PROJECT
-RUN cd $GIT_PROJECT
+RUN nodejs index.js
 
 
 
