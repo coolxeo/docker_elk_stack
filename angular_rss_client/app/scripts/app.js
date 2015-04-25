@@ -16,7 +16,8 @@ var angularRss=angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'elasticsearch'
+    'elasticsearch',
+    'firebase'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -32,3 +33,5 @@ var angularRss=angular
         redirectTo: '/'
       });
   });
+
+angularRss.constant('FIREBASE_URL','https://fiery-heat-YOURFIREBASE.firebaseio.com')
