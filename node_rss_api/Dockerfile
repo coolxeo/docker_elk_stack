@@ -1,5 +1,7 @@
 FROM ubuntu:14.04
 
+MAINTAINER sloppylopez
+
 # Env Variables
 ENV GIT_PROJECT=docker_elk_stack
 ENV SERVER=node_rss_api
@@ -26,4 +28,4 @@ RUN cd ./$GIT_PROJECT/$SERVER/$SRC;npm install
 # nodejs port
 EXPOSE  8080
 
-CMD ["nodejs", "./$GIT_PROJECT/$SERVER/$SRC/index.js"]
+CMD node /docker_elk_stack/node_rss_api/src/index.js
