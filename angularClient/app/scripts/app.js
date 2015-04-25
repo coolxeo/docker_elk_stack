@@ -30,8 +30,8 @@ var angularClient=angular
         controller: 'AboutCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/main'
       });
   });
 
-angularClient.constant('FIREBASE_URL','https://sloppylopez.firebaseio.com')
+angularClient.constant('FIREBASE_URL','https://sloppylopez.firebaseio.com');

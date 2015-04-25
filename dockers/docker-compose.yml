@@ -25,12 +25,10 @@ logstash:
  - "4545:4545"
  - "4546:4546"
 
-api:
+nodeapi:
 
- build: ../node_rss_api
+ build: ../nodeapi
  restart: always
- volumes:
-     - "app:/src"
  ports:
  - "3000:3000"
  links:

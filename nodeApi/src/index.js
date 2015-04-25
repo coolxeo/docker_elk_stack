@@ -50,6 +50,7 @@ server.route({
     handler: function (request, reply) {
         reply('Welcome!');
     }
+
 });
 
 server.route({

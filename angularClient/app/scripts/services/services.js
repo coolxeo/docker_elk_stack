@@ -19,7 +19,7 @@ angularClient
             size: 200,
             body: {
               sort: [{
-                "pubdate": {"order": "desc"}
+                'pubdate': {'order': 'desc'}
               }],
               query: {
                 match_all: {}
@@ -33,7 +33,7 @@ angularClient
             size: 200,
             body: {
               sort: [{
-                "pubdate": {"order": "desc"}
+                'pubdate': {'order': 'desc'}
               }],
               query: {
                 match: {
