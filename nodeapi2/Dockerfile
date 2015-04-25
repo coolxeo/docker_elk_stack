@@ -4,7 +4,7 @@ MAINTAINER sloppylopez@estudioweb130.com
 
 # Env Variables
 ENV GIT_PROJECT=docker_elk_stack
-ENV SERVER=nodeApi
+ENV SERVER=nodeApi2
 ENV SRC=src
 ENV GIT_USER=sloppylopez
 ENV NODE_VERSION=0.12
@@ -27,6 +27,6 @@ RUN git clone https://github.com/$GIT_USER/$GIT_PROJECT.git
 RUN cd ./$GIT_PROJECT/$SERVER/$SRC;npm install
 
 # nodejs port
-EXPOSE  3000
+EXPOSE  8080
 
 CMD node ./$GIT_PROJECT/$SERVER/$SRC/index.js

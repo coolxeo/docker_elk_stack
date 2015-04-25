@@ -1,3 +1,12 @@
+nodeapi2:
+
+ build: ../nodeapi2
+ restart: always
+ ports:
+ - "8080:8080"
+ links:
+  - elasticsearch
+
 kibana:
 
  build: ./kibana
@@ -24,12 +33,3 @@ logstash:
  ports:
  - "4545:4545"
  - "4546:4546"
-
-nodeapi:
-
- build: ../nodeapi
- restart: always
- ports:
- - "3000:3000"
- links:
-  - elasticsearch

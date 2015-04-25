@@ -34,4 +34,4 @@ var angularRss=angular
       });
   });
 
-angularRss.constant('FIREBASE_URL','https://fiery-heat-YOURFIREBASE.firebaseio.com')
+angularRss.constant('FIREBASE_URL','https://sloppylopez.firebaseio.com')
