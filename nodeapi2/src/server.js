@@ -71,4 +71,4 @@ app.use('/', router);
 // START THE SERVER
 // =============================================================================
 app.listen(port);
-console.log('Node Api listening on port ' + port);
+console.log('Sevrer Node Api listening on port ' + port);
