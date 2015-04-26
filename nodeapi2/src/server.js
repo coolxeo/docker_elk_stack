@@ -11,7 +11,7 @@ var esLoadHandler = require('./handlers/esLoadHandler.js');
 var elasticSearch = require('elasticsearch');
 var targets = require('./constants/targets.json');
 
-//elastic search client min config
+//elastic search client min, we use the docker ip in our host 'boot2docker ip' or 'ifconfig'
 var esClient = new elasticSearch.Client({
     host: '172.17.42.1:9200',
     log: 'error'

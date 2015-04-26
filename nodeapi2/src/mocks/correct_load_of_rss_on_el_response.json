@@ -1,0 +1,1806 @@
+{
+  "took": 3652,
+  "errors": false,
+  "items": [
+    {
+      "index": {
+        "_index": "nasdaq",
+        "_type": "rss",
+        "_id": "Fidelity Contrafund: Beating the Market the Old-Fashioned Way",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "nasdaq",
+        "_type": "rss",
+        "_id": "Forget Marijuana -- This Drug Offers a Far Bigger Opportunity",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "nasdaq",
+        "_type": "rss",
+        "_id": "Apple Inc. Earnings Preview: 3 Key Things to Watch",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "nasdaq",
+        "_type": "rss",
+        "_id": "Costco Wholesale Corporation Hikes Its Dividend: Why This Is Important",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "nasdaq",
+        "_type": "rss",
+        "_id": "Run, Don&#39;t Walk, From These Sketchy Dividend Stocks",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "nasdaq",
+        "_type": "rss",
+        "_id": "Social Security: 9 Seriously Fun Facts (Really!)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "nasdaq",
+        "_type": "rss",
+        "_id": "Renting or Buying a Home? Here Are 3 Things You Should Consider",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "nasdaq",
+        "_type": "rss",
+        "_id": "The 4 Largest Markets for Amazon.com, Inc.",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "nasdaq",
+        "_type": "rss",
+        "_id": "Socially Responsible Stocks for a Stock Market Crash",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "nasdaq",
+        "_type": "rss",
+        "_id": "Here&#39;s Today&#39;s Best Big Bank Stock",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "nasdaq",
+        "_type": "rss",
+        "_id": "How to Retire on Less Than $1 Million",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "nasdaq",
+        "_type": "rss",
+        "_id": "Will Google&#39;s Android Wear Update Help It Challenge the Apple Watch?",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "nasdaq",
+        "_type": "rss",
+        "_id": "Greece In Or Out - Investment Opportunities?",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "nasdaq",
+        "_type": "rss",
+        "_id": "Weighing The Week Ahead: Time For An Upside Breakout?",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "nasdaq",
+        "_type": "rss",
+        "_id": "Q1 2015 - Will Europe And The Emerging Markets Drag Us Down?",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: German Real Estate Boom – Sept. 16 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Watching Fed Language – Sept. 17 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Scotland Independence Drive - Sept 18 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Fallout From Scotland Vote – Sept. 22 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Atlantic City Downgraded – Sept. 23 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Disappointing Housing Data – Sept. 24 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Japan Welcomes Weaker Yen – Sept. 25 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: ECB Preview – Sept. 26 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Detroit Bankruptcy Trial – Sept. 29 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Disinflation Concerns – Sept.30 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Brazil Election on Sunday – Oct. 1 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: ECB Decision – Oct. 2 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Wages Lag Job Creation – Oct. 3rd (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: M&A Slows in Q3 – Oct. 6 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: German Rebound in Question – Oct. 7 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Fed September Minutes – Oct. 8 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: BOE Eyes Europe Slowdown – Oct. 9 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Asia Hedge Funds – Oct. 10 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Inversions Are Back – Oct. 13 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Subdued Inflation in Germany- Oct 15 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Fed Still Data Focused – Oct 16 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Deal Opportunities – Oct. 20 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Apple 4Q Results – Oct. 21 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Hedge Fund Brief - Oct.  21 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: CPI Has Added Importance – Oct. 22 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Economic Impact of Ebola – Oct 23 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Brazil Election – Oct 24 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Stress Tests and Brazil – Oct 27 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Fed QE Ends – Oct. 29 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Fed and GDP – Oct. 30 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: M&A on Pace for Yearly Gain – Nov. 3 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Stockton Municipal Bonds (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: ECB May Buy Corp. Bonds – Nov. 6 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: It’s All About Wages – Nov. 7 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Detroit Exits Bankruptcy – Nov 10 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: M&A Volume to Top 2007 – Nov 11 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Shale Rig Count Falls – Nov 12 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Retail Sales Preview – Nov 14 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Mergers and Acquisitions - Nov 17 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: FOMC Minutes – Nov. 19 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Muted Inflation Rate – Nov. 20 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Real Estate Supplement – Nov. 21 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: The Meltdown That Wasn’t – Nov 24 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Cornucopia of Data – Nov 25 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg Intelligence: Thanksgiving Retail - Nov. 28 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Lower Cost Fuel Benefit – Dec. 1 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Oil Producers Scale Back- Dec. 3 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: ECB Rate Decision – Dec. 4 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: November Jobs report – Dec. 5th (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: M&A Booming – Dec. 8th (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Bankruptcy Index Declines – Dec 9 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Extreme Moves in China – Dec 10 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Gasoline Boost for Retail – Dec. 11 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Family Offices – Dec. 12 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Abenomics Endorsement – Dec. 15 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Oil’s Impact on Munis – Dec. 16 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Fed Decision Day – Dec. 17 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Natural Gas Demand Slows – Dec 18 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Greek Austerity in Question (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: U.S. Bankruptcies – Dec 22 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: U.S. GDP Preview - Dec. 23 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Greek Anti-Austerity – Dec 29 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: U.S. Housing Data (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Fuel Costs Drop (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Manufacturing Data (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Insight, News & Data - Jan. 5 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Top Ten Bankruptcy Filings (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Federal Reserve Minutes (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Bank of England Rate Decision (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: December Employment Report (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: M&A Tied to GDP and Stocks (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Energy Prices Lower Inflation (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Haven Flows Pressuring Bond Yields (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Oil Price Swings and M&A (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Future of Oil Production (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF:  Atlantic City Suffers Downgrade (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg Intelligence: U.S. Growth IS Above Trend (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Atlantic City Almost Misses Payment (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Bankruptcy Index Rises (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Public Sector Austerity (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Distress in Energy - Feb. 19 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Parched Brazil Faces Recession (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: New Focus on Rig Counts (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: High Yield Munis May Return (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Private Equity Hunt for Assets (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Bank Stress Tests (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Real Estate Trend is Uninspiring (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Pharma M&A Heats Up (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Greenback Strength Rebounds (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Insight, News & Data - March 20: Crude Supplies Surge (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Investors Eye Cuba Debt (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Chapter 11s Fast Pace in Q1 (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Crude Oil Inventories (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Mergers and Acquisitions (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Insight, News & Data - April 7: Bloomberg BRIEF(Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "California Drought and Debt  - April 9: Bloomberg BRIEF(Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Shell’s Acquisition of BG Group (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: Municipal Bankruptcies in Focus (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: The Rise of Pension Obligation Bonds (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "bloomberg",
+        "_type": "rss",
+        "_id": "Bloomberg BRIEF: The Rise of Claims Trading (Audio)",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "forexcrunch",
+        "_type": "rss",
+        "_id": "EUR Rallies A Sell Irrespective Of Greece Conditions – Credit Agricole",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "forexcrunch",
+        "_type": "rss",
+        "_id": "Crude Awakening",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "forexcrunch",
+        "_type": "rss",
+        "_id": "US GDP may have contracted in Q1 – USD shrugs it off",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "forexcrunch",
+        "_type": "rss",
+        "_id": "Forex Weekly Outlook Apr 27-May 1",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "forexcrunch",
+        "_type": "rss",
+        "_id": "NZD/USD Forecast Apr. 27 – May 1",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "forexcrunch",
+        "_type": "rss",
+        "_id": "EUR/USD Forecast Apr. 27 – May 1",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "forexcrunch",
+        "_type": "rss",
+        "_id": "USD/CAD Forecast Apr. 27 – May 1",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "forexcrunch",
+        "_type": "rss",
+        "_id": "AUD/USD Forecast Apr. 27 – May 1",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "forexcrunch",
+        "_type": "rss",
+        "_id": "USD/JPY Forecast Apr. 27 – May 1",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "forexcrunch",
+        "_type": "rss",
+        "_id": "GBP/USD Forecast Apr. 27 – May 1",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "Research and Markets: Beans Market in United States: Business Report 2015",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "Technavio Says Concerns over Cargo Shipping Safety Will Boost the Global Container Tracking and Security Market",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "Sector movers: Miners lead the way as copper prices rise",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "US oil and natural gas rig count drops by 22 to 932",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "Midday Glance: Gold companies",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "Falling prices, rising threats cool interest in Kurdish oil",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "Research and Markets: Poultry and Livestock Market in United States: Business Report 2015",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "Research and Markets: Meat and Poultry Market in United States: Business Report 2015",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "Natural Gas Services Group, Inc. Announces Its First Quarter 2015 Earnings Call",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "Gold falls to one-month low as global equities hit all-time highs",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "Brent at 4-1/2 month high; U.S. crude up for sixth week",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "Oil, gas, power, prices: big themes from energy meeting",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "Four Petrobras platforms halt output due to oil leak -union",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "Business Highlights",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "Oil hits 2015 peak as Saudis resume strikes on Yemen",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "Drilling remains slow in Wyoming amid low oil prices",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "Final Glance: Coal companies",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "Final Glance: Silver companies",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "Washington state Legislature passes oil train safety bill",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "Ghana can continue production in Ivory Coast oil dispute",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "Venezuelan state firm PDVSA's oil revenue slips 7.6 percent in 2014",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "Tribunal tells Ghana to suspend new oil drilling in disputed waters",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "Like shale oil, solar power is shaking up global energy",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "Oil price drop triggers wave of profit warnings",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahoocommodities",
+        "_type": "rss",
+        "_id": "US to launch blitz of gas exports, eyes global energy dominance",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "VW patriarch and board chairman resigns",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "Tribunal tells Ghana to suspend new oil drilling in disputed waters",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "Your FM radio won’t fall silent any time soon",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "Rival rallies in Germany over fate of coal-fired power plants",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "Richest Person In UK Revealed In Annual List",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "S. Africa braces for economic backlash from xenophobic attacks",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "Russia ponders raising retirement age in budget crunch",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "Labour Promise To Slap Cap On Rising Rents",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "Kazakhstan 'buy local' drive battles ruble-cheap Russian imports",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "Labour Promises To Slap Cap On Rising Rents",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "India's SMEs still to be convinced by business-friendly PM",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "Sweets and soup vanish as Pakistan aims for halal export boost",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "ASEAN, EU to seek jump-start of free-trade talks",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "Labour To Cap Rents To Help 'Generation Rent'",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "Key Jordan trade route cut after Syria border closure",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "What recession? Ireland’s richest people wealthier now than during Celtic Tiger",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "Ever dreamed of starting your own record label? Here’s how one duo did it",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "Deutsche Bank Q1 profits fall 50%",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "Deutsche Bank Q1 profits fall 50% over litigation costs",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "US firms negligent in reporting 'conflict minerals': study",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "Embattled Ukraine fights for debt deal on financial front",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "Seven in ten Greeks want a debt deal",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "Serbia signs controversial $3-bn Belgrade development deal",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "Greece debt talks to resume after Tsipras, Merkel call",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahootopstories",
+        "_type": "rss",
+        "_id": "Car-Leasing Giant Revs Up £100m Windfall",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "Whiting and McCormick are big market movers",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "StanCorp Financial Group, Inc. to Announce First Quarter 2015 Financial Results on April 23, 2015 and Hold a Conference Call on April 24, 2015",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "STMicroelectronics Reports on Cash Dividend to be proposed to the 2015 Annual General Meeting",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "MasterCard Incorporated to Host Conference Call on First-Quarter 2015 Financial Results",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "WSI Industries Reports 12% Sales Increase and 76% Increase in Net Earnings",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "Willdan Announces Planned Date of March 31 for Fourth Quarter and Full Year 2014 Financial Results and Conference Call",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "Medigene publishes final financials 2014: Significant improvement in revenue, EBITDA and net result",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "Eurocastle Releases Fourth Quarter and Year End 2014 Financial Results and Announces Dividend of €0.125 per share",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "Card Factory says full-year profit rises 8.9 pct",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "Balfour beatty shares open 2.2 percent lower after company suspends dividend, posts loss in full year results",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "Change of Representative Director",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "Balfour Beatty scraps dividend after full-year loss",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "Leidos tops 4Q profit forecasts",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "Lands' End posts 4Q profit",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "Bank of China profit growth slowest in six years as bad loans jump",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "Francesca's Holdings tops Street 4Q forecasts",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "AGL Resources Increases 2015 Earnings Guidance",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "Paychex, Inc. Reports Third Quarter Results",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "Prudential Financial to announce first quarter 2015 earnings; schedules conference call",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "DynCorp International Inc.'s Parent, Delta Tucker Holdings, Inc., Schedules Earnings Conference Call to Discuss Fourth Quarter and Year-End 2014 Results",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "Red Hat Reports Fourth Quarter and Fiscal Year 2015 Results",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "Huntington Bancshares Incorporated to Announce 2015 First Quarter Earnings and Hold Earnings Conference Call April 22, 2015",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "United Internet 2014 core profit up by a third on new customers",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "H. B. Fuller misses 1Q profit forecasts",
+        "_version": 1,
+        "status": 201
+      }
+    },
+    {
+      "index": {
+        "_index": "yahooearnings",
+        "_type": "rss",
+        "_id": "Red Hat profit forecast matches estimates despite strong dollar",
+        "_version": 1,
+        "status": 201
+      }
+    }
+  ]
+}
