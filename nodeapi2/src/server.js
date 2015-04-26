@@ -7,6 +7,7 @@
 var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
+var esLoadHandler = require('./handlers/esLoadHandler.js');
 var elasticsearch = require('elasticsearch');
 
 //elastic search min config
@@ -71,4 +72,4 @@ app.use('/', router);
 // START THE SERVER
 // =============================================================================
 app.listen(port);
-console.log('Sevrer Node Api listening on port ' + port);
+console.log('Server Node Api listening on port ' + port);
