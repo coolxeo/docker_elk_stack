@@ -7,9 +7,9 @@
 var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
-
-//elastic search
 var elasticsearch = require('elasticsearch');
+
+//elastic search min config
 var esClient = new elasticsearch.Client({
     host: 'localhost:9200',
     log: 'error'
