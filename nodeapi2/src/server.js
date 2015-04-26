@@ -9,6 +9,7 @@ var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
 var esLoadHandler = require('./handlers/esLoadHandler.js');
 var elasticsearch = require('elasticsearch');
+var targets = require('./constants/targets.json');
 
 //elastic search client min config
 var esClient = new elasticsearch.Client({
