@@ -25,7 +25,8 @@ var rssOptions = {
 var esBulkAction=function(feed,rssOptions){
     return {index: {_index: feed.index, _type: rssOptions.type, _id:feed.title}};
 };
-
+//elastic search client min config
+//elastic search client optional config
 var mapper = function (rss) {
     return {
         index: rss.index,
@@ -41,7 +42,7 @@ var mapper = function (rss) {
         }
     };
 };
-//elastic search client min config
+//elastic search client optional config
 
 // configure app to use bodyParser()
 // this will let us get the data from a POST
@@ -61,7 +62,7 @@ router.get('/', function(req, res) {
 // charge rss from targets.json in docker elastic search
 router.get('/rssload', function(req, res) {
     esLoadHandler(targets, esClient, rssOptions, esBulkAction, mapper, function (error, feeds) {
-        res(error||feeds);
+        res.json(error||feeds);
     });
 });
 

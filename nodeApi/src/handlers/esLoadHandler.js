@@ -11,7 +11,7 @@ module.exports = function (targets, esClient, rssOpts, esBulkAction, mapper, nex
             var feeds = [], feedParser = new FeedParser(), targetId=Object.keys(target)[0];
 
             asyncTasks.push(function (callback) {
-                var defaultErrorHandler = function (error) {callback(error, null);};
+            var defaultErrorHandler = function (error) {callback(error, null);};
                 req = rq(target[targetId]);
                 req.on('error', defaultErrorHandler);
                 feedParser.on('error', defaultErrorHandler);
