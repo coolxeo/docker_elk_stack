@@ -10,7 +10,7 @@ var bodyParser = require('body-parser');
 var esLoadHandler = require('./handlers/esLoadHandler.js');
 var elasticsearch = require('elasticsearch');
 
-//elastic search min config
+//elastic search client min config
 var esClient = new elasticsearch.Client({
     host: 'localhost:9200',
     log: 'error'
@@ -21,8 +21,8 @@ var rssOptions = {
     orderBy: 'pubdate'
 };
 
-var esBulkAction=function(feed,rssasticOpts){
-    return {index: {_index: feed.index, _type: rssasticOpts.type, _id:feed.title}};
+var esBulkAction=function(feed,rssOptions){
+    return {index: {_index: feed.index, _type: rssOptions.type, _id:feed.title}};
 };
 
 var mapper = function (rss) {
@@ -40,6 +40,7 @@ var mapper = function (rss) {
         }
     };
 };
+//elastic search client min config
 
 // configure app to use bodyParser()
 // this will let us get the data from a POST
