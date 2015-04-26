@@ -8,15 +8,16 @@ var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
 var esLoadHandler = require('./handlers/esLoadHandler.js');
-var elasticsearch = require('elasticsearch');
+var elasticSearch = require('elasticsearch');
 var targets = require('./constants/targets.json');
 
 //elastic search client min config
-var esClient = new elasticsearch.Client({
-    host: 'localhost:9200',
+var esClient = new elasticSearch.Client({
+    host: '172.17.42.1:9200',
     log: 'error'
 });
-
+//elastic search client min config
+//elastic search client optional config
 var rssOptions = {
     type: 'rss',
     orderBy: 'pubdate'
@@ -25,8 +26,8 @@ var rssOptions = {
 var esBulkAction=function(feed,rssOptions){
     return {index: {_index: feed.index, _type: rssOptions.type, _id:feed.title}};
 };
-//elastic search client min config
-//elastic search client optional config
+//with this you can select the fields of the rss source feed you want to persist in EL,
+// if you pass null it will get all the fields by default
 var mapper = function (rss) {
     return {
         index: rss.index,
