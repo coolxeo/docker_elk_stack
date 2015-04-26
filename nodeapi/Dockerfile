@@ -4,7 +4,7 @@ MAINTAINER sloppylopez@estudioweb130.com
 
 # Env Variables
 ENV GIT_PROJECT=docker_elk_stack
-ENV SERVER=nodeapi2
+ENV SERVER=nodeapi
 ENV SRC=src
 ENV GIT_USER=sloppylopez
 ENV NODE_VERSION=0.12
