@@ -8,6 +8,38 @@ var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
 
+//elastic search
+var elasticsearch = require('elasticsearch');
+var esClient = new elasticsearch.Client({
+    host: 'localhost:9200',
+    log: 'error'
+});
+
+var rssOptions = {
+    type: 'rss',
+    orderBy: 'pubdate'
+};
+
+var esBulkAction=function(feed,rssasticOpts){
+    return {index: {_index: feed.index, _type: rssasticOpts.type, _id:feed.title}};
+};
+
+var mapper = function (rss) {
+    return {
+        index: rss.index,
+        title: rss.title,
+        description: rss.description,
+        pubdate: rss.pubdate,
+        author: rss.author,
+        link: rss.link,
+        image: rss.image,
+        meta: {
+            title: rss.meta.title,
+            image: rss.meta.image ? rss.meta.image.url : ''
+        }
+    };
+};
+
 // configure app to use bodyParser()
 // this will let us get the data from a POST
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -22,6 +54,12 @@ var router = express.Router();              // get an instance of the express Ro
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get('/', function(req, res) {
     res.json({ message: 'hooray! welcome to our api!' });
+});
+// charge rss from targets.json in docker elastic search
+router.get('/rssload', function(req, res) {
+    esLoadHandler(targets, esClient, rssOptions, esBulkAction, mapper, function (error, feeds) {
+        res(error||feeds);
+    });
 });
 
 // more routes for our API will happen here
