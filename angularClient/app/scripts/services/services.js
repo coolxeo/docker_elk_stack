@@ -8,8 +8,8 @@
  * Service in the angularRssApp.
  */
 angularClient
-  .service('rssFeederService',
-  function (esClient,$q) {
+  .service('rssFeederService',['esClient', '$q',
+    function (esClient,$q) {
     return {
       query: function (queryTerm) {
         if(queryTerm==='*'){//TODO refactor this crap...
@@ -54,15 +54,15 @@ angularClient
         return deferred.promise;
       }
     };
-  }
+  }]
 );
 
 // esFactory() creates a configured client instance. Turn that instance
 // into a service so that it can be required by other parts of the application
 angularClient
-  .service('esClient', function (esFactory) {
+  .service('esClient', ['esFactory',function (esFactory) {
     return esFactory({
       host: 'localhost:9200',
       log: 'trace'
     });
-  });
+  }]);
