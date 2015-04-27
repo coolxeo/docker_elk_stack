@@ -7,11 +7,11 @@ It can be used as a seed for a project with that structure or similar, it saves 
 
 There are 3 separate parts :
 
-##angular_rss_client
+##angularclient
 Implemented using Yeoman, mild default instalation, it uses Karma for testing and Grunt for building
 ###*Use the run scripts in the folder to run it
 
-##node_rss_api
+##nodeapi
 Implemented using Nodejs, it get's rss from any source of RSS and bulks the data in Elastic Search in Json format, this part will become a Nodejs module in the future,and I will use a RESTfull api, but that part it's still to be defined, this is just a node server with Hapi and a Elastic Search client with a Xml parser for retrieving, parsing and persisting in EL
 ###*Use the run scripts in the folder to run it
 
