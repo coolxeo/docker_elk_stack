@@ -2,11 +2,11 @@
 
 /**
  * @ngdoc overview
- * @name angularClient
+ * @name angularclient
  * @description
- * # angularClient
+ * # angularclient
  *
- * Main module of angularClient application.
+ * Main module of angularclient application.
  */
 var angularClient=angular
   .module('angularClient', [
@@ -34,4 +34,4 @@ var angularClient=angular
       });
   });
 
-angularClient.constant('FIREBASE_URL','https://sloppylopez.firebaseio.com');
+angularClient.constant('FIREBASE_URL','https://YOUR_FIRE_BASE.firebaseio.com');
