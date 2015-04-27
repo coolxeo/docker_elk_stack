@@ -1,9 +1,9 @@
-nodeapi:
-
- build: ../nodeapi
- restart: always
- ports:
- - "8080:8080"
+#nodeapi:
+#
+# build: ../nodeapi
+# restart: always
+# ports:
+# - "8080:8080"
 
 kibana:
 

@@ -1,7 +1,8 @@
 var FeedParser = require('feedparser'),
     rq = require('request'),
     async = require("async"),
-    _ = require('lodash');
+    _ = require('lodash'),
+    lastBulkData;
 
 module.exports = function (targets, esClient, rssOpts, esBulkAction, mapper, next) {
     try {
