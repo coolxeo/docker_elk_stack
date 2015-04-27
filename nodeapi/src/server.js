@@ -24,7 +24,7 @@ var rssOptions = {
 };
 
 var esBulkAction=function(feed,rssOptions){
-    return {index: {_index: feed.index, _type: rssOptions.type, _id:feed.title}};
+    return {update: {_index: feed.index, _type: rssOptions.type, _id:feed.title}};
 };
 //with this you can select the fields of the rss source feed you want to persist in EL,
 // if you pass null it will get all the fields by default

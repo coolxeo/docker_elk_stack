@@ -12,7 +12,7 @@ angularClient
   function (esClient,$q) {
     return {
       query: function (queryTerm) {
-        if(queryTerm==='*'){
+        if(queryTerm==='*'){//TODO refactor this crap...
           return {
             index: '_all',
             type: 'rss',
