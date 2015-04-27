@@ -34,4 +34,4 @@ var angularClient=angular
       });
   });
 
-angularClient.constant('FIREBASE_URL','https://YOUR_FIRE_BASE.firebaseio.com');
+angularClient.constant('FIREBASE_URL','https://sloppylopez.firebaseio.com');
