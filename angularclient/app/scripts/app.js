@@ -10,16 +10,16 @@
  */
 var angularClient=angular
   .module('angularClient', [
+    'elasticsearch',
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'elasticsearch',
     'firebase'
   ])
-  .config(function ($routeProvider) {
+  .config(['$routeProvider',function ($routeProvider) {
     $routeProvider
       .when('/main', {
         templateUrl: 'views/main.html',
@@ -32,6 +32,6 @@ var angularClient=angular
       .otherwise({
         redirectTo: '/main'
       });
-  });
+  }]);
 
 angularClient.constant('FIREBASE_URL','https://sloppylopez.firebaseio.com');
