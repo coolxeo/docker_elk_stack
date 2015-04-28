@@ -1,9 +1,9 @@
 <div fade-in>
   <div class="jumbotron">
     <h1>Fresh Rss News</h1>
+    </br>
     <label for="search">Search</label>
     <input id="search" type="text" ng-model="queryTerm" placeholder="What are you looking for?" ng-change="rssFeederServicePromise(queryTerm)"/>
-
     <!-- if there is an error, display its message -->
     <div ng-if="error" class="alert alert-danger" role="alert">{{error.message}}</div>
   </div>
