@@ -2,7 +2,7 @@
 
 /**
  * @ngdoc function
- * @name angularRssApp.controller:AboutCtrl
+ * @name angularClient.controller:AboutCtrl
  * @description
  * # AboutCtrl
  * Controller of the angularRssApp
