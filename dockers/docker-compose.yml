@@ -1,6 +1,6 @@
 nodeapi:
 
-build: ../nodeapi
+build: ./nodeapi
 restart: always
 ports:
 - "8080:8080"
