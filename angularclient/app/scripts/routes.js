@@ -34,11 +34,11 @@ angular.module('angularfireApp')
       })
       .otherwise({redirectTo: '/login'});
   }])
-  .run(['$rootScope',function ($rootScope) {
-    $rootScope.$on('$stateChangeStart', function (event, toState, toParams) {
-      var requireLogin = toState.access.requireLogin;
+  .run(['$rootScope','$location',function ($rootScope,$location) {
+    $rootScope.$on('$routeChangeStart', function (event, next, current) {
+      var requireLogin = next.access?next.access.requiresLogin:false;
 
-      if (requireLogin && typeof $rootScope.currentUser === 'undefined') {
+      if (requireLogin && typeof $rootScope.token === 'undefined') {
         event.preventDefault();
         $location.path( "/login" );
       }

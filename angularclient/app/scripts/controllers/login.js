@@ -8,20 +8,32 @@
 * Controller of the angularfireApp
 */
 angular.module('angularfireApp')
-  .controller('LoginCtrl',['$scope', function ($scope) {
+  .controller('LoginCtrl',['$scope','$rootScope','$location', function ($scope,$rootScope,$location) {
     var ref = new Firebase("https://sloppylopez.firebaseio.com");
+
+    var deferred = $q.defer();
+    esClient.search(this.query(queryTerm||'*')).then(function (resp) {
+      deferred.resolve(resp.hits.hits);
+    }, function (err) {
+      console.trace(err.message);
+      deferred.reject();
+    });
+    return deferred.promise;
+
     $scope.submit = function(isValid) {
       if(isValid){
         ref.authWithPassword({
-          email    : $scope.login.user.username,
-          password : $scope.login.user.password
+          email    : $scope.user.username,
+          password : $scope.user.password
         }, function(error, authData) {
           if (error) {
             console.log("Login Failed!", error);
-            model.message = "Login Failed!" + error;
+            $scope.message = "Login Failed!" + error;
           } else {
             console.log("Authenticated successfully with payload:", authData);
-            model.message = "Authenticated successfully with payload:"+authData;
+            $scope.message = "Authenticated successfully with payload:"+authData;
+            $rootScope.token=authData.token;
+            $location.path( "/main" );
           }
         });
       }
