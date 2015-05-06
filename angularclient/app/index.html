@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" ng-app="angularClient" ng-strict-di>
+<html class="no-js" ng-app="angularfireApp" ng-strict-di>
   <head>
     <meta charset="utf-8">
     <title>Sloppy Lopez</title>
@@ -32,20 +32,19 @@
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-        <h3 class="text-muted">Sloppy Lopez</h3>
         <div class="navcontainer">
           <ul>
-            <li><a href="http://docker.com"><img src="/images/docker.png"  height="42" width="42"/></a></li>
-            <li><a href="http://www.firebase.com/docs/web/libraries/angular"><img src="/images/angularfire.png"  height="42" width="42"/></a></li>
-            <li><a href="http://yeoman.io"><img src="/images/yeoman.png"  height="42" width="42"/></a></li>
-            <li><a href="http://gruntjs.com"><img src="/images/grunt.png"  height="42" width="42"/></a></li>
-            <li><a href="http://bower.io"><img src="/images/bower.png"  height="42" width="42"/></a></li>
-            <li><a href="http://modernizr.com"><img src="/images/modernizr.jpg"  height="42" width="42"/></a></li>
-            <li><a href="http://sass-lang.com"><img src="/images/sass.png"  height="42" width="42"/></a></li>
-            <li><a href="http://nodejs.org"><img src="/images/nodejs.png"  height="42" width="42"/></a></li>
-            <li><a href="https://www.elastic.co/products/elasticsearch"><img src="/images/elasticsearch.png"  height="42" width="42"/></a></li>
-            <li><a href="http://www.elastic.co/products/kibana"><img src="/images/kibana.png"  height="42" width="42"/></a></li>
-            <li><a href="http://logstash.net"><img src="/images/logstash.png"  height="42" width="42"/></a></li>
+            <li><a href="http://docker.com"><img src="/images/docker.png"  height="38" width="38"/></a></li>
+            <li><a href="http://www.firebase.com/docs/web/libraries/angular"><img src="/images/angularfire.png"  height="38" width="38"/></a></li>
+            <li><a href="http://yeoman.io"><img src="/images/yeoman.png"  height="38" width="38"/></a></li>
+            <li><a href="http://gruntjs.com"><img src="/images/grunt.png"  height="38" width="38"/></a></li>
+            <li><a href="http://bower.io"><img src="/images/bower.png"  height="38" width="38"/></a></li>
+            <li><a href="http://modernizr.com"><img src="/images/modernizr.jpg"  height="38" width="38"/></a></li>
+            <li><a href="http://sass-lang.com"><img src="/images/sass.png"  height="38" width="38"/></a></li>
+            <li><a href="http://nodejs.org"><img src="/images/nodejs.png"  height="38" width="38"/></a></li>
+            <li><a href="https://www.elastic.co/products/elasticsearch"><img src="/images/elasticsearch.png"  height="38" width="38"/></a></li>
+            <li><a href="http://www.elastic.co/products/kibana"><img src="/images/kibana.png"  height="38" width="38"/></a></li>
+            <li><a href="http://logstash.net"><img src="/images/logstash.png"  height="38" width="38"/></a></li>
           </ul>
         </div>
       </div>
@@ -101,10 +100,13 @@
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/routes.js"></script>
+        <script src="scripts/services/services.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/controllers/signup.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/directives/fadeInDirective.js"></script>
-        <script src="scripts/services/services.js"></script>
         <!-- endbuild -->
 </body>
 </html>

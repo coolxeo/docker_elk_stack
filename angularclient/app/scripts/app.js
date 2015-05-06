@@ -2,36 +2,19 @@
 
 /**
  * @ngdoc overview
- * @name angularclient
+ * @name angularfireApp
  * @description
- * # angularclient
+ * # angularfireApp
  *
- * Main module of angularclient application.
+ * Main module of the application.
  */
-var angularClient=angular
-  .module('angularClient', [
-    'elasticsearch',
+angular.module('angularfireApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'elasticsearch',
     'firebase'
-  ])
-  .config(['$routeProvider',function ($routeProvider) {
-    $routeProvider
-      .when('/main', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/main'
-      });
-  }]);
-
-angularClient.constant('FIREBASE_URL','https://sloppylopez.firebaseio.com');
+  ]);

@@ -1,0 +1,14 @@
+<div ng-controller="SignupCtrl as registration">
+<h3>Sign up</h3><span>{{ registration.message }}</span>
+<form name="registrationForm" novalidate
+      ng-submit="registration.submit(registrationForm.$valid)">
+  <div class="form-group">
+    <label>Email</label>
+    <input type="text" name="username" class="form-control" ng-model="registration.user.username" required />
+    <div ng-messages="registrationForm.username.$error" ng-messages-include="messages.html"></div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Register!</button>
+  </div>
+</form>
+</div>

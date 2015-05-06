@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name angularRssApp.controller:MainCtrl
+ * @name angularfireApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the angularRssApp
+ * Controller of the angularfireApp
  */
-angularClient
+angular.module('angularfireApp')
   .controller('MainCtrl', ['$scope', 'rssFeederService', function ($scope,rssFeederService) {
     $scope.rssFeederServicePromise = function(queryTerm) {
       rssFeederService.getRssES(queryTerm).then(function (data) {
