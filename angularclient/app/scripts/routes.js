@@ -8,7 +8,7 @@
 angular.module('angularfireApp')
   // configure views; whenAuthenticated adds a resolve method to ensure users authenticate
   // before trying to access that route
-  .config(['$routeProvider', function($routeProvider) {
+  .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/main', {
         templateUrl: 'views/main.html',
@@ -31,11 +31,11 @@ angular.module('angularfireApp')
       })
       .otherwise({redirectTo: '/main'});
   }])
-  .run(['$rootScope','$location',function ($rootScope,$location) {
+  .run(['$rootScope', '$location', function ($rootScope, $location) {
     $rootScope.$on('$routeChangeStart', function (event, next, current) {
       if (next.loginRequired && typeof $rootScope.token === 'undefined') {
         event.preventDefault();
-        $location.path( "/login" );
+        $location.path("/login");
       }
     });
   }]);

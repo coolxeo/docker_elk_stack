@@ -9,13 +9,13 @@
  * Main module of the application.
  */
 angular.module('angularfireApp', [
-    'ngAnimate',
-    'ngCookies',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch',
-    'ngMessages',
-    'elasticsearch',
-    'firebase'
-  ]);
+  'ngAnimate',
+  'ngCookies',
+  'ngResource',
+  'ngRoute',
+  'ngSanitize',
+  'ngTouch',
+  'ngMessages',
+  'elasticsearch',
+  'firebase'
+]);

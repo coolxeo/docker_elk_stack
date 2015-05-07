@@ -1,9 +1,9 @@
-
 <form name="registrationForm" novalidate
       ng-submit="submit(registrationForm.$valid)">
   <div class="form-group">
     <label>Email</label>
     <input type="text" name="email" class="form-control" ng-model="user.email" required email/>
+
     <div ng-messages="registrationForm.email.$error" ng-messages-include="views/errors.html" class="errors"></div>
   </div>
   <div class="form-group">
