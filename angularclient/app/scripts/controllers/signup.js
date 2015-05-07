@@ -8,20 +8,19 @@
  * Controller of the angularfireApp
  */
 angular.module('angularfireApp')
-  .controller("SignupCtrl", ['$scope', '$rootScope', '$location', function ($scope, $rootScope, $location) {
-    var ref = new Firebase("https://sloppylopez.firebaseio.com");//TODO put ref in a service
+  .controller("SignupCtrl", ['$scope', '$rootScope', '$location','firebaseRef', function ($scope, $rootScope, $location, firebaseRef) {
     var randomizer = function () {var chars = ['abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?_-'];var password = '';for (var i = 0; i < 9; i += 1) {password += chars[Math.floor(Math.random() * chars.length)];}return password;};
 
     $scope.submit = function (isValid) {
       if (isValid) {
-        ref.createUser({
+        firebaseRef.createUser({
           email: $scope.user.email,
           password: randomizer()
         }, function (error, userData) {
           if (error) {
             $rootScope.message = "Error creating user:" + error;
           } else {
-            ref.resetPassword({
+            firebaseRef.resetPassword({
               email: $scope.user.email
             }, function (error) {
               if (error) {

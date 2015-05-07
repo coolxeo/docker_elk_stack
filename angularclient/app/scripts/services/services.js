@@ -59,7 +59,7 @@ angular.module('angularfireApp')
 
 angular.module('angularfireApp')
   .service('firebaseRef', function () {
-    return new Firebase("https://yourfirebase.firebaseio.com");
+    return new Firebase("https://sloppylopez.firebaseio.com");
   }
 );
 
