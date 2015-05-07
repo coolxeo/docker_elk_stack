@@ -23,7 +23,10 @@ angular.module('angularfireApp')
       })
       .when('/signup', {
         templateUrl: 'views/signup.html',
-        controller: 'SignupCtrl'
+        controller: 'SignupCtrl',
+        access: {
+          requiresLogin: true
+        }
       })
       .when('/about', {
         templateUrl: 'views/about.html',
