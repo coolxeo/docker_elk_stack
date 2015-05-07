@@ -10,10 +10,10 @@ angular.module('angularfireApp')
   // before trying to access that route
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/main', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
-        loginRequired: {}
+        loginRequired: true
       })
       .when('/login', {
         templateUrl: 'views/login.html',
@@ -21,17 +21,15 @@ angular.module('angularfireApp')
       })
       .when('/signup', {
         templateUrl: 'views/signup.html',
-        controller: 'SignupCtrl'
-      })
-      .when('/errors', {
-        templateUrl: 'views/errors.html'
+        controller: 'SignupCtrl',
+        loginRequired: true
       })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
-        loginRequired: {}
+        loginRequired: true
       })
-      .otherwise({redirectTo: '/'});
+      .otherwise({redirectTo: '/main'});
   }])
   .run(['$rootScope','$location',function ($rootScope,$location) {
     $rootScope.$on('$routeChangeStart', function (event, next, current) {
