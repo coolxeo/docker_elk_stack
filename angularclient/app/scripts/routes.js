@@ -13,9 +13,7 @@ angular.module('angularfireApp')
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
-        access: {
-          requiresLogin: true
-        }
+        loginRequired: {}
       })
       .when('/login', {
         templateUrl: 'views/login.html',
@@ -31,20 +29,15 @@ angular.module('angularfireApp')
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
-        access: {
-          requiresLogin: true
-        }
+        loginRequired: {}
       })
       .otherwise({redirectTo: '/'});
   }])
   .run(['$rootScope','$location',function ($rootScope,$location) {
     $rootScope.$on('$routeChangeStart', function (event, next, current) {
-      var requireLogin = next.access?next.access.requiresLogin:false;
-
-      if (requireLogin && typeof $rootScope.token === 'undefined') {
+      if (next.loginRequired && typeof $rootScope.token === 'undefined') {
         event.preventDefault();
         $location.path( "/login" );
-        //$rootScope.$apply();
       }
     });
   }]);
