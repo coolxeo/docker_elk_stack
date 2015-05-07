@@ -19,10 +19,9 @@ angular.module('angularfireApp')
         }, function(error, authData) {
           if (error) {
             console.log("Login Failed!", error);
-            $scope.message = "Login Failed!" + error;
+            $rootScope.message = "Login Failed!";
           } else {
-            console.log("Authenticated successfully with payload:", authData);
-            $scope.message = "Authenticated successfully with payload:"+authData;
+            $rootScope.message = "Authenticated successfully "+authData.password.email;
             $rootScope.token=authData.token;
             $location.path("/");
             $scope.$apply();

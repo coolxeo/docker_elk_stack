@@ -9,7 +9,7 @@
  */
 angular.module('angularfireApp')
   .controller("SignupCtrl", ['$scope',function($scope) {//TODO put ref in a service
-  var ref = new Firebase("https://yourfirebase.firebaseio.com");
+  var ref = new Firebase("https://youfirebase.firebaseio.com");
   var randomizer = function () {
     var possibleChars = ['abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?_-'];
     var password = '';
@@ -26,7 +26,7 @@ angular.module('angularfireApp')
         password : tempPass
       }, function(error, userData) {
         if (error) {
-          $scope.message = "Error creating user:" + error;
+          $rootScope.message = "Error creating user:" + error;
         } else {
           ref.resetPassword({
             email: $scope.registration.user.username
@@ -34,20 +34,20 @@ angular.module('angularfireApp')
             if (error) {
               switch (error.code) {
                 case "INVALID_USER":
-                  $scope.message = "The specified user account does not exist.";
+                  $rootScope.message = "The specified user account does not exist.";
                   break;
                 default:
-                  $scope.message = "Error resetting password:" + error;
+                  $rootScope.message = "Error resetting password:" + error;
               }
             } else {
-              $scope.message = "Password reset email sent successfully! "+tempPass;
+              $rootScope.message = "Password reset email sent successfully! "+tempPass;
             }
           });
-          $scope.message = "Successfully created user account with uid:" + userData.uid;
+          $rootScope.message = "Successfully created user account with uid:" + userData.uid;
         }
       });
     } else {
-      $scope.message = "There are still invalid fields below";
+      $rootScope.message = "There are still invalid fields below";
     }
   };
 }]);
