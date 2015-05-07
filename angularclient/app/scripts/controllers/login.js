@@ -9,7 +9,7 @@
 */
 angular.module('angularfireApp')
   .controller('LoginCtrl',['$scope','$rootScope','$location','$q', function ($scope,$rootScope,$location,$q) {
-    var ref = new Firebase("https://yourfirebase.firebaseio.com");//TODO refactor this to a service
+    var ref = new Firebase("https://sloppylopez.firebaseio.com");//TODO refactor this to a service
 
     $scope.submit = function(isValid) {
       if(isValid){
