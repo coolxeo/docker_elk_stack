@@ -15,6 +15,7 @@ angular.module('angularfireApp', [
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'ngMessages',
     'elasticsearch',
     'firebase'
   ]);

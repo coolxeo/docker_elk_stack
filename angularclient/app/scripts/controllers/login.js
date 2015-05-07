@@ -9,12 +9,12 @@
 */
 angular.module('angularfireApp')
   .controller('LoginCtrl',['$scope','$rootScope','$location','$q', function ($scope,$rootScope,$location,$q) {
-    var ref = new Firebase("https://yourfirebase.firebaseio.com");
+    var ref = new Firebase("https://yourfirebase.firebaseio.com");//TODO refactor this to a service
 
     $scope.submit = function(isValid) {
       if(isValid){
         ref.authWithPassword({
-          email    : $scope.user.username,
+          email    : $scope.user.email,
           password : $scope.user.password
         }, function(error, authData) {
           if (error) {

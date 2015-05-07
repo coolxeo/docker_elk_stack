@@ -23,10 +23,10 @@ angular.module('angularfireApp')
       })
       .when('/signup', {
         templateUrl: 'views/signup.html',
-        controller: 'SignupCtrl',
-        access: {
-          requiresLogin: true
-        }
+        controller: 'SignupCtrl'
+      })
+      .when('/errors', {
+        templateUrl: 'views/errors.html'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
@@ -35,7 +35,7 @@ angular.module('angularfireApp')
           requiresLogin: true
         }
       })
-      .otherwise({redirectTo: '/login'});
+      .otherwise({redirectTo: '/'});
   }])
   .run(['$rootScope','$location',function ($rootScope,$location) {
     $rootScope.$on('$routeChangeStart', function (event, next, current) {
@@ -44,6 +44,7 @@ angular.module('angularfireApp')
       if (requireLogin && typeof $rootScope.token === 'undefined') {
         event.preventDefault();
         $location.path( "/login" );
+        //$rootScope.$apply();
       }
     });
   }]);
