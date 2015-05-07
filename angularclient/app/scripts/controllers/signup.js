@@ -9,7 +9,7 @@
  */
 angular.module('angularfireApp')
   .controller("SignupCtrl", ['$scope',function($scope) {//TODO put ref in a service
-  var ref = new Firebase("https://sloppylopez.firebaseio.com");
+  var ref = new Firebase("https://yourfirebase.firebaseio.com");
   var randomizer = function () {
     var possibleChars = ['abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?_-'];
     var password = '';

@@ -8,17 +8,8 @@
 * Controller of the angularfireApp
 */
 angular.module('angularfireApp')
-  .controller('LoginCtrl',['$scope','$rootScope','$location', function ($scope,$rootScope,$location) {
-    var ref = new Firebase("https://sloppylopez.firebaseio.com");
-
-    var deferred = $q.defer();
-    esClient.search(this.query(queryTerm||'*')).then(function (resp) {
-      deferred.resolve(resp.hits.hits);
-    }, function (err) {
-      console.trace(err.message);
-      deferred.reject();
-    });
-    return deferred.promise;
+  .controller('LoginCtrl',['$scope','$rootScope','$location','$q', function ($scope,$rootScope,$location,$q) {
+    var ref = new Firebase("https://yourfirebase.firebaseio.com");
 
     $scope.submit = function(isValid) {
       if(isValid){
@@ -33,7 +24,8 @@ angular.module('angularfireApp')
             console.log("Authenticated successfully with payload:", authData);
             $scope.message = "Authenticated successfully with payload:"+authData;
             $rootScope.token=authData.token;
-            $location.path( "/main" );
+            $location.path("/");
+            $scope.$apply();
           }
         });
       }
