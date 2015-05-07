@@ -1,9 +1,10 @@
+#indentation is relevant!
 nodeapi:
 
-build: ./nodeapi
-restart: always
-ports:
-- "8080:8080"
+ build: ./nodeapi
+ restart: always
+ ports:
+ - "8080:8080"
 
 kibana:
 
