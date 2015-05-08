@@ -59,7 +59,7 @@ angular.module('angularfireApp')
 
 angular.module('angularfireApp')
   .service('firebaseRef', function () {
-    return new Firebase("https://yourfirebase.firebaseio.com");
+    return new Firebase("https://sloppylopez.firebaseio.com");
   }
 );
 
@@ -68,7 +68,7 @@ angular.module('angularfireApp')
 angular.module('angularfireApp')
   .service('esClient', ['esFactory', function (esFactory) {
     return esFactory({//docker ip
-      host: 'http://dockerip:9200',
+      host: 'http://172.17.42.1:9200',
       log: 'trace'
     });
   }]);

@@ -25,6 +25,8 @@ angular.module('angularfireApp')
               $location.path("/");
               $scope.$apply();
             }
+          }, {
+            remember: "sessionOnly"
           });
         }
       };

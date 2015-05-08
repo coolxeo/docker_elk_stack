@@ -37,7 +37,6 @@ angular.module('angularfireApp')
                 $scope.$apply();
               }
             });
-            $rootScope.message = "Successfully created user account with uid:" + userData.uid;
           }
         });
       } else {
