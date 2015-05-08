@@ -8,7 +8,7 @@
  * Controller of the angularfireApp
  */
 angular.module('angularfireApp')
-  .controller("SignupCtrl", ['$scope', '$rootScope', '$location','firebaseRef', function ($scope, $rootScope, $location, firebaseRef) {
+  .controller("SignupCtrl", ['$scope', '$rootScope', '$location','firebaseRef','ngNotify', function ($scope, $rootScope, $location, firebaseRef, ngNotify) {
     var randomizer = function () {var chars = ['abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?_-'];var password = '';for (var i = 0; i < 9; i += 1) {password += chars[Math.floor(Math.random() * chars.length)];}return password;};
 
     $scope.submit = function (isValid) {
@@ -18,29 +18,29 @@ angular.module('angularfireApp')
           password: randomizer()
         }, function (error, userData) {
           if (error) {
-            $rootScope.message = "Error creating user:" + error;
+            ngNotify.set('Error creating user:');
           } else {
             firebaseRef.resetPassword({
               email: $scope.user.email
             }, function (error) {
-              if (error) {
-                switch (error.code) {
-                  case "INVALID_USER":
-                    $rootScope.message = "The specified user account does not exist.";
-                    break;
-                  default:
-                    $rootScope.message = "Error resetting password:" + error;
+                if (error) {
+                  switch (error.code) {
+                    case "INVALID_USER":
+                      ngNotify.set('The specified user account does not exist.');
+                      break;
+                    default:
+                      ngNotify.set('Error resetting password:'+ error);
+                  }
+                } else {
+                  ngNotify.set('Password reset email sent successfully! ');
+                  $location.path("/");
+                  $scope.$apply();
                 }
-              } else {
-                $rootScope.message = "Password reset email sent successfully! ";
-                $location.path("/");
-                $scope.$apply();
-              }
             });
           }
         });
       } else {
-        $rootScope.message = "There are still invalid fields below";
+        ngNotify.set('There are still invalid fields below');
       }
     };
   }]);

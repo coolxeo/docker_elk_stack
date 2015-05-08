@@ -8,8 +8,8 @@
  * Controller of the angularfireApp
  */
 angular.module('angularfireApp')
-  .controller('LoginCtrl', ['$scope', '$rootScope', '$location', 'firebaseRef',
-    function ($scope, $rootScope, $location, firebaseRef) {
+  .controller('LoginCtrl', ['$scope', '$rootScope', '$location', 'firebaseRef', 'ngNotify',
+    function ($scope, $rootScope, $location, firebaseRef, ngNotify) {
       $scope.submit = function (isValid) {
         if (isValid) {
           firebaseRef.authWithPassword({
@@ -18,9 +18,9 @@ angular.module('angularfireApp')
           }, function (error, authData) {
             if (error) {
               console.log("Login Failed!", error);
-              $rootScope.message = "Login Failed!";
+              ngNotify.set('Login Failed!');
             } else {
-              $rootScope.message = "Authenticated successfully " + authData.password.email;
+              ngNotify.set('Authenticated successfully ' + authData.password.email);
               $rootScope.token = authData.token;
               $location.path("/");
               $scope.$apply();
