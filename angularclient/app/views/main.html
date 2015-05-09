@@ -6,9 +6,7 @@
     </br>
     <label for="search">Search</label>
     <input id="search" type="text" ng-model="queryTerm" placeholder="What are you looking for?"
-           ng-change="rssFeederServicePromise(queryTerm)"/>
-    <!-- if there is an error, display its message -->
-    <div ng-if="error" class="alert alert-danger" role="alert">{{error.message}}</div>
+           ng-change="rssFeederService(queryTerm)"/>
   </div>
 
   <div class="fixrss" ng-repeat="n in news">

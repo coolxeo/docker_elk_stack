@@ -1,5 +1,5 @@
 <form name="loginForm" novalidate
-      ng-submit="submit(loginForm.$valid)">
+      ng-submit="login(loginForm.$valid)">
   <div class="form-group">
     <label for="username">User Name</label>
     <input id="username" type="email" name="email" class="form-control" ng-model="user.email" required email/>
@@ -16,5 +16,4 @@
     <button type="submit" class="btn btn-primary">Login</button>
   </div>
 </form>
-
 
