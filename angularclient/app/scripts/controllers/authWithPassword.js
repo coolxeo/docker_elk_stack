@@ -12,7 +12,7 @@ angular.module('angularfireApp')
     function ($scope, fbService) {
       $scope.authWithPassword = function (isValid) {
         if (isValid) {
-          fbService.authWithPassword($scope);
+          fbService.authWithPassword($scope, '/');
         }
       };
     }]);

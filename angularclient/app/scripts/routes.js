@@ -13,7 +13,7 @@ angular.module('angularfireApp')
         controller: 'RssFeederCtrl',
         loginRequired: true
       })
-      .when('/authWithPassword', {
+      .when('/authwithpassword', {
         templateUrl: 'views/authWithPassword.html',
         controller: 'AuthWithPasswordCtrl'
       })
@@ -26,6 +26,11 @@ angular.module('angularfireApp')
         templateUrl: 'views/resetPassword.html',
         controller: 'ResetPasswordCtrl'
       })
+      .when('/logout', {
+        controller: 'LogoutCtrl',
+        templateUrl: 'views/authWithPassword.html',
+        loginRequired: true
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
@@ -37,7 +42,7 @@ angular.module('angularfireApp')
     $rootScope.$on('$routeChangeStart', function (event, next) {
       if (next.loginRequired && typeof $rootScope.authData === 'undefined') {
         event.preventDefault();
-        $location.path("/authWithPassword");
+        $location.path("/authwithpassword");
       }
     });
   }]);

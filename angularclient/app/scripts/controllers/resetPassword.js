@@ -11,7 +11,7 @@ angular.module('angularfireApp')
   .controller('ResetPasswordCtrl', ['$scope', 'fbService', function ($scope, fbService) {
     $scope.resetPassword = function (isValid) {
       if (isValid) {
-        fbService.resetPassword($scope);
+        fbService.resetPassword($scope, '/');
       }
     };
   }]);

@@ -23,7 +23,7 @@ angular.module('angularfireApp')
 angular.module('angularfireApp')
   .factory('firebaseItemsFactory', ['$firebaseObject','firebaseRefFactory',function ($firebaseObject,firebaseRefFactory) {
     return {
-      setThreeWayDataBinding:function($scope,bindName){
+      set3WayDataBinding: function ($scope, bindName) {
         // download the data into a local object
         var syncObject = $firebaseObject(firebaseRefFactory.getFireBaseRef('sloppylopez','messages'));
 
@@ -88,8 +88,16 @@ angular.module('angularfireApp')
   .service('fbService', ['firebaseRefFactory', 'ngNotify', '$location', '$rootScope',
     function (firebaseRefFactory, ngNotify, $location, $rootScope) {
       var ref = firebaseRefFactory.getFireBaseRef('sloppylopez');
+
+      function _redirectAndApply($scope, $location, redirectTo) {
+        $location.path(redirectTo);
+        if (!$scope.$$phase) {
+          $scope.$apply();
+        }
+      }
+
       return {
-        resetPassword: function ($scope) {
+        resetPassword: function ($scope, redirectTo) {
           ref.resetPassword({
             email: $scope.user.email
           }, function (error) {
@@ -103,12 +111,11 @@ angular.module('angularfireApp')
               }
             } else {
               ngNotify.set('Password reset email sent successfully!');
-              $location.path('/');
-              $scope.$apply();
+              _redirectAndApply($scope, $location, redirectTo);
             }
           });
         },
-        authWithPassword: function ($scope) {
+        authWithPassword: function ($scope, redirectTo) {
           ref.authWithPassword({
             email: $scope.user.email,
             password: $scope.user.password
@@ -118,8 +125,7 @@ angular.module('angularfireApp')
             } else {
               ngNotify.set('Authenticated successfully ' + authData.password.email);
               $rootScope.authData = authData;
-              $location.path('/');
-              $scope.$apply();
+              _redirectAndApply($scope, $location, redirectTo);
             }
           }, {
             remember: 'sessionOnly'
@@ -136,6 +142,12 @@ angular.module('angularfireApp')
               this.reset($scope);
             }
           });
+        },
+        logout: function ($scope, redirectTo) {
+          ref.unauth();
+          $rootScope.authData = undefined;
+          ngNotify.set('Good bye');
+          _redirectAndApply($scope, $location, redirectTo);
         },
         _randomizer: function () {
           var chars = ['abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?_-'];
