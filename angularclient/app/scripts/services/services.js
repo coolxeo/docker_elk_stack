@@ -1,8 +1,12 @@
 'use strict';
 
 angular.module('angularfireApp')
-  .service('firebaseRef', function () {
-    return new Firebase('https://sloppylopez.firebaseio.com');
+  .factory('firebaseRefFactory', function () {
+    return {
+      getFireBaseRef:function(fireBaseUser,params){
+        return new Firebase(('https://'+fireBaseUser+'.firebaseio.com'+(params?params:' ')).trim())
+      }
+    };
   }
 );
 
@@ -12,13 +16,29 @@ angular.module('angularfireApp')
       host: 'http://172.17.42.1:9200',//http://dockerIp:elasticSearchPort to access elastic search
       log: 'trace'
     });
-  }]);
+  }]
+);
+
+//THIS IS NOT USED YET, i will use it for the chat service
+angular.module('angularfireApp')
+  .factory('firebaseItemsFactory', ['$firebaseObject','firebaseRefFactory',function ($firebaseObject,firebaseRefFactory) {
+    return {
+      setThreeWayDataBinding:function($scope,bindName){
+        // download the data into a local object
+        var syncObject = $firebaseObject(firebaseRefFactory.getFireBaseRef('sloppylopez','messages'));
+
+        // synchronize the object with a three-way data binding
+        syncObject.$bindTo($scope, bindName);//bindName='data'
+      }
+    };
+  }]
+);
 
 angular.module('angularfireApp')
   .service('rssFeederService', ['esClient', '$q',
     function (esClient, $q) {
       return {
-        query: function (queryTerm) {
+        _query: function (queryTerm) {
           if (queryTerm === '*') {//TODO refactor this crap...
             return {
               index: '_all',
@@ -52,7 +72,7 @@ angular.module('angularfireApp')
           }
         }, getRssES: function (queryTerm) {
           var deferred = $q.defer();
-          esClient.search(this.query(queryTerm || '*')).then(function (resp) {
+          esClient.search(this._query(queryTerm || '*')).then(function (resp) {
             deferred.resolve(resp.hits.hits);
           }, function (err) {
             console.trace(err.message);
@@ -65,11 +85,12 @@ angular.module('angularfireApp')
 );
 
 angular.module('angularfireApp')
-  .service('fbService', ['firebaseRef', 'ngNotify', '$location', '$rootScope',
-    function (firebaseRef, ngNotify, $location, $rootScope) {
+  .service('fbService', ['firebaseRefFactory', 'ngNotify', '$location', '$rootScope',
+    function (firebaseRefFactory, ngNotify, $location, $rootScope) {
+      var ref = firebaseRefFactory.getFireBaseRef('sloppylopez');
       return {
-        reset: function ($scope) {
-          firebaseRef.resetPassword({
+        resetPassword: function ($scope) {
+          ref.resetPassword({
             email: $scope.user.email
           }, function (error) {
             if (error) {
@@ -87,8 +108,8 @@ angular.module('angularfireApp')
             }
           });
         },
-        login: function ($scope) {
-          firebaseRef.authWithPassword({
+        authWithPassword: function ($scope) {
+          ref.authWithPassword({
             email: $scope.user.email,
             password: $scope.user.password
           }, function (error, authData) {
@@ -105,9 +126,9 @@ angular.module('angularfireApp')
           });
         },
         createUser: function ($scope) {
-          firebaseRef.createUser({
+          ref.createUser({
             email: $scope.user.email,
-            password: this.randomizer()
+            password: this._randomizer()
           }, function (error) {
             if (error) {
               ngNotify.set(error);
@@ -116,7 +137,7 @@ angular.module('angularfireApp')
             }
           });
         },
-        randomizer: function () {
+        _randomizer: function () {
           var chars = ['abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?_-'];
           var randomString = '';
           for (var i = 0; i <= 9; i++) {

@@ -8,11 +8,11 @@
  * Controller of the angularfireApp
  */
 angular.module('angularfireApp')
-  .controller('LoginCtrl', ['$scope', 'fbService',
+  .controller('AuthWithPasswordCtrl', ['$scope', 'fbService',
     function ($scope, fbService) {
-      $scope.login = function (isValid) {
+      $scope.authWithPassword = function (isValid) {
         if (isValid) {
-          fbService.login($scope);
+          fbService.authWithPassword($scope);
         }
       };
     }]);

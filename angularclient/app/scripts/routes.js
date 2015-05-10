@@ -13,17 +13,18 @@ angular.module('angularfireApp')
         controller: 'MainCtrl',
         loginRequired: true
       })
-      .when('/login', {
-        templateUrl: 'views/login.html',
-        controller: 'LoginCtrl'
+      .when('/authWithPassword', {
+        templateUrl: 'views/authWithPassword.html',
+        controller: 'AuthWithPasswordCtrl'
       })
-      .when('/signup', {
-        templateUrl: 'views/signup.html',
-        controller: 'SignupCtrl'
+      .when('/createuser', {
+        templateUrl: 'views/createUser.html',
+        controller: 'CreateUserCtrl',
+        loginRequired: true
       })
-      .when('/reset', {
-        templateUrl: 'views/reset.html',
-        controller: 'ResetCtrl'
+      .when('/resetpassword', {
+        templateUrl: 'views/resetPassword.html',
+        controller: 'ResetPasswordCtrl'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
@@ -36,7 +37,7 @@ angular.module('angularfireApp')
     $rootScope.$on('$routeChangeStart', function (event, next) {
       if (next.loginRequired && typeof $rootScope.token === 'undefined') {
         event.preventDefault();
-        $location.path("/login");
+        $location.path("/authWithPassword");
       }
     });
   }]);

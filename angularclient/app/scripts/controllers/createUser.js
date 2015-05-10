@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc function
- * @name angularfireApp.controller:MainCtrl
+ * @name angularfireApp.controller:CreateUserCtrl
  * @description
- * # MainCtrl
+ * # CreateUserCtrl
  * Controller of the angularfireApp
  */
 angular.module('angularfireApp')
-  .controller("SignupCtrl", ['$scope','ngNotify','fbService', function ($scope, ngNotify, fbService) {
-    $scope.signup = function (isValid) {
+  .controller("CreateUserCtrl", ['$scope','ngNotify','fbService', function ($scope, ngNotify, fbService) {
+    $scope.createUser = function (isValid) {
       if (isValid) {
         fbService.createUser($scope);
       } else {
