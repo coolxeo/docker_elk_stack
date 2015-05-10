@@ -101,7 +101,7 @@ $speed: 1.5s;
 
 .tetrominos {
   position: absolute;
-  top: 50%;
+  top: 25%;
   left: 50%;
   transform: translate(-$h, -$w);
 }
@@ -199,16 +199,17 @@ $speed: 1.5s;
   list-style-type: none;
 }
 
+//images ul
+.navcontainer ul li {
+  display: inline;
+}
+
 //Registration Form validation messages/
 .errors {
   font-size: smaller;
   padding-top: 5px;
   padding-bottom: 10px;
   color: red;
-}
-
-.navcontainer ul li {
-  display: inline;
 }
 
 /* Responsive: Portrait tablets and up */
