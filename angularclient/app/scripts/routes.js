@@ -8,9 +8,9 @@
 angular.module('angularfireApp')
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
-      .when('/main', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
+      .when('/rssfeeder', {
+        templateUrl: 'views/rssFeeder.html',
+        controller: 'RssFeederCtrl',
         loginRequired: true
       })
       .when('/authWithPassword', {
@@ -31,11 +31,11 @@ angular.module('angularfireApp')
         controller: 'AboutCtrl',
         loginRequired: true
       })
-      .otherwise({redirectTo: '/main'});
+      .otherwise({redirectTo: '/rssfeeder'});
   }])
   .run(['$rootScope', '$location', function ($rootScope, $location) {
     $rootScope.$on('$routeChangeStart', function (event, next) {
-      if (next.loginRequired && typeof $rootScope.token === 'undefined') {
+      if (next.loginRequired && typeof $rootScope.authData === 'undefined') {
         event.preventDefault();
         $location.path("/authWithPassword");
       }

@@ -32,6 +32,7 @@
           <li class="active"><a ng-href="/#/main">Main</a></li>
           <li><a ng-href="/#/about">About</a></li>
           <li><a ng-href="/#/contact">Contact</a></li>
+          <li><a ng-show="authData" ng-href="/#/logout">LogOut</a></li>
         </ul>
         <div class="navcontainer">
           <ul>
@@ -105,11 +106,11 @@
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
 
-        <!-- build:js({app,.tmp}) scripts/main.js -->
+    <!-- build:js({app,.tmp}) scripts/rssFeeder.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/routes.js"></script>
         <script src="scripts/services/services.js"></script>
-        <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/rssFeeder.js"></script>
         <script src="scripts/controllers/authWithPassword.js"></script>
         <script src="scripts/controllers/createUser.js"></script>
         <script src="scripts/controllers/about.js"></script>

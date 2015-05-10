@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc function
- * @name angularfireApp.controller:MainCtrl
+ * @name angularfireApp.controller:AuthWithPasswordCtrl
  * @description
- * # MainCtrl
+ * # AuthWithPasswordCtrl
  * Controller of the angularfireApp
  */
 angular.module('angularfireApp')

@@ -70,7 +70,7 @@ angular.module('angularfireApp')
               }
             };
           }
-        }, getRssES: function (queryTerm) {
+        }, rssFeeder: function (queryTerm) {
           var deferred = $q.defer();
           esClient.search(this._query(queryTerm || '*')).then(function (resp) {
             deferred.resolve(resp.hits.hits);
@@ -117,7 +117,7 @@ angular.module('angularfireApp')
               ngNotify.set('Login Failed ' + error);
             } else {
               ngNotify.set('Authenticated successfully ' + authData.password.email);
-              $rootScope.token = authData.token;
+              $rootScope.authData = authData;
               $location.path('/');
               $scope.$apply();
             }
