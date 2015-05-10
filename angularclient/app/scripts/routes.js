@@ -15,20 +15,24 @@ app
       })
       .when('/authwithpassword', {
         templateUrl: 'views/authWithPassword.html',
-        controller: 'AuthWithPasswordCtrl'
+        controller: 'AuthWithPasswordCtrl',
+        loginRequired: false
       })
       .when('/createuser', {
         templateUrl: 'views/createUser.html',
-        controller: 'CreateUserCtrl'
+        controller: 'CreateUserCtrl',
+        loginRequired: false
       })
       .when('/resetpassword', {
         templateUrl: 'views/resetPassword.html',
-        controller: 'ResetPasswordCtrl'
+        controller: 'ResetPasswordCtrl',
+        loginRequired: false
       })
       .when('/logout', {
         controller: 'LogoutCtrl',
         templateUrl: 'views/authWithPassword.html',
-        loginRequired: true
+        loginRequired: true,
+        resetCredentials: true
       })
       .when('/about', {
         templateUrl: 'views/about.html',

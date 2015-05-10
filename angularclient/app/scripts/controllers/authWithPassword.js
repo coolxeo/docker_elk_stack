@@ -10,6 +10,7 @@
 app
   .controller('AuthWithPasswordCtrl', ['$scope', '$rootScope', 'fbService',
     function ($scope, $rootScope, fbService) {
+      delete $rootScope.authData;
       $scope.authWithPassword = function (isValid) {
         if (isValid) {
           fbService.authWithPassword($scope, $rootScope, '/');

@@ -3,16 +3,21 @@ app
   .service('fbService', ['firebaseFactory', 'ngNotify', '$location', 'FB_USER',
     function (firebaseFactory, ngNotify, $location, FB_USER) {
       var ref = firebaseFactory.getFireBaseRef(FB_USER);
-      var _redirectAndApply = function ($scope, $location, redirectTo) {
+      var _redirect = function ($scope, $location, redirectTo) {
         if (typeof redirectTo != 'undefined') {
+          console.log('redirecting to ' + redirectTo);
           $location.path(redirectTo);
-          if (!$scope.$$phase) {
-            $scope.$apply();
-          }
         }
       };
       return {
+        logout: function ($scope, redirectTo) {
+          console.log('loggin out');
+          ref.unauth();
+          ngNotify.set('Good bye');
+          _redirect($scope, $location, redirectTo);
+        },
         resetPassword: function ($scope, $rootScope, redirectTo) {
+          console.log('reseting password');
           ref.resetPassword({
             email: $scope.user.email
           }, function (error) {
@@ -20,12 +25,12 @@ app
               ngNotify.set('Error resetting password:' + error);
             } else {
               ngNotify.set('Password reset email sent successfully!');
-              $rootScope.authData = null;//TODO check what is wrong here
-              _redirectAndApply($scope, $location, redirectTo);
+              _redirect($scope, $location, redirectTo);
             }
           });
         },
         authWithPassword: function ($scope, $rootScope, redirectTo) {
+          console.log('authentication with password');
           ref.authWithPassword({
             email: $scope.user.email,
             password: $scope.user.password
@@ -35,13 +40,14 @@ app
             } else {
               ngNotify.set('Authenticated successfully ' + authData.password.email);
               $rootScope.authData = authData;
-              _redirectAndApply($scope, $location, redirectTo);
+              _redirect($scope, $location, redirectTo);
             }
           }, {
             remember: 'sessionOnly'
           });
         },
         createUser: function ($scope) {
+          console.log('creating user');
           var that = this;
           ref.createUser({
             email: $scope.user.email,
@@ -54,16 +60,10 @@ app
             }
           });
         },
-        logout: function ($scope, $rootScope, redirectTo) {
-          ref.unauth();
-          $rootScope.authData = undefined;
-          ngNotify.set('Good bye');
-          _redirectAndApply($scope, $location, redirectTo);
-        },
         _randomizer: function () {
           var chars = ['abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?_-'];
           var randomString = '';
-          for (var i = 0; i <= 9; i++) {
+          for (var i = 0; i <= 10; i++) {
             randomString += chars[Math.floor(Math.random() * chars.length)];
           }
           return randomString;
