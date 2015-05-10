@@ -10,7 +10,6 @@
 app
   .controller('LogoutCtrl', ['$window', '$scope', 'fbService', '$rootScope',
     function ($scope, $window, fbService, $rootScope) {
-      ;
       console.log('login controller');
       console.log($window.authData);
       if (typeof $window.authData !== 'undefined') {
