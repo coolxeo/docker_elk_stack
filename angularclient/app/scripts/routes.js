@@ -19,8 +19,7 @@ app
       })
       .when('/createuser', {
         templateUrl: 'views/createUser.html',
-        controller: 'CreateUserCtrl',
-        loginRequired: true
+        controller: 'CreateUserCtrl'
       })
       .when('/resetpassword', {
         templateUrl: 'views/resetPassword.html',

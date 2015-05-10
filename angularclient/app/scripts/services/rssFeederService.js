@@ -1,8 +1,8 @@
 'use strict';
 
 app
-  .service('rssFeederService', ['esClient', '$q', 'ES_IP', 'ES_PORT', 'ngNotify',
-    function (esClient, $q, ES_IP, ES_PORT, ngNotify) {
+  .service('rssFeederService', ['esClientFactory', '$q', 'ES_IP', 'ES_PORT', 'ngNotify',
+    function (esClientFactory, $q, ES_IP, ES_PORT, ngNotify) {
       return {
         _query: function (queryTerm) {
           if (queryTerm === '*') {//TODO refactor this crap...
@@ -38,7 +38,7 @@ app
           }
         }, rssFeeder: function (queryTerm) {
           var deferred = $q.defer();
-          esClient.getElasticSearchRef(ES_IP, ES_PORT)
+          esClientFactory.getElasticSearchRef(ES_IP, ES_PORT)
             .search(this._query(queryTerm || '*')).then(function (resp) {
               deferred.resolve(resp.hits.hits);
             }, function (err) {

@@ -8,12 +8,13 @@
  * Controller of the angularfireApp
  */
 app
-  .controller("CreateUserCtrl", ['$scope','ngNotify','fbService', function ($scope, ngNotify, fbService) {
-    $scope.createUser = function (isValid) {
-      if (isValid) {
-        fbService.createUser($scope);
-      } else {
-        ngNotify.set('There are still invalid fields below');
-      }
-    };
+  .controller("CreateUserCtrl", ['$scope', '$rootScope', 'ngNotify', 'fbService',
+    function ($scope, $rootScope, ngNotify, fbService) {
+      $scope.createUser = function (isValid) {
+        if (isValid) {
+          fbService.createUser($scope, $rootScope);
+        } else {
+          ngNotify.set('There are still invalid fields below');
+        }
+      };
   }]);

@@ -1,36 +1,31 @@
 'use strict';
 app
-  .service('fbService', ['firebaseRefFactory', 'ngNotify', '$location', '$rootScope', 'FB_USER',
-    function (firebaseRefFactory, ngNotify, $location, $rootScope, FB_USER) {
-      var ref = firebaseRefFactory.getFireBaseRef(FB_USER);
-
-      function _redirectAndApply($scope, $location, redirectTo) {
-        $location.path(redirectTo);
-        if (!$scope.$$phase) {
-          $scope.$apply();
+  .service('fbService', ['firebaseFactory', 'ngNotify', '$location', 'FB_USER',
+    function (firebaseFactory, ngNotify, $location, FB_USER) {
+      var ref = firebaseFactory.getFireBaseRef(FB_USER);
+      var _redirectAndApply = function ($scope, $location, redirectTo) {
+        if (typeof redirectTo != 'undefined') {
+          $location.path(redirectTo);
+          if (!$scope.$$phase) {
+            $scope.$apply();
+          }
         }
-      }
-
+      };
       return {
-        resetPassword: function ($scope, redirectTo) {
+        resetPassword: function ($scope, $rootscope, redirectTo) {
           ref.resetPassword({
             email: $scope.user.email
           }, function (error) {
             if (error) {
-              switch (error.code) {
-                case 'INVALID_USER':
-                  ngNotify.set('The specified user account does not exist.');
-                  break;
-                default:
-                  ngNotify.set('Error resetting password:' + error);
-              }
+              ngNotify.set('Error resetting password:' + error);
             } else {
               ngNotify.set('Password reset email sent successfully!');
+              $rootscope.authData = null;
               _redirectAndApply($scope, $location, redirectTo);
             }
           });
         },
-        authWithPassword: function ($scope, redirectTo) {
+        authWithPassword: function ($scope, $rootscope, redirectTo) {
           ref.authWithPassword({
             email: $scope.user.email,
             password: $scope.user.password
@@ -47,6 +42,7 @@ app
           });
         },
         createUser: function ($scope) {
+          var that = this;
           ref.createUser({
             email: $scope.user.email,
             password: this._randomizer()
@@ -54,11 +50,11 @@ app
             if (error) {
               ngNotify.set(error);
             } else {//we reset in case of success to force the firebase email account verification mechanism
-              this.reset($scope);
+              that.resetPassword($scope);//for being able to reference 'this' here, we need to pass it in a variable called 'that' because 'this' is null when executing the callback
             }
           });
         },
-        logout: function ($scope, redirectTo) {
+        logout: function ($scope, $rootScope, redirectTo) {
           ref.unauth();
           $rootScope.authData = undefined;
           ngNotify.set('Good bye');

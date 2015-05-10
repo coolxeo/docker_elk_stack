@@ -2,16 +2,17 @@
 
 /**
  * @ngdoc function
- * @name angularfireApp.controller:ResetPasswordCtrl
+ * @name angularfireApp.controller:LogoutCtrl
  * @description
- * # ResetPasswordCtrl
+ * # LogoutCtrl
  * Controller of the angularfireApp
  */
 app
-  .controller('LogoutCtrl', ['$rootScope', '$scope', 'fbService', function ($scope, $rootScope, fbService) {
-    console.log('i am here');
-    if (typeof $rootScope.authData != 'undefined') {
-      fbService.logout($scope, '/');
-    }
-  }]);
+  .controller('LogoutCtrl', ['$rootScope', '$scope', 'fbService',
+    function ($scope, $rootScope, fbService) {
+      if (typeof $rootScope.authData != 'undefined') {
+        fbService.logout($scope, $rootScope, '/');
+      }
+    }]
+);
 

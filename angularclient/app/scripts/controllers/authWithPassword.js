@@ -12,7 +12,9 @@ app
     function ($scope, fbService) {
       $scope.authWithPassword = function (isValid) {
         if (isValid) {
-          fbService.authWithPassword($scope, '/');
+          fbService.authWithPassword($scope, '/rssfeeder');
+        } else {
+          ngNotify.set('There are still invalid fields below');
         }
       };
     }]);
