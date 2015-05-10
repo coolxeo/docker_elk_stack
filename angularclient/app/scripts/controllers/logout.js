@@ -11,7 +11,7 @@ app
   .controller('LogoutCtrl', ['$rootScope', '$scope', 'fbService',
     function ($scope, $rootScope, fbService) {
       if (typeof $rootScope.authData != 'undefined') {
-        fbService.logout($scope, $rootScope, '/');
+        fbService.logout($scope, $rootScope, '/login');
       }
     }]
 );

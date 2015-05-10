@@ -8,11 +8,11 @@
  * Controller of the angularfireApp
  */
 app
-  .controller('AuthWithPasswordCtrl', ['$scope', 'fbService',
-    function ($scope, fbService) {
+  .controller('AuthWithPasswordCtrl', ['$scope', '$rootScope', 'fbService',
+    function ($scope, $rootScope, fbService) {
       $scope.authWithPassword = function (isValid) {
         if (isValid) {
-          fbService.authWithPassword($scope, '/rssfeeder');
+          fbService.authWithPassword($scope, $rootScope, '/');
         } else {
           ngNotify.set('There are still invalid fields below');
         }

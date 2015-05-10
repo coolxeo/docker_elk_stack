@@ -12,7 +12,7 @@ app
         }
       };
       return {
-        resetPassword: function ($scope, $rootscope, redirectTo) {
+        resetPassword: function ($scope, $rootScope, redirectTo) {
           ref.resetPassword({
             email: $scope.user.email
           }, function (error) {
@@ -20,12 +20,12 @@ app
               ngNotify.set('Error resetting password:' + error);
             } else {
               ngNotify.set('Password reset email sent successfully!');
-              $rootscope.authData = null;
+              $rootScope.authData = null;//TODO check what is wrong here
               _redirectAndApply($scope, $location, redirectTo);
             }
           });
         },
-        authWithPassword: function ($scope, $rootscope, redirectTo) {
+        authWithPassword: function ($scope, $rootScope, redirectTo) {
           ref.authWithPassword({
             email: $scope.user.email,
             password: $scope.user.password
