@@ -38,6 +38,9 @@ app
             if (error) {
               ngNotify.set('Login Failed ' + error);
             } else {
+              //ref.changePassword(email, $scope.user.password, authData.password.password).then(null, function(error) {
+              //  console.log(error);
+              //});
               ngNotify.set('Authenticated successfully ' + authData.password.email);
               $rootScope.authData = authData;
               _redirect($scope, $location, redirectTo);
