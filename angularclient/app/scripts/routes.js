@@ -5,7 +5,8 @@
  * @description
  * # routes.js
  */
-angular.module('angularfireApp')
+app
+  .constant('FIRE_BASE_USER', 'sloppylopez')
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/rssfeeder', {

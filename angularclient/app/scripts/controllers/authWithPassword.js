@@ -7,7 +7,7 @@
  * # AuthWithPasswordCtrl
  * Controller of the angularfireApp
  */
-angular.module('angularfireApp')
+app
   .controller('AuthWithPasswordCtrl', ['$scope', 'fbService',
     function ($scope, fbService) {
       $scope.authWithPassword = function (isValid) {

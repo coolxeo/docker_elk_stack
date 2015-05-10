@@ -7,7 +7,7 @@
  * # ResetPasswordCtrl
  * Controller of the angularfireApp
  */
-angular.module('angularfireApp')
+app
   .controller('LogoutCtrl', ['$rootScope', '$scope', 'fbService', function ($scope, $rootScope, fbService) {
     console.log('i am here');
     if (typeof $rootScope.authData != 'undefined') {

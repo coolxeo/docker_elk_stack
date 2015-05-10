@@ -7,7 +7,7 @@
  * # RssFeederCtrl
  * Controller of the angularfireApp
  */
-angular.module('angularfireApp')
+app
   .controller('RssFeederCtrl', ['$scope', 'rssFeederService', 'ngNotify', function ($scope, rssFeederService, ngNotify) {
     $scope.rssFeeder = function (queryTerm) {
       rssFeederService.rssFeeder(queryTerm).then(function (data) {

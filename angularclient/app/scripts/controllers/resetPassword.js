@@ -7,7 +7,7 @@
  * # ResetPasswordCtrl
  * Controller of the angularfireApp
  */
-angular.module('angularfireApp')
+app
   .controller('ResetPasswordCtrl', ['$scope', 'fbService', function ($scope, fbService) {
     $scope.resetPassword = function (isValid) {
       if (isValid) {

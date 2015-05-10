@@ -7,7 +7,7 @@
  * # AboutCtrl
  * Controller of the angularfireApp
  */
-angular.module('angularfireApp')
+app
   .controller('AboutCtrl', ['$scope', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

@@ -1,16 +1,16 @@
 'use strict';
 
-angular.module('angularfireApp')
+app
   .factory('firebaseRefFactory', function () {
     return {
-      getFireBaseRef:function(fireBaseUser,params){
-        return new Firebase(('https://'+fireBaseUser+'.firebaseio.com'+(params?params:' ')).trim())
+      getFireBaseRef: function (fireBaseUser, params) {
+        return new Firebase(('https://' + fireBaseUser + '.firebaseio.com' + (params ? params : ' ')).trim())
       }
     };
   }
 );
 
-angular.module('angularfireApp')
+app
   .service('esClient', ['esFactory', function (esFactory) {
     return esFactory({
       host: 'http://172.17.42.1:9200',//http://dockerIp:elasticSearchPort to access elastic search
@@ -20,21 +20,22 @@ angular.module('angularfireApp')
 );
 
 //THIS IS NOT USED YET, i will use it for the chat service
-angular.module('angularfireApp')
-  .factory('firebaseItemsFactory', ['$firebaseObject','firebaseRefFactory',function ($firebaseObject,firebaseRefFactory) {
-    return {
-      set3WayDataBinding: function ($scope, bindName) {
-        // download the data into a local object
-        var syncObject = $firebaseObject(firebaseRefFactory.getFireBaseRef('sloppylopez','messages'));
+app
+  .factory('firebaseItemsFactory', ['$firebaseObject', 'firebaseRefFactory', 'FIRE_BASE_USER',
+    function ($firebaseObject, firebaseRefFactory, FIRE_BASE_USER) {
+      return {
+        set3WayDataBinding: function ($scope, bindName) {
+          // download the data into a local object
+          var syncObject = $firebaseObject(firebaseRefFactory.getFireBaseRef(FIRE_BASE_USER, 'messages'));
 
-        // synchronize the object with a three-way data binding
-        syncObject.$bindTo($scope, bindName);//bindName='data'
-      }
-    };
-  }]
+          // synchronize the object with a three-way data binding
+          syncObject.$bindTo($scope, bindName);//bindName='data'
+        }
+      };
+    }]
 );
 
-angular.module('angularfireApp')
+app
   .service('rssFeederService', ['esClient', '$q',
     function (esClient, $q) {
       return {
@@ -84,10 +85,10 @@ angular.module('angularfireApp')
     }]
 );
 
-angular.module('angularfireApp')
-  .service('fbService', ['firebaseRefFactory', 'ngNotify', '$location', '$rootScope',
-    function (firebaseRefFactory, ngNotify, $location, $rootScope) {
-      var ref = firebaseRefFactory.getFireBaseRef('sloppylopez');
+app
+  .service('fbService', ['firebaseRefFactory', 'ngNotify', '$location', '$rootScope', 'FIRE_BASE_USER',
+    function (firebaseRefFactory, ngNotify, $location, $rootScope, FIRE_BASE_USER) {
+      var ref = firebaseRefFactory.getFireBaseRef(FIRE_BASE_USER);
 
       function _redirectAndApply($scope, $location, redirectTo) {
         $location.path(redirectTo);
