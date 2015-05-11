@@ -22,6 +22,8 @@ module.exports = function (grunt) {
     dist: 'dist'
   };
 
+  //grunt.loadNpmTasks('grunt-karma');
+
   // Define the configuration for all the tasks
   grunt.initConfig({
 
@@ -379,8 +381,15 @@ module.exports = function (grunt) {
         'svgmin'
       ]
     }
+    //,
+    //
+    //karma: {
+    //  unit: {
+    //    configFile: 'karma.conf.js',
+    //    autoWatch: true
+    //  }
+    //}
   });
-
 
   grunt.registerTask('serve', 'start the server and preview your app, --allow-remote for remote access', function (target) {
     if (grunt.option('allow-remote')) {
