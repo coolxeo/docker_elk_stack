@@ -37,15 +37,14 @@ app
           }, function (error, authData) {
             if (error) {
               ngNotify.set('Login Failed ' + error);
-              $scope.showme = false;
             } else {
               //ref.changePassword(email, $scope.user.password, authData.password.password).then(null, function(error) {
               //  console.log(error);
               //});
               ngNotify.set('Authenticated successfully ' + authData.password.email);
               $rootScope.authData = authData;
-              _redirect($scope, $location, redirectTo);
             }
+            _redirect($scope, $location, redirectTo);
           }, {
             remember: 'sessionOnly'
           });
