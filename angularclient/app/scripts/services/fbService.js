@@ -37,6 +37,7 @@ app
           }, function (error, authData) {
             if (error) {
               ngNotify.set('Login Failed ' + error);
+              $scope.showme = false;
             } else {
               //ref.changePassword(email, $scope.user.password, authData.password.password).then(null, function(error) {
               //  console.log(error);

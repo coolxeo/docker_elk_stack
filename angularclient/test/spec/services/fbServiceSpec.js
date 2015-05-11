@@ -7,10 +7,14 @@ describe('fbService', function () {
     fbService = _fbService_;
   }));
 
+  //beforeEach(module(function ($provide) {
+  //  visitor = {};
+  //  $provide.value('visitor', visitor);
+  //}));
 
   describe('Constructor', function () {
     it('assigns a name', function () {
-      //expect(true).toBe(true);
+      expect(true).toBe(true);
     });
     });
   });
