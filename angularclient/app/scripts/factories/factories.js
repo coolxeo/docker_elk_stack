@@ -30,7 +30,7 @@ app
       return {
         set3WayDataBinding: function ($scope, bindName) {
           // download the data into a local object
-          var syncObject = $firebaseObject(firebaseFactory.getFireBaseRef(F_B_USER, 'messages'));
+          var syncObject = $firebaseObject(firebaseFactory.getFireBaseRef(FB_USER, 'messages'));
 
           // synchronize the object with a three-way data binding
           syncObject.$bindTo($scope, bindName);//bindName='data'
