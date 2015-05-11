@@ -3,7 +3,7 @@ app
   .service('fbService', ['firebaseFactory', 'ngNotify', '$location', 'FB_USER',
     function (firebaseFactory, ngNotify, $location, FB_USER) {
       var ref = firebaseFactory.getFireBaseRef(FB_USER);
-      var _redirect = function ($scope, $location, redirectTo) {
+      var _redirect = function ($location, redirectTo) {
         if (typeof redirectTo != 'undefined') {
           console.log('redirecting to ' + redirectTo);
           $location.path(redirectTo);
@@ -14,7 +14,7 @@ app
           console.log('loggin out');
           ref.unauth();
           ngNotify.set('Good bye');
-          _redirect($scope, $location, redirectTo);
+          _redirect($location, redirectTo);
         },
         resetPassword: function ($scope, $rootScope, redirectTo) {
           console.log('reseting password');
@@ -25,7 +25,7 @@ app
               ngNotify.set('Error resetting password:' + error);
             } else {
               ngNotify.set('Password reset email sent successfully!');
-              _redirect($scope, $location, redirectTo);
+              _redirect($location, redirectTo);
             }
           });
         },
@@ -44,7 +44,7 @@ app
               ngNotify.set('Authenticated successfully ' + authData.password.email);
               $rootScope.authData = authData;
             }
-            _redirect($scope, $location, redirectTo);
+            _redirect($location, redirectTo);
           }, {
             remember: 'sessionOnly'
           });
