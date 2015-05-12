@@ -15,7 +15,7 @@
     docker run -d  -> run in detached mode
     docker build .  -> build docker image
 
-##Build
+##Single Run
     $ docker run -t -i <YOUR_NAME_IMAGE> /sbin/my_init -- bash -l
 
 
