@@ -6,7 +6,9 @@ var FeedParser = require('feedparser'),
 
 module.exports = function (targets, esClient, rssOpts, esBulkAction, mapper, next) {
     try {
-        var asyncTasks = [], esCommands = [], req, defaultMapper = function(rss){return rss};
+        var asyncTasks = [], esCommands = [], req, defaultMapper = function (rss) {
+            return rss;
+        };
 
         targets.forEach(function (target) {
             var feeds = [], feedParser = new FeedParser(), targetId=Object.keys(target)[0];
@@ -18,7 +20,9 @@ module.exports = function (targets, esClient, rssOpts, esBulkAction, mapper, nex
                 feedParser.on('error', defaultErrorHandler);
 
                 req.on('response', function (res) {
-                    if (res.statusCode != 200) return this.emit('error', new Error('Bad status code'));
+                    if (res.statusCode !== 200) {
+                        return this.emit('error', new Error('Bad status code'));
+                    }
                     this.pipe(feedParser);
                 });
                 feedParser.on('readable', function () {
