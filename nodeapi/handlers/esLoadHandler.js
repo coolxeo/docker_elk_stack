@@ -1,8 +1,7 @@
 var FeedParser = require('feedparser'),
     rq = require('request'),
     async = require("async"),
-    _ = require('lodash'),
-    lastBulkData;
+    _ = require('lodash')
 
 module.exports = function (targets, esClient, rssOpts, esBulkAction, mapper, next) {
     try {
@@ -40,7 +39,9 @@ module.exports = function (targets, esClient, rssOpts, esBulkAction, mapper, nex
         });
 
         async.parallel(asyncTasks, function (err, feeds) {
-            if (err) throw err;
+            if (err) {
+                throw err;
+            }
             _.flatten(feeds).forEach(function (feed) {
                 var esBulkAct = esBulkAction(feed, rssOpts);
                 esCommands.push(esBulkAct);
