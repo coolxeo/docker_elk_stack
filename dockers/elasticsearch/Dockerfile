@@ -1,5 +1,5 @@
 # Pull base image.
-FROM dockerfile/java:oracle-java7
+FROM dockerfile/java:oracle-java8
 
 # Set install version
 ENV ES_PKG_NAME elasticsearch-1.5.1
@@ -21,9 +21,13 @@ WORKDIR /data
 # Custom ES config
 ADD elasticsearch.yml /elasticsearch/config/elasticsearch.yml
 
-# Define default command
-CMD ["/elasticsearch/bin/elasticsearch"]
-
 # Expose ports
 EXPOSE 9200
 EXPOSE 9300
+
+# Define default command
+CMD ["/elasticsearch/bin/elasticsearch"]
+
+# Clean up APT when done.
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+

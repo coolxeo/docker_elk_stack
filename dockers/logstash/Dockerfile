@@ -31,3 +31,6 @@ EXPOSE 4545
 EXPOSE 4546
 
 CMD /opt/logstash/bin/logstash -f /etc/logstash/server.conf
+
+# Clean up APT when done.
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

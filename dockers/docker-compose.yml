@@ -8,7 +8,7 @@ nodeapi:
 
 kibana:
 
- build: ./kibana
+ build: ./kibana2
  restart: always
  ports:
  - "5601:5601"
@@ -17,7 +17,7 @@ kibana:
 
 elasticsearch:
 
- build: ./elasticsearch
+ build: ./elasticsearch2
  restart: always
  ports:
  - "9200:9200"
@@ -27,7 +27,7 @@ elasticsearch:
 
 logstash:
 
- build: ./logstash
+ build: ./logstash2
  restart: always
  ports:
  - "4545:4545"

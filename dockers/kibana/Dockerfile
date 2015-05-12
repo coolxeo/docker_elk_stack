@@ -12,7 +12,7 @@ RUN wget https://download.elasticsearch.org/kibana/kibana/kibana-4.0.2-linux-x64
  tar zxf /tmp/kibana.tar.gz && mv kibana-4.0.2-linux-x64/* /opt/kibana/
 
 # Configs
-ADD kibana.yml /opt/kibana/config/kibana.yml
+COPY kibana.yml /opt/kibana/config/kibana.yml
 ADD users.htpasswd /opt/kibana/node_modules/http-auth/data/users.htpasswd
 
 EXPOSE 5601
