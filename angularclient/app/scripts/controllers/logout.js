@@ -8,8 +8,8 @@
  * Controller of the angularfireApp
  */
 angular.module('angularfireApp')
-  .controller('LogoutCtrl', ['$window', '$scope', 'fbService', '$rootScope',
-    function ($scope, $window, fbService, $rootScope) {
+  .controller('LogoutCtrl', ['$window', '$scope', 'fbService',
+    function ($scope, $window, fbService) {
       console.log('login controller');
       console.log($window.authData);
       if (typeof $window.authData !== 'undefined') {

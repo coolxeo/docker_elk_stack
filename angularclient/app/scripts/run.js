@@ -17,7 +17,7 @@ angular.module('angularfireApp')
       if (next.loginRequired && typeof $rootScope.authData === 'undefined') {
         event.preventDefault();
         console.log('interceptor redirected to authwithpassword');
-        $location.path("/authwithpassword");
+        $location.path('/authwithpassword');
       } else if (typeof $rootScope.authData !== 'undefined') {
         console.log('user logged ' + $rootScope.authData.password.email);
       } else {

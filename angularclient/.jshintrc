@@ -17,5 +17,16 @@
   "strict": true,
   "trailing": true,
   "smarttabs": true,
-  "jquery": true
+  "jquery": true,
+  "predef": [
+    "angular",
+    "Firebase",
+    "_",
+    "esFactory",
+    "describe",
+    "beforeEach",
+    "inject",
+    "expect",
+    "it"
+  ]
 }

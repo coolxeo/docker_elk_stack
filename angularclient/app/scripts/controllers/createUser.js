@@ -8,7 +8,7 @@
  * Controller of the angularfireApp
  */
 angular.module('angularfireApp')
-  .controller("CreateUserCtrl", ['$scope', '$rootScope', 'ngNotify', 'fbService',
+  .controller('CreateUserCtrl', ['$scope', '$rootScope', 'ngNotify', 'fbService',
     function ($scope, $rootScope, ngNotify, fbService) {
       $scope.createUser = function (isValid) {
         if (isValid) {

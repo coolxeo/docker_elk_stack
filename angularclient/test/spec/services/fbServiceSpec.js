@@ -2,7 +2,7 @@
 describe('fbService', function () {
 
   var fbService;
-  beforeEach(module("angularfireApp"));
+  beforeEach(module('angularfireApp'));
   beforeEach(inject(function (_fbService_) {
     fbService = _fbService_;
   }));
