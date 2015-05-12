@@ -9,12 +9,16 @@ module.exports = function (targets, esClient, rssOpts, esBulkAction, mapper, nex
             defaultMapper = function (rss) {
                 return rss;
             };
-
+        _.filter(targets, function (n) {
+            return (n !== null && n !== '');
+        });
         targets.forEach(function (target) {
-            var feeds = [], feedParser = new FeedParser(), targetId=Object.keys(target)[0];
+            var feeds = [], feedParser = new FeedParser(), targetId = Object.keys(target)[0];
 
             asyncTasks.push(function (callback) {
-                var defaultErrorHandler = function (error) {callback(error, null);};
+                var defaultErrorHandler = function (error) {
+                    callback(error, null);
+                };
                 req = rq(target[targetId]);
                 req.on('error', defaultErrorHandler);
                 feedParser.on('error', defaultErrorHandler);
@@ -28,8 +32,8 @@ module.exports = function (targets, esClient, rssOpts, esBulkAction, mapper, nex
                 feedParser.on('readable', function () {
                     var feed;
                     while (feed = this.read()) {
-                        feed.index=targetId;
-                        feeds.push(_.map([feed], _.isFunction(mapper)?mapper:defaultMapper)[0]);
+                        feed.index = targetId;
+                        feeds.push(_.map([feed], _.isFunction(mapper) ? mapper : defaultMapper)[0]);
                     }
                 });
                 feedParser.on('end', function () {
@@ -40,17 +44,22 @@ module.exports = function (targets, esClient, rssOpts, esBulkAction, mapper, nex
         });
 
         async.parallel(asyncTasks, function (err, feeds) {
-            if (err) {
-                throw err;
+            try {
+                if (err) {
+                    throw err;
+                }
+                _.flatten(feeds).forEach(function (feed) {
+                    var esBulkAct = esBulkAction(feed, rssOpts);
+                    esCommands.push(esBulkAct);
+                    esCommands.push(Object.keys(esBulkAct)[0] === 'update' ? {doc: feed} : feed);
+                });
+                esClient.bulk({body: esCommands}, function (err, resp) {
+                    next(err, resp);
+                });
+            } catch (e) {
+                console.log(e);
+                next(e, feeds);
             }
-            _.flatten(feeds).forEach(function (feed) {
-                var esBulkAct = esBulkAction(feed, rssOpts);
-                esCommands.push(esBulkAct);
-                esCommands.push(Object.keys(esBulkAct)[0]==='update'?{doc: feed}:feed);
-            });
-            esClient.bulk({body: esCommands}, function (err, resp) {
-                next(err, resp);
-            });
         });
     } catch (e) {
         throw e;

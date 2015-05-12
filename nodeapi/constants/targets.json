@@ -1,8 +1,6 @@
 [
   {"nasdaq": "http://articlefeeds.nasdaq.com/nasdaq/categories?category=News"},
-  {"bloomberg": "http://www.bloomberg.com/feed/podcast/bloomberg-brief.xml"},
   {"forexcrunch": "http://feeds.feedburner.com/ForexCrunch"},
   {"yahoocommodities": "https://uk.finance.yahoo.com/news/category-commodities/?format=rss"},
-  {"yahootopstories": "https://uk.finance.yahoo.com/news/topic-top-stories/?format=rss"},
-  {"yahooearnings": "https://uk.finance.yahoo.com/news/category-earnings/?format=rss"}
+  {"yahootopstories": "https://uk.finance.yahoo.com/news/topic-top-stories/?format=rss"}
 ]

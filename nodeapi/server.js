@@ -11,7 +11,7 @@ var esLoadHandler = require('./handlers/esLoadHandler.js');
 var elasticSearch = require('elasticsearch');
 var targets = require('./constants/targets.json');
 
-//elastic search client min, we use the docker ip in our host 'boot2docker ip' or 'ifconfig'
+//elastic search client minimum config , we use the docker ip in our host 'boot2docker ip for windows' or 'ifconfig for linux'
 var esClient = new elasticSearch.Client({
     host: '172.17.42.1:9200',
     log: 'error'
@@ -26,8 +26,8 @@ var rssOptions = {
 var esBulkAction=function(feed,rssOptions){
     return {index: {_index: feed.index, _type: rssOptions.type, _id:feed.title}};
 };
-//with this you can select the fields of the rss source feed you want to persist in EL,
-// if you pass null it will get all the fields by default
+//with this function you can select the fields of the rss source feed you want to persist in EL,
+// if you pass null it will get all the fields of the rss source by default
 var mapper = function (rss) {
     return {
         index: rss.index,
@@ -63,7 +63,7 @@ router.get('/', function(req, res) {
 // charge rss from targets.json in docker elastic search
 router.get('/rssload', function(req, res) {
     esLoadHandler(targets, esClient, rssOptions, esBulkAction, mapper, function (error, feeds) {
-        res.json(error||feeds);
+        res.json(error.message || feeds);
     });
 });
 
@@ -71,7 +71,7 @@ router.get('/rssload', function(req, res) {
 
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
-app.use('/', router);
+app.use('/api', router);
 
 // START THE SERVER
 // =============================================================================
