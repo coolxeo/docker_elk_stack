@@ -1,3 +1,4 @@
+{<img src="https://codeclimate.com/github/sloppylopez/docker_elk_stack/badges/gpa.svg" />}[https://codeclimate.com/github/sloppylopez/docker_elk_stack]
 ## Angular + Nodejs + ELK + Docker + Docker-Compose + RSS
 Front-End Angular, Back-End Nodejs, Docker running 3 servers with ELK stack orchestrated with Docker-compose
 
