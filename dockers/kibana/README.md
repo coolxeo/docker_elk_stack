@@ -14,8 +14,6 @@
     docker ps  -> list containers
     docker run -d  -> run in detached mode
     docker build .  -> build docker image
-    docker ps  -> list containers
-    docker ps  -> list containers
 
 ##Build
     $ docker run -t -i <YOUR_NAME_IMAGE> /sbin/my_init -- bash -l
