@@ -1,7 +1,7 @@
 var FeedParser = require('feedparser'),
     rq = require('request'),
     async = require("async"),
-    _ = require('lodash')
+    _ = require('lodash');
 
 module.exports = function (targets, esClient, rssOpts, esBulkAction, mapper, next) {
     try {
@@ -49,9 +49,9 @@ module.exports = function (targets, esClient, rssOpts, esBulkAction, mapper, nex
                     throw err;
                 }
                 _.flatten(feeds).forEach(function (feed) {
-                    var esBulkAct = esBulkAction(feed, rssOpts);
-                    esCommands.push(esBulkAct);
-                    esCommands.push(Object.keys(esBulkAct)[0] === 'update' ? {doc: feed} : feed);
+                    var esba = esBulkAction(feed, rssOpts);
+                    esCommands.push(esba);
+                    esCommands.push(Object.keys(esba)[0] === 'update' ? {doc: feed} : feed);
                 });
                 esClient.bulk({body: esCommands}, function (err, resp) {
                     next(err, resp);
