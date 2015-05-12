@@ -1,16 +1,29 @@
 'use strict';
 
-app
+angular.module('angularfireApp')
   .factory('firebaseFactory', function () {
     return {
       getFireBaseRef: function (fireBaseUser, params) {
-        return new Firebase(('https://' + fireBaseUser + '.firebaseio.com' + (params ? params : ' ')).trim())
+        return new Firebase(('https://' + fireBaseUser + '.firebaseio.com' + (params ? params : ' ')).trim());
       }
     };
   }
 );
 
-app
+angular.module('angularfireApp')
+  .factory('ngNotifyFactory', ['ngNotify', function (ngNotify) {
+    return {
+      getConfiguredNotify: function (ip, port) {
+        return esFactory({
+          host: 'http://' + ip + ':' + port,//http://dockerIp:elasticSearchPort to access elastic search 172.17.42.1:9200
+          log: 'error'
+        });
+      }
+    };
+  }]
+);
+
+angular.module('angularfireApp')
   .factory('esClientFactory', ['esFactory', function (esFactory) {
     return {
       getElasticSearchRef: function (ip, port) {
@@ -24,7 +37,7 @@ app
 );
 
 //THIS IS NOT USED YET, i will use it for the chat service
-app
+angular.module('angularfireApp')
   .factory('firebaseItemsFactory', ['$firebaseObject', 'firebaseFactory', 'FB_USER',
     function ($firebaseObject, firebaseFactory, FB_USER) {
       return {

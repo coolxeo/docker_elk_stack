@@ -1,8 +1,10 @@
 'use strict';
-app
+angular.module('angularfireApp')
   .service('fbService', ['firebaseFactory', 'ngNotify', '$location', 'FB_USER',
     function (firebaseFactory, ngNotify, $location, FB_USER) {
       var ref = firebaseFactory.getFireBaseRef(FB_USER);
+      ngNotify.config({theme: 'pitchy', position: 'bottom', duration: 3000, type: 'info', sticky: false});
+
       var _redirect = function ($location, redirectTo) {
         if (typeof redirectTo != 'undefined') {
           console.log('redirecting to ' + redirectTo);
@@ -22,7 +24,7 @@ app
             email: $scope.user.email
           }, function (error) {
             if (error) {
-              ngNotify.set('Error resetting password:' + error);
+              ngNotifyError.set('Error resetting password:' + error);
             } else {
               ngNotify.set('Password reset email sent successfully!');
               _redirect($location, redirectTo);
@@ -36,7 +38,7 @@ app
             password: $scope.user.password
           }, function (error, authData) {
             if (error) {
-              ngNotify.set('Login Failed ' + error);
+              ngNotifyError.set('Login Failed ' + error);
             } else {
               //ref.changePassword(email, $scope.user.password, authData.password.password).then(null, function(error) {
               //  console.log(error);
@@ -57,7 +59,7 @@ app
             password: this._randomizer()
           }, function (error) {
             if (error) {
-              ngNotify.set(error);
+              ngNotifyError.set(error);
             } else {//we reset in case of success to force the firebase email account verification mechanism
               that.resetPassword($scope);//for being able to reference 'this' here, we need to pass it in a variable called 'that' because 'this' is null when executing the callback
             }

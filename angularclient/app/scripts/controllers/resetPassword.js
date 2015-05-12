@@ -7,7 +7,7 @@
  * # ResetPasswordCtrl
  * Controller of the angularfireApp
  */
-app
+angular.module('angularfireApp')
   .controller('ResetPasswordCtrl', ['$scope', '$rootScope', 'fbService', 'ngNotify',
     function ($scope, $rootScope, fbService, ngNotify) {
       delete $rootScope.authData;//TODO check what is wrong here

@@ -7,7 +7,7 @@
  * # LogoutCtrl
  * Controller of the angularfireApp
  */
-app
+angular.module('angularfireApp')
   .controller('LogoutCtrl', ['$window', '$scope', 'fbService', '$rootScope',
     function ($scope, $window, fbService, $rootScope) {
       console.log('login controller');
