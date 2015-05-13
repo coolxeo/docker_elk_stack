@@ -8,12 +8,11 @@
  * Controller of the angularfireApp
  */
 angular.module('angularfireApp')
-  .controller('ResetPasswordCtrl', ['$scope', '$rootScope', 'fbService', 'ngNotify',
-    function ($scope, $rootScope, fbService, ngNotify) {
-      delete $rootScope.authData;//TODO check what is wrong here
+  .controller('ResetPasswordCtrl', ['$scope', '$rootScope', 'firebaseServiceFactory', 'ngNotify',
+    function ($scope, $rootScope, firebaseServiceFactory, ngNotify) {
       $scope.resetPassword = function (isValid) {
         if (isValid) {
-          fbService.resetPassword($scope, $rootScope, '/login');
+          fbServiceFactory.resetPassword($scope, $rootScope, '/login');
         } else {
           ngNotify.set('There are still invalid fields below');
         }

@@ -8,11 +8,11 @@
  * Controller of the angularfireApp
  */
 angular.module('angularfireApp')
-  .controller('CreateUserCtrl', ['$scope', '$rootScope', 'ngNotify', 'fbService',
-    function ($scope, $rootScope, ngNotify, fbService) {
+  .controller('CreateUserCtrl', ['$scope', '$rootScope', 'ngNotify', 'firebaseServiceFactory',
+    function ($scope, $rootScope, ngNotify, firebaseServiceFactory) {
       $scope.createUser = function (isValid) {
         if (isValid) {
-          fbService.createUser($scope, $rootScope);
+          firebaseServiceFactory.createUser($scope, $rootScope);
         } else {
           ngNotify.set('There are still invalid fields below');
         }
