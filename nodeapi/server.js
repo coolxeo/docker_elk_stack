@@ -63,7 +63,7 @@ router.get('/', function(req, res) {
 // charge rss from targets.json in docker elastic search
 router.get('/rssload', function(req, res) {
     esLoadHandler(targets, esClient, rssOptions, esBulkAction, mapper, function (error, feeds) {
-        res.json(error.message || feeds);
+        res.json(error ? error.message : undefined || feeds);
     });
 });
 
