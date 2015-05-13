@@ -1,3 +1,4 @@
+'use strict';
 //app
 //  .factory('ngNotifyFactory', ['ngNotify', function (ngNotify) {
 //    return {

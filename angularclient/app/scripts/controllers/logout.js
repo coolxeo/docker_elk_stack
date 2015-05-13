@@ -12,7 +12,7 @@ app
     function ($scope, $window, firebaseServiceFactory) {
       console.log('logout controller');
       if (typeof $window.authData !== 'undefined') {
-        fbServiceFactory.logout($scope, '/');
+        firebaseServiceFactory.logout($scope, '/');
       }
     }]
 );
