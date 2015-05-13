@@ -1,6 +1,6 @@
 'use strict';
-angular.module('angularfireApp')
-  .service('fbService', ['firebaseFactory', 'ngNotify', '$location', 'FB_USER',
+app
+  .factory('firebaseServiceFactory', ['firebaseFactory', 'ngNotify', '$location', 'FB_USER',
     function (firebaseFactory, ngNotify, $location, FB_USER) {
       var ref = firebaseFactory.getFireBaseRef(FB_USER);
       ngNotify.config({theme: 'pitchy', position: 'bottom', duration: 3000, type: 'info', sticky: false});

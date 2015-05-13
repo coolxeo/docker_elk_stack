@@ -7,7 +7,7 @@
  * # ResetPasswordCtrl
  * Controller of the angularfireApp
  */
-angular.module('angularfireApp')
+app
   .controller('ResetPasswordCtrl', ['$scope', '$rootScope', 'firebaseServiceFactory', 'ngNotify',
     function ($scope, $rootScope, firebaseServiceFactory, ngNotify) {
       $scope.resetPassword = function (isValid) {

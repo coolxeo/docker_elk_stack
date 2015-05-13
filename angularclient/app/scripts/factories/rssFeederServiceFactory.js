@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularfireApp')
+app
   .service('rssFeederService', ['esClientFactory', '$q', 'ES_IP', 'ES_PORT', 'ngNotify',
     function (esClientFactory, $q, ES_IP, ES_PORT, ngNotify) {
       return {

@@ -1,10 +1,10 @@
 'use strict';
-describe('fbService', function () {
+describe('firebaseServiceFactory', function () {
 
-  var fbService;
+  var firebaseServiceFactory;
   beforeEach(module('angularfireApp'));
-  beforeEach(inject(function (_fbService_) {
-    fbService = _fbService_;
+  beforeEach(inject(function (_firebaseServiceFactory_) {
+    firebaseServiceFactory = _firebaseServiceFactory_;
   }));
 
   //beforeEach(module(function ($provide) {
@@ -16,5 +16,5 @@ describe('fbService', function () {
     it('assigns a name', function () {
       expect(true).toBe(true);
     });
-    });
   });
+});

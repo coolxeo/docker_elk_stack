@@ -5,10 +5,10 @@
  * @description
  * # routes.js
  */
-angular.module('angularfireApp')
+app
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
-      .when('/rssfeeder', {
+      .when('/', {
         templateUrl: 'views/rssFeeder.html',
         controller: 'RssFeederCtrl',
         loginRequired: true
@@ -39,5 +39,5 @@ angular.module('angularfireApp')
         controller: 'AboutCtrl',
         loginRequired: true
       })
-      .otherwise({redirectTo: '/rssfeeder'});
+      .otherwise({redirectTo: '/'});
   }]);
