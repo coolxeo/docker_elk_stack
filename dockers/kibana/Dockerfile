@@ -8,7 +8,10 @@
 # for a list of version numbers.
 # using latest version 0.9.16
 FROM phusion/baseimage:0.9.16
+#FROM ubuntu:14.04
 MAINTAINER Sloppy Lopez <slopez@estudioweb130.com>
+
+ENV KIBANA_VERSION=4.0.2
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
@@ -26,8 +29,8 @@ RUN apt-get install -y oracle-java8-installer
 
 # Kibana
 RUN mkdir -p /opt/kibana
-RUN wget https://download.elasticsearch.org/kibana/kibana/kibana-4.0.2-linux-x64.tar.gz -O /tmp/kibana.tar.gz && \
- tar zxf /tmp/kibana.tar.gz && mv kibana-4.0.2-linux-x64/* /opt/kibana/
+RUN wget https://download.elasticsearch.org/kibana/kibana/kibana-$KIBANA_VERSION-linux-x64.tar.gz -O /tmp/kibana.tar.gz && \
+ tar zxf /tmp/kibana.tar.gz && mv kibana-$KIBANA_VERSION-linux-x64/* /opt/kibana/
 
 # Configs
 COPY kibana.yml /opt/kibana/config/kibana.yml

@@ -9,7 +9,7 @@
 # using latest version 0.9.16
 
 FROM phusion/baseimage:0.9.16
-ENV DEBIAN_FRONTEND noninteractive
+#FROM ubuntu:14.04
 ENV LOGSTASH_VER 1.5.0.rc2
 WORKDIR /opt
 MAINTAINER Sloppy Lopez <slopez@estudioweb130.com>
@@ -47,9 +47,10 @@ EXPOSE 4545
 # log-courier port
 EXPOSE 4546
 
+# Clean up APT when done.
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
 CMD /opt/logstash/bin/logstash -f /etc/logstash/server.conf
 
 # ...put your own build instructions here...
 
-# Clean up APT when done.
-RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

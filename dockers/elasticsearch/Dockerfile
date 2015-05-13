@@ -8,6 +8,7 @@
 # for a list of version numbers.
 # using latest version 0.9.16
 FROM phusion/baseimage:0.9.16
+#FROM ubuntu:14.04
 MAINTAINER Sloppy Lopez <slopez@estudioweb130.com>
 
 # Use baseimage-docker's init system.

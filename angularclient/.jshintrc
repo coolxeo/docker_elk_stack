@@ -27,6 +27,7 @@
     "beforeEach",
     "inject",
     "expect",
-    "it"
+    "it",
+    "app"
   ]
 }
