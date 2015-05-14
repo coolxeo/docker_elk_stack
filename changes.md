@@ -1,3 +1,9 @@
+## 0.0.1
+
+    BUGS FIXED:
+        * Wrong redirection after authWithPassword
+        * Spinner was not fitting perfectly again...
+
 ## 0.0.1-alpha
 
     BUGS FIXED:
