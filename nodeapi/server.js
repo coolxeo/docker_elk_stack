@@ -1,5 +1,5 @@
 // server.js
-
+'use strict';
 // BASE SETUP
 // =============================================================================
 
@@ -13,7 +13,7 @@ var targets = require('./constants/targets.json');
 
 //elastic search client minimum config , we use the docker ip in our host 'boot2docker ip for windows' or 'ifconfig for linux'
 var esClient = new elasticSearch.Client({
-    host: '172.17.42.1:9200',
+    host: '<YOUR_DOCKER_IP>:<YOUR_DOCKER_EL_PORT>',
     log: 'error'
 });
 //elastic search client min config
