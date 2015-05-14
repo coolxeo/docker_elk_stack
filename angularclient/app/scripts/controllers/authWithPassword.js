@@ -14,7 +14,7 @@ app
       $scope.authWithPassword = function (isValid) {
         if (isValid) {
           $scope.showme = true;
-          firebaseServiceFactory.authWithPassword($scope, $rootScope, '/', redirectService);
+          firebaseServiceFactory.authWithPassword($scope, $rootScope, '/');
         } else {
           ngNotify.set('There are still invalid fields below');
         }
