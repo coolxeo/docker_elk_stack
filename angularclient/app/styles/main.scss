@@ -100,11 +100,13 @@ $yspace: $h/4 - 1;
 $speed: 1.5s;
 
 .tetrominos {
-  position: absolute;
-  top: 27%;
-  left: 50%;
-
-  transform: translate(-$h, -$w);
+  position: relative;
+  left: 0;
+  top: 0;
+  transform: none;
+  height: 165px;
+  width: 240px;
+  margin: 0px auto;
 }
 
 .tetromino {
