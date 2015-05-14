@@ -7,7 +7,7 @@
  * # LogoutCtrl
  * Controller of the angularfireApp
  */
-app
+angular.module('angularfireApp')
   .controller('LogoutCtrl', ['$window', '$scope', 'firebaseServiceFactory',
     function ($scope, $window, firebaseServiceFactory) {
       console.log('logout controller');

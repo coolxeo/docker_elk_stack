@@ -1,5 +1,5 @@
 'use strict';
-//app
+//angular.module('angularfireApp')
 //  .factory('ngNotifyFactory', ['ngNotify', function (ngNotify) {
 //    return {
 //      getConfiguredNotify: function (ip, port) {
@@ -13,7 +13,7 @@
 //);
 
 //THIS IS NOT USED YET, i will use it for the chat service
-app
+angular.module('angularfireApp')
   .factory('firebaseItemsFactory', ['$firebaseObject', 'firebaseFactory', 'FB_USER',
     function ($firebaseObject, firebaseFactory, FB_USER) {
       return {

@@ -1,6 +1,6 @@
 'use strict';
 
-app
+angular.module('angularfireApp')
   .directive('fadeIn', function () {
     return {
       compile: function (elm) {

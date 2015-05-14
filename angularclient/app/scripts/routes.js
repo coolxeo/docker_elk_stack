@@ -5,7 +5,7 @@
  * @description
  * # routes.js
  */
-app
+angular.module('angularfireApp')
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {

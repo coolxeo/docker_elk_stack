@@ -1,5 +1,5 @@
 'use strict';
-app
+angular.module('angularfireApp')
   .factory('firebaseServiceFactory', ['firebaseFactory', 'ngNotify', '$location', 'FB_USER',
     function (firebaseFactory, ngNotify, $location, FB_USER) {
       var ref = firebaseFactory.getFireBaseRef(FB_USER);

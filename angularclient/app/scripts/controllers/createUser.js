@@ -7,7 +7,7 @@
  * # CreateUserCtrl
  * Controller of the angularfireApp
  */
-app
+angular.module('angularfireApp')
   .controller('CreateUserCtrl', ['$scope', '$rootScope', 'ngNotify', 'firebaseServiceFactory',
     function ($scope, $rootScope, ngNotify, firebaseServiceFactory) {
       $scope.createUser = function (isValid) {

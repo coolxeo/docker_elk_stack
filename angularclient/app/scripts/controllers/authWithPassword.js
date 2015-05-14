@@ -7,7 +7,7 @@
  * # AuthWithPasswordCtrl
  * Controller of the angularfireApp
  */
-app
+angular.module('angularfireApp')
   .controller('AuthWithPasswordCtrl', ['$scope', '$rootScope', 'firebaseServiceFactory', 'ngNotify',
     function ($scope, $rootScope, firebaseServiceFactory, ngNotify) {
       //delete $rootScope.authData;

@@ -5,7 +5,7 @@
  * @description
  * # run.js
  */
-app
+angular.module('angularfireApp')
   .run(['$rootScope', '$location', function ($rootScope, $location) {
     $rootScope.$on('$routeChangeStart', function (event, next) {
       console.log('interceptor executing...');

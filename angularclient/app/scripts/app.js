@@ -8,7 +8,6 @@
  *
  * Main module of the application.
  */
-var app =
 angular.module('angularfireApp', [
   'ngAnimate',
   'ngCookies',

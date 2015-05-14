@@ -1,6 +1,6 @@
 'use strict';
 //not used yet, i will use it to take common factor of put the redirection in the controller instead of in the service
-app
+angular.module('angularfireApp')
   .service('redirectService', [function () {
     this.redirectTo = function ($location, redirectTo) {
       if (typeof redirectTo !== 'undefined') {

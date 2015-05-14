@@ -1,6 +1,6 @@
 'use strict';
 
-app
+angular.module('angularfireApp')
   .factory('firebaseFactory', function () {
     return {
       getFireBaseRef: function (fireBaseUser, params) {

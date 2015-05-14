@@ -1,6 +1,6 @@
 'use strict';
 
-app
+angular.module('angularfireApp')
   .factory('esClientFactory', ['esFactory', function (esFactory) {
     return {
       getElasticSearchRef: function (ip, port) {
