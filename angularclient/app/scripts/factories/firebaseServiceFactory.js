@@ -3,7 +3,7 @@ angular.module('angularfireApp')
   .factory('firebaseServiceFactory', ['firebaseFactory', 'ngNotify', '$location', 'FB_USER',
     function (firebaseFactory, ngNotify, $location, FB_USER) {
       var ref = firebaseFactory.getFireBaseRef(FB_USER);
-      ngNotify.config({theme: 'pitchy', position: 'bottom', duration: 3000, type: 'info', sticky: false});
+      ngNotify.config({theme: 'pure', position: 'bottom', duration: 3000, type: 'error', sticky: false});
 
       var _redirect = function ($location, redirectTo) {
         if (typeof redirectTo !== 'undefined') {
