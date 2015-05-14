@@ -46,6 +46,7 @@ app
               ngNotify.set('Authenticated successfully ' + authData.password.email);
               $rootScope.authData = authData;
             }
+            $scope.showme = false;
             _redirect($location, redirectTo);
           }, {
             remember: 'sessionOnly'
