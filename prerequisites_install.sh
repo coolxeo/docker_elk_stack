@@ -33,4 +33,5 @@ echo java -version
 echo docker -version
 echo npm -version
 echo node -v
+echo git -version
 
