@@ -10,7 +10,7 @@
 ##Deploy in prod
   grunt build
   
-  firebase deploy
+  firebase deploy(you need to do 'firebase init' and put your credentials if it's your first deploy)
   
 ##Run the dist version (this is running the project like it is in production for debugging purposes)
   from angularclient folder...
