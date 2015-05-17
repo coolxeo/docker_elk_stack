@@ -30,7 +30,7 @@ PULL AND PLAY!!!!
 
 I will keep updating the project often
 
-Keep it stupid!, simple.
+###Keep it stupid!, simple.
 
 ![alt tag](http://lh3.ggpht.com/ZpL4xc4OOMqiKxrLzJ3w33AOlu5ERX4ZbAsEWqSBQWeLYLF2hybEw11D5msBRLtGY1DoKYMI-A8VBx3yvwpNNUmr=s250)
 
