@@ -1,4 +1,5 @@
-<img src="https://codeclimate.com/github/sloppylopez/docker_elk_stack/badges/gpa.svg" />
+<img src="https://codeclimate.com/github/sloppylopez/docker_elk_stack/badges/gpa.svg" /> Flawless Victory, Fatality!
+
 [https://codeclimate.com/github/sloppylopez/docker_elk_stack]
 
 https://sloppylopez.firebaseapp.com/   v0.0.1-feel-like-a-sir RELEASED! ![alt tag](http://i3.kym-cdn.com/photos/images/original/000/161/140/feel-like-a-sir-template.jpg)
