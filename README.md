@@ -2,7 +2,7 @@
 
 [https://codeclimate.com/github/sloppylopez/docker_elk_stack]
 
-https://sloppylopez.firebaseapp.com/   v0.0.1-feel-like-a-sir RELEASED! ![alt tag](http://i3.kym-cdn.com/photos/images/original/000/161/140/feel-like-a-sir-template.jpg)
+https://sloppylopez.firebaseapp.com/   <a href="https://github.com/sloppylopez/docker_elk_stack/releases/tag/v0.0.1-feel-like-a-sir">v0.0.1-feel-like-a-sir</a> RELEASED! ![alt tag](http://i3.kym-cdn.com/photos/images/original/000/161/140/feel-like-a-sir-template.jpg)
 
 ## Angular + Nodejs + ELK + Docker + Docker-Compose + RSS
 Front-End Angular, Back-End Nodejs, Docker running 3 servers with ELK stack orchestrated with Docker-compose
