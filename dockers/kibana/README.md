@@ -1,21 +1,13 @@
-## docker has stopped distributing images with java pre-installed :_(
-    We use this problem to generate an opportunity, we will start using
+## To access kibana
 
-        http://phusion.github.io/baseimage-docker/#solution
-        https://github.com/phusion/baseimage-docker
-
-    Which aims to be a lightweight docker friendly minimal ubuntu image, that
-    will allow us to consume much less memory in our docker stack
-
-##Upgrade docker
-    wget -N https://get.docker.com/ | sh
-
-##Useful commands
-    docker ps  -> list containers
-    docker run -d  -> run in detached mode
-    docker build .  -> build docker image
-
-##Single Run
-    $ docker run -t -i <YOUR_NAME_IMAGE> /sbin/my_init -- bash -l
+    asumming you have the docker stack up and using using ./sh run_dockers.sh
+    you just have to open a browser in http://localhost:5601
+    
+    There is some trouble finding the logs of logstash in kibana, I didn't 
+    have time to put much attention in logstash, it works as the base article
+    used to build the docker part, however, if you put '*' when Kibana is
+    asking you for an index to start searching you will be able to find
+    the RSS persisted in Elastic Search when the nodeapi runs for the first
+    time, so you can start using Kibana.
 
 
