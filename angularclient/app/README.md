@@ -4,7 +4,7 @@
   npm
   grunt-cli
 
-##Build
+##Run angularclient
   grunt serve
   
 ##Deploy in prod
