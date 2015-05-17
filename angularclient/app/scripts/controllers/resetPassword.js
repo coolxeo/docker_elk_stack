@@ -8,11 +8,11 @@
  * Controller of the angularfireApp
  */
 angular.module('angularfireApp')
-  .controller('ResetPasswordCtrl', ['$scope', '$rootScope', 'firebaseServiceFactory', 'ngNotify',
+  .controller('ResetPasswordCtrl', ['$scope', 'firebaseServiceFactory', 'ngNotify',
     function ($scope, $rootScope, firebaseServiceFactory, ngNotify) {
       $scope.resetPassword = function (isValid) {
         if (isValid) {
-          firebaseServiceFactory.resetPassword($scope, $rootScope, '/login');
+          firebaseServiceFactory.resetPassword($scope, '/login');
         } else {
           ngNotify.set('There are still invalid fields below');
         }

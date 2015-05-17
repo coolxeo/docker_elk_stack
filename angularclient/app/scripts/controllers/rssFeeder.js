@@ -12,7 +12,7 @@ angular.module('angularfireApp')
     function ($scope, rssFeederService, ngNotify) {
       $scope.rssFeeder = function (queryTerm) {
         rssFeederService.rssFeeder(queryTerm).then(function (data) {
-          $scope.news = data;
+          $scope.news = data || {};
         }, function (e) {
           ngNotify.set(e);
         });
