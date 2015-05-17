@@ -1,6 +1,6 @@
 Base Article http://thepracticalsysadmin.com/running-elk-on-docker/
 
-## docker has stopped distributing images with java pre-installed http://www.clker.com/cliparts/f/7/d/e/1339641514467388466forever%20alone-th.png
+## docker has stopped distributing images with java pre-installed ![alt tag](http://www.clker.com/cliparts/f/7/d/e/1339641514467388466forever%20alone-th.png)
     We use this problem to generate an opportunity, we will start using
 
         http://phusion.github.io/baseimage-docker/#solution
