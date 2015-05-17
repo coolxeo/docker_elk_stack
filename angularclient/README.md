@@ -1,5 +1,5 @@
 ##Prerequisites
-  firebase account
+  firebase account (free)
   
   bower
   
