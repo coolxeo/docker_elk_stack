@@ -18,7 +18,7 @@ Base Article http://thepracticalsysadmin.com/running-elk-on-docker/
     docker build .  -> build docker image
 
 ##Single Run
-    $ docker run -t -i <YOUR_NAME_IMAGE> /sbin/my_init --bash -l
+    $ docker run -t -i <YOUR_NAME_IMAGE> /sbin/my_init -- bash -l
 
 
 ##dockers
