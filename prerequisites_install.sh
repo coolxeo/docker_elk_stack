@@ -4,6 +4,7 @@ sudo apt-get install node
 sudo apt-get install npm
 sudo apt-get install wget
 sudo apt-get install curl
+sudo apt-get install git
 
 #Docker
 wget -qO- https://get.docker.com/ | sh
