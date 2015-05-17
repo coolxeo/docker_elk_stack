@@ -18,7 +18,7 @@ angular.module('angularfireApp')
           ngNotify.set('Good bye');
           _redirect($location, redirectTo);
         },
-        resetPassword: function ($scope, $rootScope, redirectTo) {
+        resetPassword: function ($scope, redirectTo) {
           //console.log('reseting password');
           ref.resetPassword({
             email: $scope.user.email

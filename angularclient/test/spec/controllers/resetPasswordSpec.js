@@ -1,13 +1,9 @@
 'use strict';
 describe('ResetPasswordCtrl', function () {
-  var user = {}, controller, scope, $rootscope, $location, firebaseServiceFactory, $q, ngNotify;
+  var controller, scope, $rootscope, $location, firebaseServiceFactory, $q, ngNotify;
 
   beforeEach(module('angularfireApp'));
 
-  //beforeEach(module(function ($provide) {
-  //  $provide.value('user', user);
-  //  $provide.value('isValid', true);
-  //}));
   beforeEach(inject(function (_$controller_, _$rootScope_, _$location_, _firebaseServiceFactory_, _$q_, _ngNotify_) {
     scope = _$rootScope_.$new();
     $rootscope = _$rootScope_;
@@ -25,7 +21,7 @@ describe('ResetPasswordCtrl', function () {
       var deferredSuccess = $q.defer();
       spyOn(firebaseServiceFactory, 'resetPassword').and.returnValue(deferredSuccess.promise);
 
-      scope.resetPassword = scope.resetPassword(true);
+      scope.resetPassword(true);
 
       expect(firebaseServiceFactory.resetPassword).toHaveBeenCalled();
       deferredSuccess.resolve();
@@ -35,7 +31,7 @@ describe('ResetPasswordCtrl', function () {
       var deferredSuccess = $q.defer();
       spyOn(ngNotify, 'set').and.returnValue(deferredSuccess.promise);
 
-      scope.resetPassword = scope.resetPassword(false);
+      scope.resetPassword(false);
 
       expect(ngNotify.set).toHaveBeenCalled();
 
