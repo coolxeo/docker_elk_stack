@@ -3,11 +3,15 @@
 
 Next steps:
             
-           1)Finish test coverage
+           1)Fix know bug when deploy the minified code, 
+           you cannot log sometimes in firebase for some
+           voodoo reason because it does not give any error
            
-           2)Finish test e2e with protractor
+           2)Finish test coverage
            
-           3)Deploy docker back-end ,i am not quite sure how 
+           3)Finish test e2e with protractor
+           
+           4)Deploy docker back-end ,i am not quite sure how 
            much ram will need this to work, i will test calmly 
            using virtual box but this process can take time, 
            because i am going to try to deploy it for 
