@@ -30,7 +30,9 @@ PULL AND PLAY!!!!
 
 I will keep updating the project often
 
-Enjoy! ![alt tag](http://i0.kym-cdn.com/photos/images/small/000/215/726/halolz-dot-com-futurama-thelegendofzelda-shutupandtakemyrupees.jpg)
+Keep it stupid!, simple.
+
+![alt tag](http://lh3.ggpht.com/ZpL4xc4OOMqiKxrLzJ3w33AOlu5ERX4ZbAsEWqSBQWeLYLF2hybEw11D5msBRLtGY1DoKYMI-A8VBx3yvwpNNUmr=s250)
 
 ### To build:
 
