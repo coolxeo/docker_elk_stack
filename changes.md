@@ -1,5 +1,8 @@
 ## 0.0.1
 
+    KNOWN BUGS:
+        * Can't log in with mobile devices
+
     BUGS FIXED:
         * Wrong redirection after authWithPassword
         * Spinner was not fitting perfectly again...
