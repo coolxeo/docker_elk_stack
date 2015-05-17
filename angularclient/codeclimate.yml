@@ -1,0 +1,11 @@
+languages:
+  Ruby: true
+  JavaScript: true
+  PHP: true
+  Python: true
+exclude_paths:
+  - ".tmp"
+  - "bower_components"
+  - "dist"
+  - "node_modules"
+
