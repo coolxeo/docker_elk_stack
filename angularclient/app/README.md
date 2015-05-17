@@ -9,6 +9,7 @@
   
 ##Deploy in prod
   grunt build
+  
   firebase deploy
   
 ##Run the dist version (for debugging purposes)
