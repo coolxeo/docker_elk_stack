@@ -4,10 +4,10 @@ describe('ResetPasswordCtrl', function () {
 
   beforeEach(module('angularfireApp'));
 
-  beforeEach(module(function ($provide) {
-    $provide.value('user', user);
-    $provide.value('isValid', true);
-  }));
+  //beforeEach(module(function ($provide) {
+  //  $provide.value('user', user);
+  //  $provide.value('isValid', true);
+  //}));
   beforeEach(inject(function (_$controller_, _$rootScope_, _$location_, _firebaseServiceFactory_, _$q_, _ngNotify_) {
     scope = _$rootScope_.$new();
     $rootscope = _$rootScope_;
