@@ -12,7 +12,7 @@
   
   firebase deploy
   
-##Run the dist version (for debugging purposes)
+##Run the dist version (this is running the project like it is in production for debugging purposes)
   from angularclient folder...
   
   cd dist
