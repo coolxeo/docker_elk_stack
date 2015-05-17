@@ -7,16 +7,13 @@
 # https://github.com/phusion/baseimage-docker/blob/master/Changelog.md
 # for a list of version numbers.
 # using latest version 0.9.16
-
 FROM phusion/baseimage:0.9.16
 #FROM ubuntu:14.04
-ENV LOGSTASH_VER 1.5.0.rc2
-ENV DEBIAN_FRONTEND noninteractive
-WORKDIR /opt
 MAINTAINER Sloppy Lopez <slopez@estudioweb130.com>
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
+ENV DEBIAN_FRONTEND noninteractive
 
 # ...put your own build instructions here...
 # Dependencies
@@ -29,29 +26,15 @@ RUN apt-get update
 RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
 RUN apt-get install -y oracle-java8-installer
 
-# Install Logstash
-RUN wget --quiet "https://download.elasticsearch.org/logstash/logstash/logstash-$LOGSTASH_VER.tar.gz" -O "/opt/logstash-$LOGSTASH_VER.tar.gz" --no-check-certificate && \
- tar zxf logstash-$LOGSTASH_VER.tar.gz && \
- mv logstash-$LOGSTASH_VER logstash
+# Install jenkins
+RUN sudo apt-get install wget
+RUN wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+RUN sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
+RUN sudo apt-get update
+#RUN sudo apt-get install jenkins
 
-# Install plugins
-RUN /opt/logstash/bin/plugin update logstash-output-zeromq
-RUN /opt/logstash/bin/plugin install logstash-input-log-courier
-
-# Config files
-ADD server.conf /etc/logstash/server.conf
-ADD logstash-forwarder.key /etc/logstash/logstash-forwarder.key
-ADD logstash-forwarder.crt /etc/logstash/logstash-forwarder.crt
-
-# lumberjack port
-EXPOSE 4545
-# log-courier port
-EXPOSE 4546
+EXPOSE 8080
+# ...put your own build instructions here...
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-CMD /opt/logstash/bin/logstash -f /etc/logstash/server.conf
-
-# ...put your own build instructions here...
-
