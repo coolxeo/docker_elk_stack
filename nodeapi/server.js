@@ -13,7 +13,7 @@ var targets = require('./constants/targets.json');
 
 //elastic search client minimum config , we use the docker ip in our host 'boot2docker ip for windows' or 'ifconfig for linux'
 var esClient = new elasticSearch.Client({
-    host: '<YOUR_DOCKER_IP>:<YOUR_DOCKER_EL_PORT>',
+    host: '172.17.42.1:9200',
     log: 'error'
 });
 //elastic search client min config
@@ -50,13 +50,13 @@ var mapper = function (rss) {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var port = process.env.PORT || 8080;        // set our port
+var port = process.env.PORT || 8081;        // set our port
 
 // ROUTES FOR OUR API
 // =============================================================================
 var router = express.Router();              // get an instance of the express Router
 
-// test route to make sure everything is working (accessed at GET http://localhost:8080/api)
+// test route to make sure everything is working (accessed at GET http://localhost:8081/api)
 router.get('/', function(req, res) {
     res.json({message: 'hooray!'});
 });
