@@ -19,7 +19,7 @@ describe('firebaseServiceFactory Spec', function () {
     var deferredSuccess = $q.defer();
     spyOn(firebaseFactory, 'getFireBaseRef').and.returnValue(deferredSuccess.promise);
     scope.user = {email: 'dummy@email.com'};
-    firebaseServiceFactory.resetPassword(scope);
+    firebaseServiceFactory.resetPassword(scope, '/login');
     expect(firebaseFactory.getFireBaseRef).toHaveBeenCalled();
     deferredSuccess.resolve();
     scope.$digest();
