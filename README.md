@@ -50,7 +50,7 @@ Prerequisites :
     
 ###Next steps:
             
-           1)Merge with <a href="https://github.com/firebase/firereader">firereader</a> 
+           1)Merge with https://github.com/firebase/firereader
            this will eliminate all the boiler plate of managing and displaying
            nicely the feeds, because the real intention of this project is not 
            displaying rss through a Elastic Search, but to analyze those rss
