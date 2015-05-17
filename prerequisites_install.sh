@@ -1,4 +1,5 @@
 #!/bin/bash
+#Pre-requisites
 sudo apt-get install node
 sudo apt-get install npm
 sudo apt-get install wget
