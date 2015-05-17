@@ -50,16 +50,22 @@ Prerequisites :
     
 ###Next steps:
             
-           1)Fix known bug when deploy the minified code, 
+           1)Merge with <a href="https://github.com/firebase/firereader">firereader</a> 
+           this will eliminate all the boiler plate of managing and displaying
+           nicely the feeds, because the real intention of this project is not 
+           displaying rss through a Elastic Search, but to analyze those rss
+           to extract information using Spark or similar.
+           
+           2)Fix known bug when deploy the minified code, 
            you cannot log sometimes in firebase with mobile
            devices for some voodoo reason because it does 
            not give any error
            
-           2)Finish test coverage
+           3)Finish test coverage
            
-           3)Finish test e2e with protractor
+           4)Finish test e2e with protractor
            
-           4)Deploy docker back-end ,i am not quite sure how 
+           5)Deploy docker back-end ,i am not quite sure how 
            much ram will need this to work, i will test calmly 
            using virtual box but this process can take time, 
            because i am going to try to deploy it for 
