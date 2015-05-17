@@ -3,7 +3,7 @@
 
 Next steps:
             
-           1)Fix know bug when deploy the minified code, 
+           1)Fix known bug when deploy the minified code, 
            you cannot log sometimes in firebase for some
            voodoo reason because it does not give any error
            
