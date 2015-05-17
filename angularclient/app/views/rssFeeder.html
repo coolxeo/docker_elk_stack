@@ -9,14 +9,15 @@
            ng-change="rssFeeder(queryTerm)"/>
   </div>
 
-  <div class="fixrss" ng-repeat="n in news">
+  <article class="fixrss" ng-repeat="n in news">
     <div>
-      <h3><a href="{{n._source.link}}">{{n._source.title}}</a></h3>
+      <h2><a class="small-font" href="{{n._source.link}}">{{n._source.title}}</a></h2>
 
       <p>{{n._source.pubdate}}</p>
 
       <div ng-bind-html="n._source.description">
       </div>
+      <footer><p>{{n._source.author}}</footer>
     </div>
-  </div>
+  </article>
 </div>

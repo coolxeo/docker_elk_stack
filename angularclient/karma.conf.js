@@ -8,7 +8,7 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha', 'chai'],
+    frameworks: ['jasmine', 'mocha', 'chai'],
 
     // list of files / patterns to load in the browser
     files: [
@@ -51,12 +51,15 @@ module.exports = function(config) {
 
     // list of files to exclude
     exclude: [
+      '.tmp',
+      'dist',
+      'config'
     ],
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      './app/scripts/**/*.js': ['coverage']
+      './scripts/**/*.js': ['coverage']
     },
 
     // test results reporter to use

@@ -10,10 +10,12 @@
 angular.module('angularfireApp')
   .controller('LogoutCtrl', ['$window', '$scope', 'firebaseServiceFactory',
     function ($scope, $window, firebaseServiceFactory) {
-      console.log('logout controller');
-      if (typeof $window.authData !== 'undefined') {
-        firebaseServiceFactory.logout($scope, '/');
-      }
+      $scope.logout = function(){
+        //console.log('logout controller');
+        if (typeof $window.authData !== 'undefined') {
+          firebaseServiceFactory.logout($scope, '/');
+        }
+      };
     }]
 );
 

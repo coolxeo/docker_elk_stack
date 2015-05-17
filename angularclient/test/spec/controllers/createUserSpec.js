@@ -1,5 +1,5 @@
 'use strict';
-describe('authWithPasswordCtrl', function () {
+describe('CreateUserCtrl', function () {
   var user = {}, controller, scope, $rootscope, $location, firebaseServiceFactory, $q, ngNotify;
 
   beforeEach(module('angularfireApp'));
@@ -11,7 +11,7 @@ describe('authWithPasswordCtrl', function () {
   beforeEach(inject(function (_$controller_, _$rootScope_, _$location_, _firebaseServiceFactory_, _$q_, _ngNotify_) {
     scope = _$rootScope_.$new();
     $rootscope = _$rootScope_;
-    controller = _$controller_('AuthWithPasswordCtrl', {
+    controller = _$controller_('CreateUserCtrl', {
       $scope: scope
     });
     $location = _$location_;
@@ -20,14 +20,14 @@ describe('authWithPasswordCtrl', function () {
     ngNotify = _ngNotify_;
   }));
 
-  describe('authWithPassword Controller', function () {
-    it('submit should call the firebaseServiceFactory with email and password and fail to authenticate', function () {
+  describe('createUser Controller', function () {
+    it('submit should call createUser and not fail', function () {
       var deferredSuccess = $q.defer();
-      spyOn(firebaseServiceFactory, 'authWithPassword').and.returnValue(deferredSuccess.promise);
+      spyOn(firebaseServiceFactory, 'createUser').and.returnValue(deferredSuccess.promise);
 
-      scope.authWithPassword = scope.authWithPassword(true);
+      scope.createUser = scope.createUser(true);
 
-      expect(firebaseServiceFactory.authWithPassword).toHaveBeenCalled();
+      expect(firebaseServiceFactory.createUser).toHaveBeenCalled();
       deferredSuccess.resolve();
       scope.$digest();           // This makes sure that all callbacks of promises will be called
     });
@@ -35,7 +35,7 @@ describe('authWithPasswordCtrl', function () {
       var deferredSuccess = $q.defer();
       spyOn(ngNotify, 'set').and.returnValue(deferredSuccess.promise);
 
-      scope.authWithPassword = scope.authWithPassword(false);
+      scope.createUser = scope.createUser(false);
 
       expect(ngNotify.set).toHaveBeenCalled();
 
