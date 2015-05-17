@@ -1,6 +1,8 @@
 <img src="https://codeclimate.com/github/sloppylopez/docker_elk_stack/badges/gpa.svg" />
 [https://codeclimate.com/github/sloppylopez/docker_elk_stack]
 
+![alt tag](http://www.clker.com/cliparts/f/7/d/e/1339641514467388466forever%20alone-th.png)
+
 Next steps:
             
            1)Fix known bug when deploy the minified code, 
