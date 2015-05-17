@@ -1,8 +1,6 @@
 <img src="https://codeclimate.com/github/sloppylopez/docker_elk_stack/badges/gpa.svg" />
 [https://codeclimate.com/github/sloppylopez/docker_elk_stack]
 
-![alt tag](http://www.clker.com/cliparts/f/7/d/e/1339641514467388466forever%20alone-th.png)
-
 Next steps:
             
            1)Fix known bug when deploy the minified code, 
@@ -21,7 +19,7 @@ Next steps:
            free, not sure if this can de done easily, or if will 
            have to give up and pay :_(
 
-https://sloppylopez.firebaseapp.com/   v0.0.1 RELEASED! :_)
+https://sloppylopez.firebaseapp.com/   v0.0.1 RELEASED! ![alt tag](http://www.clker.com/cliparts/f/7/d/e/1339641514467388466forever%20alone-th.png)
 
 ## Angular + Nodejs + ELK + Docker + Docker-Compose + RSS
 Front-End Angular, Back-End Nodejs, Docker running 3 servers with ELK stack orchestrated with Docker-compose
