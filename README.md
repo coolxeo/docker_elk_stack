@@ -2,6 +2,7 @@
 [https://codeclimate.com/github/sloppylopez/docker_elk_stack]
 
 Next steps:
+            
            1)Finish test coverage
            
            2)Finish test e2e with protractor
