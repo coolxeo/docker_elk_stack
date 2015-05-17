@@ -1,24 +1,6 @@
 <img src="https://codeclimate.com/github/sloppylopez/docker_elk_stack/badges/gpa.svg" />
 [https://codeclimate.com/github/sloppylopez/docker_elk_stack]
 
-Next steps:
-            
-           1)Fix known bug when deploy the minified code, 
-           you cannot log sometimes in firebase with mobile
-           devices for some voodoo reason because it does 
-           not give any error
-           
-           2)Finish test coverage
-           
-           3)Finish test e2e with protractor
-           
-           4)Deploy docker back-end ,i am not quite sure how 
-           much ram will need this to work, i will test calmly 
-           using virtual box but this process can take time, 
-           because i am going to try to deploy it for 
-           free, not sure if this can de done easily, or if will 
-           have to give up and pay :_(
-
 https://sloppylopez.firebaseapp.com/   v0.0.1-feel-like-a-sir RELEASED! ![alt tag](http://i3.kym-cdn.com/photos/images/original/000/161/140/feel-like-a-sir-template.jpg)
 
 ## Angular + Nodejs + ELK + Docker + Docker-Compose + RSS
@@ -63,6 +45,24 @@ Prerequisites :
     * Git
     * Docker
     * Docker-compose
+    
+Next steps:
+            
+           1)Fix known bug when deploy the minified code, 
+           you cannot log sometimes in firebase with mobile
+           devices for some voodoo reason because it does 
+           not give any error
+           
+           2)Finish test coverage
+           
+           3)Finish test e2e with protractor
+           
+           4)Deploy docker back-end ,i am not quite sure how 
+           much ram will need this to work, i will test calmly 
+           using virtual box but this process can take time, 
+           because i am going to try to deploy it for 
+           free, not sure if this can de done easily, or if will 
+           have to give up and pay :_(
 
 
 
