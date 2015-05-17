@@ -46,7 +46,7 @@ Prerequisites :
     * Docker
     * Docker-compose
     
-Next steps:
+###Next steps:
             
            1)Fix known bug when deploy the minified code, 
            you cannot log sometimes in firebase with mobile
