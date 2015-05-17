@@ -2,8 +2,10 @@
 [https://codeclimate.com/github/sloppylopez/docker_elk_stack]
 
 Next steps:1)Finish test coverage
+
            2)Finish test e2e with protractor
-           3)Deploy docker back-end (i am not quite sure how much ram will need this to work, i will test calmly using virtual box but this process can take time, because i am going to try to deploy it for free, not sure if this can de done easily)
+           
+           3)Deploy docker back-end (i am not quite sure how much ram will need this to work, i will test calmly using virtual box but this process can take time, because i am going to try to deploy it for free, not sure if this can de done easily, or if iwll have to give up and pay :_( )
 
 https://sloppylopez.firebaseapp.com/   v0.0.1 RELEASED! :_)
 
