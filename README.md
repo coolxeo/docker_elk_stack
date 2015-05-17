@@ -30,16 +30,7 @@ PULL AND PLAY!!!!
 
 I will keep updating the project often
 
-Enjoy!
-
-
-  __                                                    
- /    /                          /                      
-(___ (  ___  ___  ___           (     ___  ___  ___  ___
-    )| |   )|   )|   )\   )     |   )|   )|   )|___) __/
- __/ | |__/ |__/ |__/  \_/      |__/ |__/ |__/ |__  /__ 
-            |    |      /                 |             
-
+Enjoy! ![alt tag](http://i0.kym-cdn.com/photos/images/small/000/215/726/halolz-dot-com-futurama-thelegendofzelda-shutupandtakemyrupees.jpg)
 
 ### To build:
 
