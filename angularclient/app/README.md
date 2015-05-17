@@ -14,4 +14,5 @@
   
 ##Run the dist version (for debugging purposes)
   cd dist
+  
   python -m SimpleHTTPServer
