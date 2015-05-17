@@ -13,6 +13,8 @@
   firebase deploy
   
 ##Run the dist version (for debugging purposes)
+  from angularclient folder...
+  
   cd dist
   
   python -m SimpleHTTPServer
