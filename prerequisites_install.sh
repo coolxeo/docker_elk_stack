@@ -23,6 +23,8 @@ sudo npm install -g codeclimate-test-reporter
 sudo npm install -g grunt grunt-cli
 #Bower
 sudo npm install -g bower
+#Firebase Tools
+sudo npm install -g firebase-tools
 
 # Add a repo where JDK can be found.
 sudo apt-get install -y software-properties-common
