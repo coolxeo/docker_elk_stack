@@ -47,30 +47,46 @@ Prerequisites :
     * Git
     * Docker
     * Docker-compose
+
+### To build:FROM 0 INSTALL
+    1) sudo sh prerequisites_install.sh
+    2) sudo sh ./dockers/run_dockers.sh
+    3) cd angularclient
+    4) npm install;bower install
+    5) grunt serve
+    6) http://localhost:9000/#/
+    *NOTES:
+        1) removes the boiler plate of the dependencies
+        (still room for improvement but working perfect in 14.04)
+        2) builds and runs the backend (ELK Stack)
+        3)4)5)6) it's for running the client, to visualize the data
+        that came from nodeapi to elasticsearch, and from 'el' to
+        angular, if you see this instalation it's complete correctly
+
     
 ###Next steps:
             
-           1)Merge with https://github.com/firebase/firereader
-           this will eliminate all the boiler plate of managing and displaying
-           nicely the feeds, because the real intention of this project is not 
-           displaying rss through a Elastic Search, but to analyze those rss
-           to extract information using Spark or similar.
+    1)Merge with https://github.com/firebase/firereader
+    this will eliminate all the boiler plate of managing and displaying
+    nicely the feeds, because the real intention of this project is not
+    displaying rss through a Elastic Search, but to analyze those rss
+    to extract information using Spark or similar.
+
+    2)Fix known bug when deploy the minified code,
+    you cannot log sometimes in firebase with mobile
+    devices for some voodoo reason because it does
+    not give any error
+
+    3)Finish test coverage
            
-           2)Fix known bug when deploy the minified code, 
-           you cannot log sometimes in firebase with mobile
-           devices for some voodoo reason because it does 
-           not give any error
-           
-           3)Finish test coverage
-           
-           4)Finish test e2e with protractor
-           
-           5)Deploy docker back-end ,i am not quite sure how 
-           much ram will need this to work, i will test calmly 
-           using virtual box but this process can take time, 
-           because i am going to try to deploy it for 
-           free, not sure if this can de done easily, or if will 
-           have to give up and pay :_(
+    4)Finish test e2e with protractor
+
+    5)Deploy docker back-end ,i am not quite sure how
+    much ram will need this to work, i will test calmly
+    using virtual box but this process can take time,
+    because i am going to try to deploy it for
+    free, not sure if this can de done easily, or if will
+    have to give up and pay :_(
 
 
 
