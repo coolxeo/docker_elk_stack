@@ -19,9 +19,10 @@ chmod +x /usr/local/bin/docker-compose
 
 #Code Climate coverage
 sudo npm install -g codeclimate-test-reporter
-
 #Grunt
 sudo npm install -g grunt grunt-cli
+#Bower
+sudo npm install -g bower
 
 # Add a repo where JDK can be found.
 sudo apt-get install -y software-properties-common

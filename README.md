@@ -55,15 +55,20 @@ Prerequisites :
     4) sudo npm install;bower install
     5) firebase init
     6) grunt serve
-    7) http://localhost:9000/#/
     *NOTES:
         1) removes the boiler plate of the dependencies
         (still room for improvement but working perfect in 14.04)
         2) builds and runs the backend (ELK Stack)
         3) initialize firebase (only once)
-        4)5)6)7) it's for running the client, to visualize the data
+        4)5)6) it's for running the client, to visualize the data
         that came from nodeapi to elasticsearch, and from 'el' to
         angular, if you see this instalation it's complete correctly
+
+
+###After install:
+        1) http://localhost:9000/#/    angularclient
+        1) http://localhost:5601/      kibana
+        1) http://localhost:8081/api
 
     
 ###Next steps:
