@@ -20,10 +20,10 @@ sudo npm install -g codeclimate-test-reporter
 #Grunt
 sudo npm install -g grunt grunt-cli
 
-# Add a repo where OpenJDK can be found.
-apt-get install -y software-properties-common
-add-apt-repository -y ppa:webupd8team/java
-apt-get update
+# Add a repo where JDK can be found.
+sudo apt-get install -y software-properties-common
+sudo add-apt-repository -y ppa:webupd8team/java
+sudo apt-get update
 
 # Auto-accept the Oracle JDK license
 echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
