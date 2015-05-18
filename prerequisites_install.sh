@@ -8,7 +8,7 @@ sudo apt-get install git
 
 #Docker
 wget -qO- https://get.docker.com/ | sh
-sudo usermod -aG docker ubuntu
+sudo usermod -aG docker <YOUR_UBUNTU_USER>
 
 #Docker-Compose
 curl -L https://github.com/docker/compose/releases/download/1.2.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
