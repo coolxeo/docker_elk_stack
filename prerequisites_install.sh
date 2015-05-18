@@ -10,7 +10,7 @@ sudo apt-get install git
 wget -qO- https://get.docker.com/ | sh
 sudo usermod -aG docker sloppylopez
 
-#Docker-Compose !FOR SOME REASON THIS 2 LINES WONT WORK while executed via sh, try sudo su , then 1 first line, then exit, then second line and it should work
+#Docker-Compose 
 sudo curl -L https://github.com/docker/compose/releases/download/1.2.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
