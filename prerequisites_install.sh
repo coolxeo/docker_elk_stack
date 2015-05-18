@@ -1,6 +1,6 @@
 #!/bin/bash
 #Pre-requisites
-sudo apt-get install node
+sudo apt-get install nodejs
 sudo apt-get install npm
 sudo apt-get install wget
 sudo apt-get install curl
@@ -32,6 +32,7 @@ sudo apt-get install -y oracle-java8-installer
 #Check versions of installed dependencies
 java -version
 docker --version
-node --v
+nodejs -v
+npm -v
 git --version
 uname -r

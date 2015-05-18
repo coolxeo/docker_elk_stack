@@ -52,8 +52,8 @@ Prerequisites :
     1) sudo sh prerequisites_install.sh
     2) sudo sh ./dockers/run_dockers.sh
     3) cd angularclient
-    4) firebase init
-    5) npm install;bower install
+    4) sudo npm install;bower install
+    5) firebase init
     6) grunt serve
     7) http://localhost:9000/#/
     *NOTES:
