@@ -10,7 +10,7 @@ sudo apt-get install git
 wget -qO- https://get.docker.com/ | sh
 sudo usermod -aG docker sloppylopez
 
-#Docker-Compose
+#Docker-Compose !FOR SOME REASON THIS 2 LINES WONT WORK while executed via sh, try sudo su , then 1 first line, then exit, then second line and it should work
 sudo curl -L https://github.com/docker/compose/releases/download/1.2.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
@@ -29,10 +29,12 @@ sudo apt-get update
 echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
 sudo apt-get install -y oracle-java8-installer
 
+#Init Docker daemon
+sudo docker -d
+
 java -version
 docker --version
 npm --version
 node --v
 git --version
 uname -r
-
