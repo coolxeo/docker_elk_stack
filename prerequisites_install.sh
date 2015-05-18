@@ -34,4 +34,5 @@ docker --version
 npm --version
 node --v
 git --version
+uname -r
 
