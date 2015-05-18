@@ -11,9 +11,10 @@ FROM phusion/baseimage:0.9.16
 #FROM ubuntu:14.04
 MAINTAINER Sloppy Lopez <slopez@estudioweb130.com>
 
+ENV DEBIAN_FRONTEND noninteractive
+
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
-ENV DEBIAN_FRONTEND noninteractive
 
 # ...put your own build instructions here...
 # Dependencies
