@@ -52,14 +52,16 @@ Prerequisites :
     1) sudo sh prerequisites_install.sh
     2) sudo sh ./dockers/run_dockers.sh
     3) cd angularclient
-    4) npm install;bower install
-    5) grunt serve
-    6) http://localhost:9000/#/
+    4) firebase init
+    5) npm install;bower install
+    6) grunt serve
+    7) http://localhost:9000/#/
     *NOTES:
         1) removes the boiler plate of the dependencies
         (still room for improvement but working perfect in 14.04)
         2) builds and runs the backend (ELK Stack)
-        3)4)5)6) it's for running the client, to visualize the data
+        3) initialize firebase (only once)
+        4)5)6)7) it's for running the client, to visualize the data
         that came from nodeapi to elasticsearch, and from 'el' to
         angular, if you see this instalation it's complete correctly
 

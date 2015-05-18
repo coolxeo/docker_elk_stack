@@ -7,18 +7,12 @@ sudo apt-get install curl
 sudo apt-get install git
 
 #Docker
-#wget -qO- https://get.docker.com/ | sh
-sudo apt-get install docker.io
+wget -qO- https://get.docker.com/ | sh
 #sudo usermod -aG docker <YOUR_UBUNTU_USER>
 
 #Docker-Compose 
 sudo curl -L https://github.com/docker/compose/releases/download/1.2.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
-
-#Docker as a service
-sudo service docker.io status
-sudo service docker.io start
-sudo ln -sf /usr/bin/docker.io /usr/local/bin/docker
 
 #Code Climate coverage
 sudo npm install -g codeclimate-test-reporter
