@@ -6,6 +6,9 @@ sudo apt-get install wget
 sudo apt-get install curl
 sudo apt-get install git
 
+#Fix for node first install http://stackoverflow.com/questions/21168141/can-not-install-packages-using-node-package-manager-in-ubuntu
+sudo ln -s /usr/bin/nodejs /usr/bin/node
+
 #Docker
 wget -qO- https://get.docker.com/ | sh
 #sudo usermod -aG docker <YOUR_UBUNTU_USER>
