@@ -44,8 +44,8 @@ in the future I will probably cover Windows as well
 Prerequisites :
 
     * Linux
-    * Python 2.6 or 2.7
-    * Nodejs "node": ">=0.12.0"
+    * Python >=2.6
+    * Nodejs "node": ">=0.10.0"
     * Npm
     * Bower
     * Git
