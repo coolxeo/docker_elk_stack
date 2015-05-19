@@ -5,8 +5,6 @@
 
 Please don't use master, that is why I do releases
 
-[https://codeclimate.com/github/sloppylopez/docker_elk_stack]
-
 https://sloppylopez.firebaseapp.com/   
 <a href="https://github.com/sloppylopez/docker_elk_stack/releases/tag/v0.0.4-feel-like-a-sir">v0.0.4-feel-like-a-sir</a> RELEASED! 
 
