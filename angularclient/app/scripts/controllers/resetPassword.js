@@ -9,7 +9,7 @@
  */
 angular.module('angularfireApp')
   .controller('ResetPasswordCtrl', ['$scope', 'firebaseServiceFactory', 'ngNotify',
-    function ($scope, $rootScope, firebaseServiceFactory, ngNotify) {
+    function ($scope, firebaseServiceFactory, ngNotify) {
       $scope.resetPassword = function (isValid) {
         if (isValid) {
           firebaseServiceFactory.resetPassword($scope, '/login');
