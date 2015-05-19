@@ -50,7 +50,7 @@ Prerequisites :
 
 ### To build:FROM 0 INSTALL
     1) sudo sh prerequisites_install.sh
-    2) sudo sh ./dockers/run_dockers.sh
+    2) sudo sh run_dockers.sh
     3) cd angularclient
     4) sudo npm install;bower install
     5) firebase init
