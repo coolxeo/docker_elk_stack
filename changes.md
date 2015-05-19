@@ -1,3 +1,19 @@
+## 0.0.4-feel-like-a-sir
+
+    KNOWN BUGS:
+        * Can't log in with mobile devices
+
+    BUGS FIXED:
+        * Cleaned and documented and running out of the box
+
+## 0.0.3-feel-like-a-sir
+
+    KNOWN BUGS:
+        * Can't log in with mobile devices
+
+    BUGS FIXED:
+        * Added Karma to prerequisites_install.sh
+
 ## 0.0.2-feel-like-a-sir
 
     KNOWN BUGS:
