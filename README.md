@@ -50,6 +50,8 @@ Prerequisites :
     * Bower
     * Git
     * Docker
+    * Karma
+    * Grunt
     * Docker-compose
 
 ### To build:FIRST INSTALL!
