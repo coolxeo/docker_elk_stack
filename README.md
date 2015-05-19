@@ -53,6 +53,15 @@ Prerequisites :
     * Docker-compose
 
 ### To build:FIRST INSTALL!
+    Notice that 1) it's intended for plain
+    Ubuntu, if you have already java, npm
+    and so on, you should not use 1) because
+    it can mess up your working environment,
+    my suggestion to try this is to use
+    Virtual Box with a clean ubuntu install,
+    If you, if you met requirements it should work
+    without 1) but i can't test so many scenarios.
+
     1) sudo sh prerequisites_install.sh
     2) sudo sh run_dockers.sh or GIST https://gist.github.com/sloppylopez/7aca2e569adddba2e09f
     3) cd angularclient && change ./script/constants.js 
