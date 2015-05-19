@@ -68,7 +68,8 @@ Prerequisites :
 ###After install:
         1) http://localhost:9000/#/    angularclient
         1) http://localhost:5601/      kibana
-        1) http://localhost:8081/api
+        1) http://localhost:8081/api   nodeapi
+        1) http://localhost:8081/api   nodeapi
 
     
 ###Next steps:
