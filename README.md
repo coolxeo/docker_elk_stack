@@ -50,7 +50,7 @@ Prerequisites :
 
 ### To build:FIRST INSTALL!
     1) sudo sh prerequisites_install.sh
-    2) sudo sh run_dockers.sh
+    2) sudo sh run_dockers.sh or GIST https://gist.github.com/sloppylopez/7aca2e569adddba2e09f
     3) cd angularclient && change ./script/constants.js 
     to match your values, basically after 2) you can discover 
     the docker ip doing ipconfig and so on
