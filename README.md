@@ -3,8 +3,6 @@
 
 [![Test Coverage](https://codeclimate.com/github/sloppylopez/docker_elk_stack/badges/coverage.svg)](https://codeclimate.com/github/sloppylopez/docker_elk_stack/coverage) Fair enough :_(
 
-Please don't use master, that is why I do releases
-
 https://sloppylopez.firebaseapp.com/   
 <a href="https://github.com/sloppylopez/docker_elk_stack/releases/tag/v0.0.4-feel-like-a-sir">v0.0.4-feel-like-a-sir</a> RELEASED! 
 
@@ -120,6 +118,6 @@ Prerequisites :
     free, not sure if this can de done easily, or if will
     have to give up and pay :_(
 
-
+Please don't use master, that is why I do releases
 
 
