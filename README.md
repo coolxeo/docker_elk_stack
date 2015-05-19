@@ -1,6 +1,6 @@
 <img src="https://codeclimate.com/github/sloppylopez/docker_elk_stack/badges/gpa.svg" /> Flawless Victory, Fatality!
 
-[![Test Coverage](https://codeclimate.com/github/sloppylopez/docker_elk_stack/badges/coverage.svg)](https://codeclimate.com/github/sloppylopez/docker_elk_stack/coverage)
+[![Test Coverage](https://codeclimate.com/github/sloppylopez/docker_elk_stack/badges/coverage.svg)](https://codeclimate.com/github/sloppylopez/docker_elk_stack/coverage) Shame :_(
 
 Please don't use master, that is why I do releases
 
