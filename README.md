@@ -38,6 +38,8 @@ I will keep updating the project often
 ![alt tag](http://lh3.ggpht.com/ZpL4xc4OOMqiKxrLzJ3w33AOlu5ERX4ZbAsEWqSBQWeLYLF2hybEw11D5msBRLtGY1DoKYMI-A8VBx3yvwpNNUmr=s250)
 
 ### To build:
+I only give Linux support for the moment, 
+in the future I will probably cover Windows as well
 
 Prerequisites :
 
