@@ -51,7 +51,9 @@ Prerequisites :
 ### To build:FIRST INSTALL!
     1) sudo sh prerequisites_install.sh
     2) sudo sh run_dockers.sh
-    3) cd angularclient
+    3) cd angularclient && change ./script/constants.js 
+    to match your values, basically after 2) you can discover 
+    the docker ip doing ipconfig and so on
     4) sudo npm install;bower install
     5) firebase init
     6) grunt serve
