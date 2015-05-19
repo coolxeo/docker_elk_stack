@@ -64,7 +64,8 @@ Prerequisites :
         5) initialize firebase (only once)
         4)3)6) it's for running the client, to visualize the data
         that came from nodeapi to elasticsearch, and from 'el' to
-        angular, if you see this instalation it's complete correctly
+        angular, if you can see the rss news in angular,
+        it's complete correctly instaled
 
 
 ###After install:
