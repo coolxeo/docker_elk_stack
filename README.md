@@ -6,7 +6,7 @@ Please don't use master, that is why I do releases
 
 https://sloppylopez.firebaseapp.com/   <a href="https://github.com/sloppylopez/docker_elk_stack/releases/tag/v0.0.3-feel-like-a-sir">v0.0.3-feel-like-a-sir</a> RELEASED! ![alt tag](http://i3.kym-cdn.com/photos/images/original/000/161/140/feel-like-a-sir-template.jpg)
 
-## Angular + Nodejs + ELK + Docker + Docker-Compose + RSS
+## Angular + Firebase + Nodejs + ELK + Docker + Docker-Compose + RSS
 Front-End Angular, Back-End Nodejs, Docker running 3 servers with ELK stack orchestrated with Docker-compose
 
 This project it's 3 virtual machines build with docker and docker-compose for the orchestration of the 3 services, Elastic search, Logstash and Kibana, also there is a front-end angular client, and a backend nodejs that includes a elastic search client to consume rss from any website and persist them in the EL in a bulk process, then you can visualize them in the angular frontend and do the tipical text search over the rss's
