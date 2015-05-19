@@ -48,7 +48,7 @@ Prerequisites :
     * Docker
     * Docker-compose
 
-### To build:FROM 0 INSTALL
+### To build:FIRST INSTALL!
     1) sudo sh prerequisites_install.sh
     2) sudo sh run_dockers.sh
     3) cd angularclient
@@ -59,8 +59,8 @@ Prerequisites :
         1) removes the boiler plate of the dependencies
         (still room for improvement but working perfect in 14.04)
         2) builds and runs the backend (ELK Stack)
-        3) initialize firebase (only once)
-        4)5)6) it's for running the client, to visualize the data
+        5) initialize firebase (only once)
+        4)3)6) it's for running the client, to visualize the data
         that came from nodeapi to elasticsearch, and from 'el' to
         angular, if you see this instalation it's complete correctly
 
