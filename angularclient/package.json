@@ -45,7 +45,16 @@
     "mocha": "^2.2.4",
     "phantomjs": "^1.9.16",
     "precommit-hook": "^2.0.1",
-    "time-grunt": "^0.4.0"
+    "time-grunt": "^0.4.0",
+    "postcss": "~4.1.11",
+    "caniuse-db": "~1.0.30000169",
+    "imagemin-gifsicle": "~4.1.0",
+    "each-async": "~1.1.1",
+    "imagemin-jpegtran": "~4.1.0",
+    "imagemin-optipng": "~4.2.0",
+    "imagemin-pngquant": "~4.1.0",
+    "object-assign": "~2.0.0",
+    "chalk": "~1.0.0"
   },
   "scripts": {
     "lint": "grunt jshint",

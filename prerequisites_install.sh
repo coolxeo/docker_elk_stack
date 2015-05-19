@@ -20,7 +20,7 @@ chmod +x /usr/local/bin/docker-compose
 #Code Climate coverage
 sudo npm install -g codeclimate-test-reporter
 #Grunt
-sudo npm install -g grunt grunt-cli
+sudo npm install -g grunt-cli
 #Bower
 sudo npm install -g bower
 #Firebase Tools

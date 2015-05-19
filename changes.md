@@ -1,4 +1,12 @@
-## 0.0.1
+## 0.0.2-feel-like-a-sir
+
+    KNOWN BUGS:
+        * Can't log in with mobile devices
+
+    BUGS FIXED:
+        * Working 100x100 out of the box following the instructions
+
+## 0.0.1-feel-like-a-sir
 
     KNOWN BUGS:
         * Can't log in with mobile devices
