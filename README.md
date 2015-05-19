@@ -1,4 +1,4 @@
-<img src="https://codeclimate.com/github/sloppylopez/docker_elk_stack/badges/gpa.svg" /> Flawless Victory, Fatality!
+[![Code Climate](https://codeclimate.com/github/sloppylopez/docker_elk_stack/badges/gpa.svg)](https://codeclimate.com/github/sloppylopez/docker_elk_stack) Flawless Victory, Fatality!
 
 [![Test Coverage](https://codeclimate.com/github/sloppylopez/docker_elk_stack/badges/coverage.svg)](https://codeclimate.com/github/sloppylopez/docker_elk_stack/coverage) Shame :_(
 
