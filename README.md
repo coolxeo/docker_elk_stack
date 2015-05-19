@@ -17,7 +17,7 @@ There are 3 separate parts :
 
 ##angularclient
 Implemented using Yeoman, mild default instalation, it uses Karma for testing and Grunt for building
-###*Use the run scripts in the folder to run it
+###*See how to run below
 
 ##nodeapi
 Implemented using Nodejs, it gets rss from any source and bulks the data in Elastic Search using json format, this part will become a Nodejs module in the future, and I will use a RESTful api, but that part it's still to be defined, this is just a node server with Express 4 and a Elastic Search client with a Xml parser for retrieving, parsing and persisting in EL
