@@ -27,6 +27,9 @@ sudo npm install -g bower
 sudo npm install -g firebase-tools
 #Yeoman
 sudo npm install -g yo generator-karma generator-angular
+#Karma
+sudo npm install -g karma-cli
+
 
 # Add a repo where JDK can be found.
 sudo apt-get install -y software-properties-common
