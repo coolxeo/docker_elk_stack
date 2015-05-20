@@ -1,1 +1,0 @@
-http://blog.howareyou.com/post/62157486858/continuous-delivery-with-docker-and-jenkins-part
