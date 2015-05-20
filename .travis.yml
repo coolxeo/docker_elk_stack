@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - 0.12
+  - 0.11
+  - 0.10
+
+sudo: required
+
+#  env:
+#    global:
+#    - RUBYOPT='-W0'
+#    - COVERAGE=1
+
+script: "sudo sh ./prerequisites_install.sh"
+
+
+install: sudo ./prerequisites_install.sh

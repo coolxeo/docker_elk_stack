@@ -59,7 +59,7 @@
   },
   "scripts": {
     "lint": "grunt jshint",
-    "test": "karma start",
+    "test": "./node_modules/karma/bin/karma start --single-run --browsers PhantomJS",
     "build": "grunt build",
     "deploy": [
       "lint",
