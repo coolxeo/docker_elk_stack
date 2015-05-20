@@ -1,7 +1,10 @@
 ##Prerequisites
   firebase account
+  
   bower
+  
   npm
+  
   grunt-cli
 
 ##Run angularclient
