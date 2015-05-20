@@ -11,7 +11,7 @@ sudo: required
 #    - RUBYOPT='-W0'
 #    - COVERAGE=1
 
-script: "./prerequisites_install.sh"
+script: "sudo sh ./prerequisites_install.sh"
 
 
 install: sudo ./prerequisites_install.sh
