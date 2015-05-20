@@ -77,7 +77,6 @@ Prerequisites :
     6) grunt serve
     *NOTES:
         1) removes the boiler plate of the dependencies
-        (still room for improvement but working perfect in 14.04)
         2) builds and runs the backend (ELK Stack)
         5) initialize firebase (only once)
         4)3)6) it's for running the client, to visualize the data
