@@ -4,11 +4,14 @@ node_js:
   - 0.11
   - 0.10
 
-sudo: true
+sudo: required
 
 #  env:
 #    global:
 #    - RUBYOPT='-W0'
 #    - COVERAGE=1
+
+script: "./prerequisites_install.sh"
+
 
 install: sudo ./prerequisites_install.sh
