@@ -20,15 +20,15 @@ There are 3 separate parts :
 Implemented using Yeoman, mild default instalation, it uses Karma for testing and Grunt for building
 Includes angular-fire a implementation of firebase client for angular, we use it as a Baas (Backend
 as service), this is much more than a database, you can deploy you project in production with 1
-command, it has a nice web interface to maintain the back-end, including non-google-analytics
-user management, testing console, and many nice options that erase the boiler plate of deploying in
-prod/managing a server/managing a backend for your FRONTEND application, it simply works out of the box
-the project has implemented USER EMAIL VALIDATION using firebase Baas magic.
+command, it has a nice web interface to maintain the back-end, including non-google-webe-analytics,
+user management, testing console, and many nice options that erase the boiler plate of 'deploying in
+prod'/'managing a server'/'managing a backend' for your FRONT-END application, it simply works out of the box
+the project has implemented USER EMAIL VALIDATION using firebase Baas magic and angularfire modules.
 ###*See how to run below
 
 ##nodeapi
 Implemented using Nodejs, it gets rss from any source and bulks the data in Elastic Search using json format, this part will become a Nodejs module in the future, and I will use a RESTful api, but that part it's still to be defined, this is just a node server with Express 4 and a Elastic Search client with a Xml parser for retrieving, parsing and persisting in EL
-###*Use the run scripts in the folder to run it
+###*Runs with docker-compose in the elk-stack
 
 ##dockers
 This is the FUN part, based on this article (http://thepracticalsysadmin.com/running-elk-on-docker/)
@@ -37,8 +37,6 @@ container, plus the instructions to download and configure,USING the rest of the
 ###*Use the run scripts in the folder to run it, it works out of the box.
 
 PULL AND PLAY!!!!
-
-I will keep updating the project often
 
 ###Keep it stupid!, simple.
 
@@ -68,22 +66,35 @@ Prerequisites :
     pre-requisites it should work without 1) but i can't test so many scenarios.
 
     1) sudo sh prerequisites_install.sh
-    2) sudo sh run_dockers.sh or GIST https://gist.github.com/sloppylopez/7aca2e569adddba2e09f
+    2) sudo sh run_dockers.sh
     3) cd angularclient && change ./script/constants.js 
-    to match your values, basically after 2) you can discover 
-    the docker ip doing ipconfig and so on
+       to match your values, basically after 2) you can discover 
+       the docker ip doing ifconfig and such.
     4) sudo npm install;bower install
-    5) firebase init
-    6) grunt serve
+    5) mkdir dist
+       (to create the dist directory which we will use to deploy in firebase)
+    6) firebase init
+    7) grunt serve
+    8) Load rss in elasticsearch with for fresh news:
+       http://localhost:8081/api/rssload
     *NOTES:
         1) removes the boiler plate of the dependencies
         2) builds and runs the backend (ELK Stack)
-        5) initialize firebase (only once)
-        4)3)6) it's for running the client, to visualize the data
-        that came from nodeapi to elasticsearch, and from 'el' to
-        angular, if you can see the rss news in angular,
-        it's complete correctly instaled
+        3)4)7) it's for running the client, to visualize the data
+           that came from nodeapi to elasticsearch, and from 'el' to
+           angular, if you can see the rss news in angular,
+           it's complete correctly instaled
+        5) creates a release inside 'dist' folder, needed for firebase
+        6) initialize firebase (only first time, this is only 
+           needed for deploying angularclient in firebase hosting)
 
+###To deploy in production:
+        Pre-requisites:
+            Firebase account (free)
+            Change constants.js in angularclient to match your credentials
+            
+        1)grunt build
+        2)firebase deploy
 
 ###After install:
         1) http://localhost:9000/#/    angularclient

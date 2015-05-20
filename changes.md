@@ -1,3 +1,12 @@
+## 0.0.5-feel-like-a-sir TBR
+
+    KNOWN BUGS:
+        * Can't log in with mobile devices
+        
+    FEATURES ADDED:
+        * Removed jenkins, we will start using travis CI as it 
+        integrates with git out-of-the-box
+
 ## 0.0.4-feel-like-a-sir
 
     KNOWN BUGS:
