@@ -19,10 +19,6 @@ sudo: required
 #    - COVERAGE=1
 
 before_install:
-#  #Nodejs
-#  - apt-get install nodejs
-#  #Npm
-#  - apt-get install npm
   #Code Climate coverage
   - npm install -g codeclimate-test-reporter
   #Grunt
@@ -37,7 +33,8 @@ before_install:
 install:
   - cd angularclient
   - npm install
-  - karma start
+ #- travis will do 'npm test' here and that will call
+ # our karma tests to be exec in phantomjs
 
 #:_( Nasty issue that i don't like, i will think what to do with this
 #and prepare travis to test ONLY angular, because it seems he it's not able to test
