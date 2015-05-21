@@ -1,6 +1,8 @@
 ## Angular + Firebase + Nodejs + ELK + Docker + Docker-Compose + RSS
 [![Code Climate](https://codeclimate.com/github/sloppylopez/docker_elk_stack/badges/gpa.svg)](https://codeclimate.com/github/sloppylopez/docker_elk_stack) Flawless Victory, Fatality!
 
+[![Travis](https://travis-ci.org/sloppylopez/docker_elk_stack.svg)](https://travis-ci.org/sloppylopez/docker_elk_stack.svg)
+
 [![Test Coverage](https://codeclimate.com/github/sloppylopez/docker_elk_stack/badges/coverage.svg)](https://codeclimate.com/github/sloppylopez/docker_elk_stack/coverage) Fair enough :_(
 
 <img title="Build Status Images" src="https://travis-ci.org/sloppylopez/docker_elk_stack.svg">https://travis-ci.org/sloppylopez/docker_elk_stack</img>
