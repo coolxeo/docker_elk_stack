@@ -3,7 +3,7 @@
 
 [![Test Coverage](https://codeclimate.com/github/sloppylopez/docker_elk_stack/badges/coverage.svg)](https://codeclimate.com/github/sloppylopez/docker_elk_stack/coverage) Fair enough :_(
 
-<img title="Build Status Images" src="https://travis-ci.org/sloppylopez/docker_elk_stack.svg"> 
+<img title="Build Status Images" src="https://travis-ci.org/sloppylopez/docker_elk_stack.svg">https://travis-ci.org/sloppylopez/docker_elk_stack</img>
 
 <a href="https://github.com/sloppylopez/docker_elk_stack/releases/tag/v0.0.4-feel-like-a-sir">v0.0.4-feel-like-a-sir</a> RELEASED! 
 
