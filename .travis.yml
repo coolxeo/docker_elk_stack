@@ -14,7 +14,9 @@ sudo: required
 
 before_install: "sudo sh ./prerequisites_install.sh"
 
-install: "sudo sh ./dockers/run_dockers.sh"
+install:
+  - cd dockers
+  - sudo sh run_dockers.sh
 
 #script: "sudo sh ./dockers/run_dockers.sh"
 
