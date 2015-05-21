@@ -11,14 +11,28 @@ sudo: required
 #    global:
 #    - RUBYOPT='-W0'
 #    - COVERAGE=1
+before_install:
+  #Code Climate coverage
+  - sudo npm install -g codeclimate-test-reporter
+  #Grunt
+  - sudo npm install -g grunt-cli
+  #Bower
+  - sudo npm install -g bower
+  #Firebase Tools
+  - sudo npm install -g firebase-tools
+  #Yeoman
+  - sudo npm install -g yo generator-karma generator-angular
+  #Karma
+  - sudo npm install -g karma-cli
 
-script: "sudo sh ./prerequisites_install.sh"
+install: "sudo sh ./prerequisites_install.sh"
 
+script: "sudo sh ./dockers/run_dockers.sh"
 
 #install: sudo ./prerequisites_install.sh
 
 #CI with firebase https://johnheroy.com/2014/10/17/continuous-firebase-deployment-with-travis.html
-#after_success:
-#  - mkdir /home/travis/tmp
+after_success:
+  - mkdir /home/travis/tmp
 #  - sudo $(which npm) install -g firebase-tools
 #  - if [[ "${TRAVIS_PULL_REQUEST}" == "false" ]]; then echo -e "${FIREBASE_EMAIL}\n${FIREBASE_PASSWORD}" | firebase deploy; fi
