@@ -4,6 +4,15 @@ node_js:
 #  - 0.12
 #  - 0.11
 
+cache:
+  - codeclimate-test-reporter
+  - grunt-cli
+  - bower
+  - firebase-tools
+  - yo
+  - karma-cli
+  - generator-karma
+  - generator-angular
 
 sudo: required
 
@@ -12,11 +21,28 @@ sudo: required
 #    - RUBYOPT='-W0'
 #    - COVERAGE=1
 
-before_install: "sudo sh ./prerequisites_install.sh"
+before_install:
+  #Code Climate coverage
+  - sudo npm install -g codeclimate-test-reporter
+  #Grunt
+  - sudo npm install -g grunt-cli
+  #Bower
+  - sudo npm install -g bower
+  #Firebase Tools
+  - sudo npm install -g firebase-tools
+  #Yeoman
+  - sudo npm install -g yo generator-karma generator-angular
+  #Karma
+  - sudo npm install -g karma-cli
 
 install:
-  - cd dockers
-  - sudo sh run_dockers.sh
+  - cd angularclient
+  - karma start
+
+#:_( Nasty issue that i don't like, i will think what to do with this
+#and prepare travis to test ONLY angular, because it seems he it's not able to test
+#the docker build, shame....
+#https://github.com/travis-ci/travis-ci/issues/1196
 
 #script: "sudo sh ./dockers/run_dockers.sh"
 
