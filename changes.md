@@ -4,12 +4,15 @@
         * Can't log in with mobile devices
         * Nasty issue that i don't like, i will think what to do with this
           and prepare travis to test ONLY angular, because it seems he it's not able to test
-          the docker build, shame....
+          the docker build, shame...
           https://github.com/travis-ci/travis-ci/issues/1196
 
     FEATURES ADDED:
-        * Removed jenkins, we will start using travis CI as it 
-        integrates with git out-of-the-box
+        * I will have to keep jenkins because of the bug mentioned
+          i want to be able to test the docker stack install,
+          but i will keep travis because apart from that BIG
+          limitation it's great and very easy, you only need to touch
+          1 file to configure the tests, the rest simply works out of the box
 
 ## 0.0.4-feel-like-a-sir
 
