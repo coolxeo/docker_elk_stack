@@ -16,3 +16,9 @@ script: "sudo sh ./prerequisites_install.sh"
 
 
 #install: sudo ./prerequisites_install.sh
+
+#CI with firebase https://johnheroy.com/2014/10/17/continuous-firebase-deployment-with-travis.html
+#after_success:
+#  - mkdir /home/travis/tmp
+#  - sudo $(which npm) install -g firebase-tools
+#  - if [[ "${TRAVIS_PULL_REQUEST}" == "false" ]]; then echo -e "${FIREBASE_EMAIL}\n${FIREBASE_PASSWORD}" | firebase deploy; fi
