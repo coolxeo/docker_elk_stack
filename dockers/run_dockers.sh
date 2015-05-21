@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-docker run -d
+rm -rf /var/run/docker.pid
+docker -d
 docker-compose build
 docker-compose up
