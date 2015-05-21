@@ -2,7 +2,11 @@
 
     KNOWN BUGS:
         * Can't log in with mobile devices
-        
+        * Nasty issue that i don't like, i will think what to do with this
+          and prepare travis to test ONLY angular, because it seems he it's not able to test
+          the docker build, shame....
+          https://github.com/travis-ci/travis-ci/issues/1196
+
     FEATURES ADDED:
         * Removed jenkins, we will start using travis CI as it 
         integrates with git out-of-the-box
