@@ -9,10 +9,7 @@ cache:
   - grunt-cli
   - bower
   - firebase-tools
-  - yo
   - karma-cli
-  - generator-karma
-  - generator-angular
 
 sudo: required
 
@@ -34,13 +31,12 @@ before_install:
   - npm install -g bower
   #Firebase Tools
   - npm install -g firebase-tools
-  #Yeoman
-  - npm install -g yo generator-karma generator-angular
   #Karma
   - npm install -g karma-cli
 
 install:
   - cd angularclient
+  - npm install
   - karma start
 
 #:_( Nasty issue that i don't like, i will think what to do with this
