@@ -24,7 +24,8 @@ Base Article http://thepracticalsysadmin.com/running-elk-on-docker/
 
 
 ##dockers
-It's 3 virtual machines one per each element of the stack, connected 
+It's 5 virtual machines, one per each element of the ELK stack, 1 jenkins
+and 1 nodeapi server to persist info in the elastic search, they are connected 
 between them with minimum configuration, if you check inside each folder 
 there is one Dockerfile to create each container, plus the instructions 
 to download and configure,USING the rest of the files of each folder to 
