@@ -105,13 +105,14 @@ Prerequisites :
         4) http://localhost:9200       elasticsearch
 
     
-###Next steps:
-            
-    1)Merge with https://github.com/firebase/firereader
-    this will eliminate all the boiler plate of managing and displaying
-    nicely the feeds, because the real intention of this project is not
-    displaying rss through a Elastic Search, but to analyze those rss
-    to extract information using Spark or similar.
+###Next steps:(Changed priorities 22-may-2015)
+    1)Start using rancherOS for cooking the images, 
+    so i will change Kibana, Logstash and EL to start
+    using rancherOS(Dedicated docker OS) instead of
+    phusion image we are using right now, i think
+    this is the way to go
+    
+    2)Start using rancher to manage jenkins slaves
 
     2)Fix known bug when deploy the minified code,
     you cannot log sometimes in firebase with mobile
@@ -128,6 +129,12 @@ Prerequisites :
     because i am going to try to deploy it for
     free, not sure if this can de done easily, or if will
     have to give up and pay :_(
+    
+    6)Merge with https://github.com/firebase/firereader
+    this will eliminate all the boiler plate of managing and displaying
+    nicely the feeds, because the real intention of this project is not
+    displaying rss through a Elastic Search, but to analyze those rss
+    to extract information using Spark or similar.
 
 Please don't use master, that is why I do releases
 
