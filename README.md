@@ -84,7 +84,7 @@ PULL AND PLAY!!!!
 
 ![alt tag](http://lh3.ggpht.com/ZpL4xc4OOMqiKxrLzJ3w33AOlu5ERX4ZbAsEWqSBQWeLYLF2hybEw11D5msBRLtGY1DoKYMI-A8VBx3yvwpNNUmr=s250)
 
-### To build:
+### To build the whole stack and client:
 I only give Linux support for the moment, in the future I will probably cover Windows as well.
 I want you to understand that this project it's literally building 4 servers, each one configured with
 1 different and complementary technology, which are visible between them which minimum configuration
