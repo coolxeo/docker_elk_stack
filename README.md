@@ -28,9 +28,9 @@
    
    This 2 lines make all the validation, including displaying the custom error messages for each case
    which completely erases the boiler plate of form validation, this is the so called 'angular way'
-   >< input id="username" type="email" name="email" class="form-control" ng-model="user.email" required email/>"
+   >< input id="username" type="email" name="email" class="form-control" ng-model="user.email" required email/>
 
-   >< div ng-messages="loginForm.email.$error" ng-messages-include="views/errors.html" class="errors"></div>"
+   >< div ng-messages="loginForm.email.$error" ng-messages-include="views/errors.html" class="errors"></div>
    
 ##INTENDED FEATURES:   
    1)CI and CD in firebase and jenkins (i am using jenkins because Travis WILL NEVER
