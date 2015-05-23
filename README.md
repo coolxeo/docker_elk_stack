@@ -156,6 +156,7 @@ Prerequisites :
         2) http://localhost:5601       kibana
         3) http://localhost:8081/api   nodeapi
         4) http://localhost:9200       elasticsearch
+        5) http://localhost:8080       jenkins
 
     
 ###Next steps:(Changed priorities 22-may-2015)
