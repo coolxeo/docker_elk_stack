@@ -20,19 +20,12 @@ sudo: required
 
 before_install:
   #Code Climate coverage
-  - npm install -g codeclimate-test-reporter
-  #Grunt
-  - npm install -g grunt-cli
-  #Bower
-  - npm install -g bower
-  #Firebase Tools
-  - npm install -g firebase-tools
-  #Karma
-  - npm install -g karma-cli
+  - npm install -g codeclimate-test-reporter grunt-cli bower firebase-tools karma-cli
 
 install:
   - cd angularclient
   - npm install
+  - bower install
  #- travis will do 'npm test' here and that will call
  # our karma tests to be exec in phantomjs
 
