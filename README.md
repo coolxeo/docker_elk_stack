@@ -28,8 +28,8 @@
    
 ##INTENDED FEATURES:   
    1)CI and CD in firebase and jenkins (i am using jenkins because Travis WILL NEVER
-     in the near future support docker builds which is kind of lame, however it's so
-     good and so well integrated that i will keep it for running karma tests in the angularclient)
+     in the near future support docker builds because they use a pre-historic core version 2.6?! which is kind of          lame, however it's so good and so well integrated that i will keep it for running karma tests in the          
+     angularclient)
      
    2)Manage jenkins and docker cluster with rancher
 
