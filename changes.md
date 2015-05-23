@@ -16,10 +16,9 @@
 
 ## 0.0.4-feel-like-a-sir
 
-    KNOWN BUGS:
-        * Can't log in with mobile devices
-
     BUGS FIXED:
+        * Fixed login bug in angular client, now you can log 
+          from any device
         * Cleaned and documented and running out of the box
 
 ## 0.0.3-feel-like-a-sir
