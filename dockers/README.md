@@ -14,6 +14,22 @@ Base Article http://thepracticalsysadmin.com/running-elk-on-docker/
     in fact I started the process of putting it inside the project, 
     it will be released on next 0.0.5
 
+##dockers
+It's 5 virtual machines, one per each element of the ELK stack, 1 jenkins
+and 1 nodeapi server to persist info in the elastic search, they are connected 
+between them with minimum configuration, if you check inside each folder 
+there is one Dockerfile to create each container, plus the instructions 
+to download and configure,USING the rest of the files of each folder to 
+have a complete running setup once all dependencies have been downloaded 
+by Docker
+###*Use the run scripts in the folder to run it, it works out of the box.
+
+Prerequisites :
+
+    * Linux
+    * Docker
+    * Docker-compose
+
 ##Upgrade docker
     wget -N https://get.docker.com/ | sh
 
@@ -26,25 +42,13 @@ Base Article http://thepracticalsysadmin.com/running-elk-on-docker/
 
 ##Single Run(phusion images only)
     $ docker run -t -i <YOUR_NAME_IMAGE> /sbin/my_init -- bash -l
-
-
-##dockers
-It's 5 virtual machines, one per each element of the ELK stack, 1 jenkins
-and 1 nodeapi server to persist info in the elastic search, they are connected 
-between them with minimum configuration, if you check inside each folder 
-there is one Dockerfile to create each container, plus the instructions 
-to download and configure,USING the rest of the files of each folder to 
-have a complete running setup once all dependencies have been downloaded 
-by Docker
-###*Use the run scripts in the folder to run it, it works out of the box.
-
-    Prerequisites :
-
-        * Linux
-        * Docker
-        * Docker-compose
-
-    A PROBLEMAS... SOLUCIONES!!!!
+    
+###After install:
+        1) http://localhost:9000/#/    angularclient
+        2) http://localhost:5601       kibana
+        3) http://localhost:8081/api   nodeapi
+        4) http://localhost:9200       elasticsearch
+        5) http://localhost:8080       jenkins
 
 
 
