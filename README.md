@@ -79,7 +79,7 @@ Prerequisites :
        (to create the dist directory which we will use to deploy in firebase)
     6) firebase init
     7) grunt serve
-    8) Load rss in elasticsearch with for fresh news:
+    8) Load rss in elasticsearch with fresh rss news:
        http://localhost:8081/api/rssload
     *NOTES:
         1) removes the boiler plate of the dependencies
