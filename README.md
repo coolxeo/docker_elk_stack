@@ -85,8 +85,8 @@ Prerequisites :
         1) removes the boiler plate of the dependencies
         2) builds and runs the backend (ELK Stack)
         3)4)7) it's for running the client, to visualize the data
-           that came from nodeapi to elasticsearch, and from 'el' to
-           angular, if you can see the rss news in angular,
+           that came from nodeapi to elasticsearch, and from elastic 
+           search to angular, if you can see the rss news in angular,
            it's complete correctly instaled
         5) creates a release inside 'dist' folder, needed for firebase
         6) initialize firebase (only first time, this is only 
