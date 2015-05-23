@@ -13,7 +13,10 @@ angular.module('angularfireApp')
       //delete $rootScope.authData;
       $scope.authWithPassword = function (isValid) {
         if (isValid) {
-          firebaseServiceFactory.authWithPassword($scope, $rootScope, '/');
+          firebaseServiceFactory.authWithPassword($scope, $rootScope, '/')
+            .then(function(){
+              $scope.showme=true;
+            })
         } else {
           ngNotify.set('There are still invalid fields below');
         }
