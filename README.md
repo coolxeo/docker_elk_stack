@@ -99,16 +99,16 @@ told you and it will work
 
 Prerequisites :
 
-    * Linux
-    * Python >=2.6
-    * Nodejs "node": ">=0.10.0"
-    * Npm
-    * Bower
-    * Git
-    * Docker
-    * Karma
-    * Grunt
-    * Docker-compose
+    >* Linux
+    >* Python >=2.6
+    >* Nodejs "node": ">=0.10.0"
+    >* Npm
+    >* Bower
+    >* Git
+    >* Docker
+    >* Karma
+    >* Grunt
+    >* Docker-compose
 
 ### To build:FIRST INSTALL!
     Notice that 1) it's intended for plain Ubuntu, if you have already java, npm and so on, 
