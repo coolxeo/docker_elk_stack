@@ -26,9 +26,9 @@
    
    7)Completely logicless form validation using new angular 1.3 directive ng-messages
    
-   <input id="username" type="email" name="email" class="form-control" ng-model="user.email" required email/>
+   '<input id="username" type="email" name="email" class="form-control" ng-model="user.email" required email/>'
 
-   <div ng-messages="loginForm.email.$error" ng-messages-include="views/errors.html" class="errors"></div>
+   '<div ng-messages="loginForm.email.$error" ng-messages-include="views/errors.html" class="errors"></div>'
    
 ##INTENDED FEATURES:   
    1)CI and CD in firebase and jenkins (i am using jenkins because Travis WILL NEVER
