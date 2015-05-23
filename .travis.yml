@@ -40,4 +40,5 @@ install:
 #CI with firebase https://johnheroy.com/2014/10/17/continuous-firebase-deployment-with-travis.html
 after_success:
   - mkdir /home/travis/tmp
+  - echo ${TRAVIS_PULL_REQUEST}
   - firebase deploy
