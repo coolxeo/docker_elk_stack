@@ -1,11 +1,11 @@
 ## Angular + Firebase + Nodejs + ELK + Docker + Docker-Compose + RSS
 [![Code Climate](https://codeclimate.com/github/sloppylopez/docker_elk_stack/badges/gpa.svg)](https://codeclimate.com/github/sloppylopez/docker_elk_stack) Flawless Victory, Fatality!
 
-[![Travis](https://travis-ci.org/sloppylopez/docker_elk_stack.svg)](https://travis-ci.org/sloppylopez/docker_elk_stack) the project it's not broken, I am experimenting with Travis at the moment
+[![Travis](https://travis-ci.org/sloppylopez/docker_elk_stack.svg)](https://travis-ci.org/sloppylopez/docker_elk_stack)
 
 [![Test Coverage](https://codeclimate.com/github/sloppylopez/docker_elk_stack/badges/coverage.svg)](https://codeclimate.com/github/sloppylopez/docker_elk_stack/coverage) Fair enough :_(
 
-<a href="https://github.com/sloppylopez/docker_elk_stack/releases/tag/v0.0.4-feel-like-a-sir">v0.0.4-feel-like-a-sir</a> RELEASED! 
+<a href="https://github.com/sloppylopez/docker_elk_stack/releases/tag/v0.0.5-feel-like-a-sir">v0.0.5-feel-like-a-sir</a> RELEASED! 
 
 ![alt tag](http://i3.kym-cdn.com/photos/images/original/000/161/140/feel-like-a-sir-template.jpg)
 
