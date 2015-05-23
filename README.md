@@ -22,9 +22,9 @@
       
    5) Havent checked yet but runs in mayority of browsers/devices and it's responsive
    
-   6)Integrated with Travis (even though i am struggling to make the build correctly)
+   6) Integrated with Travis (even though i am struggling to make the build correctly)
    
-   7)Completely logicless form validation using new angular 1.3 directive ng-messages
+   7) Completely logicless form validation using new angular 1.3 directive ng-messages
    
    This 2 lines make all the validation, including displaying the custom error messages for each case
    which completely erases the boiler plate of form validation, this is the so called 'angular way'
