@@ -29,4 +29,4 @@ install:
 after_success:
   - mkdir /home/travis/tmp
   - echo "${TRAVIS_PULL_REQUEST}"
-  - firebase deploy
+  #- firebase deploy
