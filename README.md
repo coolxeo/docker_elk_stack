@@ -85,8 +85,17 @@ PULL AND PLAY!!!!
 ![alt tag](http://lh3.ggpht.com/ZpL4xc4OOMqiKxrLzJ3w33AOlu5ERX4ZbAsEWqSBQWeLYLF2hybEw11D5msBRLtGY1DoKYMI-A8VBx3yvwpNNUmr=s250)
 
 ### To build:
-I only give Linux support for the moment, 
-in the future I will probably cover Windows as well
+I only give Linux support for the moment, in the future I will probably cover Windows as well.
+I want you to understand that this project it's literally building 4 servers, each one configured with
+1 different and complementary technology, which are visible between them which minimum configuration
+which at the same time integrates with a aldocker build CD and CI using jenkins, as you can imagine
+doing all this with only 7 steps it's really a time saver, but also I am saying this to make you understand
+that i noticed when installing sometimes problems with components, specially with grunt, when doing the steps
+when had to execute 'grunt serve' it gives an wierd error, and the project does not launch, this has happened
+several times with the testing of the 100x100 out of the box working installation, however, after deleting
+node_modules, .temp, dist and bower_componenets and reinstalling them again it simply started to work,
+this is the only pitfall i can find in the instalation, just to make you aware. so if you see this try what
+told you and it will work
 
 Prerequisites :
 
