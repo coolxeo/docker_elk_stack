@@ -27,7 +27,7 @@
    7)Completely logicless form validation using new angular 1.3 directive ng-messages
    
    This 2 lines make all the validation, including displaying the custom error messages for each case
-   which completely erases the boiler plate of form validation
+   which completely erases the boiler plate of form validation, this is the so called 'angular way'
    >< input id="username" type="email" name="email" class="form-control" ng-model="user.email" required email/>"
 
    >< div ng-messages="loginForm.email.$error" ng-messages-include="views/errors.html" class="errors"></div>"
