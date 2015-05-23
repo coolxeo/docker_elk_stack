@@ -1,7 +1,7 @@
 ## Angular + Firebase + Nodejs + ELK + Docker + Docker-Compose + RSS
 [![Code Climate](https://codeclimate.com/github/sloppylopez/docker_elk_stack/badges/gpa.svg)](https://codeclimate.com/github/sloppylopez/docker_elk_stack) Flawless Victory, Fatality!
 
-[![Travis](https://travis-ci.org/sloppylopez/docker_elk_stack.svg)](https://travis-ci.org/sloppylopez/docker_elk_stack) the project it's not broken, I am experimenting with Travis at the moment
+[![Travis](https://travis-ci.org/sloppylopez/docker_elk_stack.svg)](https://travis-ci.org/sloppylopez/docker_elk_stack)
 
 [![Test Coverage](https://codeclimate.com/github/sloppylopez/docker_elk_stack/badges/coverage.svg)](https://codeclimate.com/github/sloppylopez/docker_elk_stack/coverage) Fair enough :_(
 
@@ -189,7 +189,3 @@ Prerequisites :
     nicely the feeds, because the real intention of this project is not
     displaying rss through a Elastic Search, but to analyze those rss
     to extract information using Spark or similar.
-
-Please don't use master, that is why I do releases
-
-
