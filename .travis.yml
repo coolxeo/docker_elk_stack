@@ -26,6 +26,7 @@ install:
   - cd angularclient
   - npm install
   - bower install
+  - grunt build
  #- travis will do 'npm test' here and that will call
  # our karma tests to be exec in phantomjs
 
@@ -36,10 +37,7 @@ install:
 
 #script: "sudo sh ./dockers/run_dockers.sh"
 
-#install: sudo ./prerequisites_install.sh
-
 #CI with firebase https://johnheroy.com/2014/10/17/continuous-firebase-deployment-with-travis.html
 after_success:
   - mkdir /home/travis/tmp
-#  - $(which npm) install -g firebase-tools
-#  - if [[ "${TRAVIS_PULL_REQUEST}" == "false" ]]; then echo -e "${FIREBASE_EMAIL}\n${FIREBASE_PASSWORD}" | firebase deploy; fi
+  - if [[ "${TRAVIS_PULL_REQUEST}" == "false" ]]; then echo -e "${FIREBASE_EMAIL}\n${FIREBASE_PASSWORD}" | firebase deploy; fi
