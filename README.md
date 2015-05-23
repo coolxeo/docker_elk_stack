@@ -143,6 +143,9 @@ Prerequisites :
 ###To deploy in production:
         Pre-requisites:
             Firebase account (free)
+            'firebase init' command executed in angularclient. he will promp you questions, i recommend to choose
+            the folder ./dist as the folder firebase will deploy in prod since 'grunt build' will put the minified
+            version of our js and css there
             Change constants.js in angularclient to match your credentials
             
         1)grunt build
