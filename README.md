@@ -26,6 +26,10 @@
    
    7)Completely logicless form validation using new angular 1.3 directive ng-messages
    
+   <input id="username" type="email" name="email" class="form-control" ng-model="user.email" required email/>
+
+   <div ng-messages="loginForm.email.$error" ng-messages-include="views/errors.html" class="errors"></div>
+   
 ##INTENDED FEATURES:   
    1)CI and CD in firebase and jenkins (i am using jenkins because Travis WILL NEVER
      in the near future support docker builds because they use a pre-historic core version 2.6?! which is kind of          lame, however it's so good and so well integrated that i will keep it for running karma tests in the          
