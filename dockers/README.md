@@ -49,7 +49,6 @@ Prerequisites :
     sudo docker run -d  -> run in detached mode
     sudo docker build .  -> build docker image
     sudo docker build -t maestrodev/build-agent .  -> build docker image
-    sudo docker run -t -i ubuntu:14.04 /bin/bash   -> build a server with jenkins
 
 ##Single Run(phusion images only)
     $ docker run -t -i <YOUR_NAME_IMAGE> /sbin/my_init -- bash -l
