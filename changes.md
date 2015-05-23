@@ -1,3 +1,12 @@
+## 0.0.5-feel-like-a-sir TBR
+
+    FEATURES ADDED:
+        * I will have to keep jenkins because of the bug mentioned
+          i want to be able to test the docker stack install,
+          but i will keep travis because apart from that BIG
+          limitation it's great and very easy, you only need to touch
+          1 file to configure the tests, the rest simply works out of the box
+
 ## 0.0.5-feel-like-a-sir
 
     KNOWN BUGS:
@@ -9,13 +18,6 @@
     KNOWN BUGS:          
         * Fixed login bug in angular client, now you can log 
           from any device
-
-    FEATURES ADDED:
-        * I will have to keep jenkins because of the bug mentioned
-          i want to be able to test the docker stack install,
-          but i will keep travis because apart from that BIG
-          limitation it's great and very easy, you only need to touch
-          1 file to configure the tests, the rest simply works out of the box
 
 ## 0.0.4-feel-like-a-sir
 

@@ -1,10 +1,10 @@
 #!/bin/bash
 #Pre-requisites
-sudo apt-get install nodejs
-sudo apt-get install npm
-sudo apt-get install wget
-sudo apt-get install curl
-sudo apt-get install git
+sudo apt-get install -y -qq nodejs
+sudo apt-get install -y -qq npm
+sudo apt-get install -y -qq wget
+sudo apt-get install -y -qq curl
+sudo apt-get install -y -qq git
 
 #Fix for node first install http://stackoverflow.com/questions/21168141/can-not-install-packages-using-node-package-manager-in-ubuntu
 sudo ln -s /usr/bin/nodejs /usr/bin/node
