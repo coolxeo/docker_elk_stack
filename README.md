@@ -9,6 +9,21 @@
 
 ![alt tag](http://i3.kym-cdn.com/photos/images/original/000/161/140/feel-like-a-sir-template.jpg)
 
+##FEATURES SO FAR:
+   1) 1 command deployment in production usign Firebase Baas amazing capabilities
+   2) Scaffolding of angular client done with Yeoman (default angular generator)
+   3) User management, including email verification fully integrated using angularfire
+   4) Plain default mild installation of all components, bower, npm, docker which
+      means the whole project is mainstreamed at maximum, no hacky shit, no wheel
+      reinventions (at least that i am aware of)
+   5) Havent checked yet but runs in mayority of browsers/devices and it's responsive
+   6)Integrated with Travis (even though i am struggling to make the build correctly)
+   
+##INTENDED FEATURES:   
+   1)CI and CD in firebase and jenkins (i am using jenkins because Travis WILL NEVER
+     in the near future support docket builds which is kind of lame, however it's so
+     good and so well integrated that i will keep it for running karma tests in the angularclient
+
 ##INTRO:
 Front-End Angular, Back-End Nodejs, Docker running 3 servers with ELK stack orchestrated with Docker-compose
 
@@ -17,8 +32,10 @@ This project it's 3 virtual machines build with docker and docker-compose for th
 It can be used as a seed for a project with that structure or similar, it saves a lot of 'default work' to set everything together.
 
 There are 2 main goals in this project
+
 1)Create a 'seed' that can be reused everytime you need to build a web-app with similar characteristics
 like in this case angular, node and elk
+
 2)Use the finnished version of this project to build something over it, like for example without
 entering yet in much details extract info from the rss news stored with Spark or a similar technology
 IN REAL TIME
