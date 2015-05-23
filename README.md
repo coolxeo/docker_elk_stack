@@ -10,7 +10,7 @@
 ![alt tag](http://i3.kym-cdn.com/photos/images/original/000/161/140/feel-like-a-sir-template.jpg)
 
 ##FEATURES SO FAR:
-   1) 1 command deployment in production usign Firebase Baas amazing capabilities
+   1) 1 command deployment in production using Firebase Baas amazing capabilities
    
    2) Scaffolding of angular client done with Yeoman (default angular generator)
    
