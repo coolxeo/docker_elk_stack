@@ -24,6 +24,8 @@
    
    6)Integrated with Travis (even though i am struggling to make the build correctly)
    
+   7)Completely logicless form validation using new angular directive ng-messages
+   
 ##INTENDED FEATURES:   
    1)CI and CD in firebase and jenkins (i am using jenkins because Travis WILL NEVER
      in the near future support docker builds which is kind of lame, however it's so
