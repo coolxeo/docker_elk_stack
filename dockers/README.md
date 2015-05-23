@@ -8,6 +8,11 @@ Base Article http://thepracticalsysadmin.com/running-elk-on-docker/
 
     Which aims to be a lightweight docker friendly minimal ubuntu image, that
     will allow us to consume much less memory in our docker stack
+    
+    I am seriously considering star using http://rancher.com/rancher-os/
+    instead of phusion images, i think RancherOS is the real deal for docker,
+    in fact I started the process of putting it inside the project, 
+    it will be released on next 0.0.5
 
 ##Upgrade docker
     wget -N https://get.docker.com/ | sh
