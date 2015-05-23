@@ -67,7 +67,8 @@ Prerequisites :
     Notice that 1) it's intended for plain Ubuntu, if you have already java, npm and so on, 
     you should not use 1) because it can mess up your working environment, my suggestion to 
     try this is to use Virtual Box with a clean ubuntu install, If you met 
-    pre-requisites it should work without 1) but i can't test so many scenarios.
+    pre-requisites it should work without 1) but i can't test so many scenarios so im not
+    100% sure what would happen if you try to install it without 1)
 
     1) sudo sh prerequisites_install.sh
     2) sudo sh run_dockers.sh
