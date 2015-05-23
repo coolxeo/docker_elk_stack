@@ -87,7 +87,7 @@ PULL AND PLAY!!!!
 ### To build the whole stack and client:
 I only give Linux support for the moment, in the future I will probably cover Windows as well.
 I want you to understand that this project it's literally building 4 servers, each one configured with
-1 different and complementary technology, which are visible between them which minimum configuration
+1 different and complementary technology, which are visible between them with minimum configuration
 which at the same time integrates with a dockerized built CD and CI using jenkins, as you can imagine
 doing all this with only 7 steps it's really a time saver, but also I am saying this to make you understand
 that i noticed when installing sometimes problems with components, specially with grunt, when doing the steps
