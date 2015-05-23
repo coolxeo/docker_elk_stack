@@ -27,7 +27,7 @@
 ##INTENDED FEATURES:   
    1)CI and CD in firebase and jenkins (i am using jenkins because Travis WILL NEVER
      in the near future support docket builds which is kind of lame, however it's so
-     good and so well integrated that i will keep it for running karma tests in the angularclient
+     good and so well integrated that i will keep it for running karma tests in the angularclient)
 
 ##INTRO:
 Front-End Angular, Back-End Nodejs, Docker running 3 servers with ELK stack orchestrated with Docker-compose
