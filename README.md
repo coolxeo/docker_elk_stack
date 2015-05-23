@@ -60,7 +60,7 @@ This are the 3 separate parts :
 Implemented using Yeoman, mild default instalation, it uses Karma for testing and Grunt for building
 Includes angular-fire a implementation of firebase client for angular, we use it as a Baas (Backend
 as service), this is much more than a database, you can deploy you project in production with 1
-command, it has a nice web interface to maintain the back-end, including non-google-webe-analytics,
+command, it has a nice web interface to maintain the back-end, including non-google-web-analytics,
 user management, testing console, and many nice options that erase the boiler plate of 'deploying in
 prod'/'managing a server'/'managing a backend' for your FRONT-END application, it simply works out of the box
 the project has implemented USER EMAIL VALIDATION using firebase Baas magic and angularfire modules.
