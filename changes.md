@@ -1,11 +1,14 @@
-## 0.0.5-feel-like-a-sir TBR
+## 0.0.5-feel-like-a-sir
 
     KNOWN BUGS:
-        * Can't log in with mobile devices
         * Nasty issue that i don't like, i will think what to do with this
           and prepare travis to test ONLY angular, because it seems he it's not able to test
           the docker build, shame...
           https://github.com/travis-ci/travis-ci/issues/1196
+          
+    KNOWN BUGS:          
+        * Fixed login bug in angular client, now you can log 
+          from any device
 
     FEATURES ADDED:
         * I will have to keep jenkins because of the bug mentioned
@@ -16,9 +19,10 @@
 
 ## 0.0.4-feel-like-a-sir
 
+    KNOWN BUGS:
+        * Can't log in with mobile devices
+
     BUGS FIXED:
-        * Fixed login bug in angular client, now you can log 
-          from any device
         * Cleaned and documented and running out of the box
 
 ## 0.0.3-feel-like-a-sir
