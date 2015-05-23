@@ -1,4 +1,4 @@
-## 0.0.5-feel-like-a-sir TBR
+## 0.0.6-feel-like-a-sir TBR
 
     FEATURES ADDED:
         * I will have to keep jenkins because of the bug mentioned
