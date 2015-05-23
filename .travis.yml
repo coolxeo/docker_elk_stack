@@ -1,8 +1,15 @@
 language: node_js
 node_js:
   - 0.12
-  - 0.11
-  - 0.10
+#  - 0.12
+#  - 0.11
+
+cache:
+  - codeclimate-test-reporter
+  - grunt-cli
+  - bower
+  - firebase-tools
+  - karma-cli
 
 sudo: required
 
@@ -11,7 +18,26 @@ sudo: required
 #    - RUBYOPT='-W0'
 #    - COVERAGE=1
 
-script: "sudo sh ./prerequisites_install.sh"
+before_install:
+  #Code Climate coverage
+  - npm install -g codeclimate-test-reporter grunt-cli bower firebase-tools karma-cli
 
+install:
+  - cd angularclient
+  - npm install
+  - bower install
+  - grunt build
+ #- travis will do 'npm test' here and that will call
+ # our karma tests to be exec in phantomjs
 
-install: sudo ./prerequisites_install.sh
+#:_( Nasty issue that i don't like, i will think what to do with this
+#and prepare travis to test ONLY angular, because it seems he it's not able to test
+#the docker build, shame....
+#https://github.com/travis-ci/travis-ci/issues/1196
+
+#script: "sudo sh ./dockers/run_dockers.sh"
+
+#CI with firebase https://johnheroy.com/2014/10/17/continuous-firebase-deployment-with-travis.html
+after_success:
+  - mkdir /home/travis/tmp
+  - if [[ "${TRAVIS_PULL_REQUEST}" == "false" ]]; then echo -e "${FIREBASE_EMAIL}\n${FIREBASE_PASSWORD}" | firebase deploy; fi
