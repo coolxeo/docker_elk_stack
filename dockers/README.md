@@ -29,6 +29,17 @@ Prerequisites :
     * Linux
     * Docker
     * Docker-compose
+    
+### To build:FIRST INSTALL!
+    1)sudo sh prerequisites_install.sh
+    2)sudo sh run_dockers.sh
+    
+###After install:
+    1) http://localhost:9000/#/    angularclient
+    2) http://localhost:5601       kibana
+    3) http://localhost:8081/api   nodeapi
+    4) http://localhost:9200       elasticsearch
+    5) http://localhost:8080       jenkins
 
 ##Upgrade docker
     wget -N https://get.docker.com/ | sh
@@ -42,13 +53,6 @@ Prerequisites :
 
 ##Single Run(phusion images only)
     $ docker run -t -i <YOUR_NAME_IMAGE> /sbin/my_init -- bash -l
-    
-###After install:
-        1) http://localhost:9000/#/    angularclient
-        2) http://localhost:5601       kibana
-        3) http://localhost:8081/api   nodeapi
-        4) http://localhost:9200       elasticsearch
-        5) http://localhost:8080       jenkins
 
 
 
