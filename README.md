@@ -51,7 +51,7 @@ There are 2 main goals in this project
 like in this case angular, node and elk
 
 2)Use the finnished version of this project to build something over it, like for example without
-entering yet in much details extract info from the rss news stored with Spark or a similar technology
+entering yet in many details, extract info from the rss news stored with Spark or a similar technology
 IN REAL TIME
 
 This are the 3 separate parts :
