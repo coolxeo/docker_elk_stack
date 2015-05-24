@@ -120,6 +120,7 @@ Prerequisites :
 
     1) sudo sh prerequisites_install.sh
     2) sudo sh run_dockers.sh
+       if you get an error saying docker daemon is not up just do 'docker -d' and do 2) again
     3) cd angularclient && change ./script/constants.js 
        to match your values, basically after 2) you can discover 
        the docker ip doing ifconfig and such.
