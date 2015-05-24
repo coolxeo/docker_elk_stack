@@ -7,7 +7,8 @@
 # https://github.com/phusion/baseimage-docker/blob/master/Changelog.md
 # for a list of version numbers.
 # using latest version 0.9.16
-FROM phusion/baseimage:0.9.16
+# FROM phusion/baseimage:0.9.16
+FROM rancherio/os:latest
 #FROM ubuntu:14.04
 MAINTAINER Sloppy Lopez <slopez@estudioweb130.com>
 

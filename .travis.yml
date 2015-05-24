@@ -30,12 +30,15 @@ install:
  #  our karma tests to be exec in phantomjs
 
 script:
+  - test $TRAVIS_PULL_REQUEST == "false"
   - echo "${TRAVIS_PULL_REQUEST}"
-  - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && bundle exec rake tests:integration || false'
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master"
   - echo "${TRAVIS_PULL_REQUEST}"
 
 #CI with firebase https://johnheroy.com/2014/10/17/continuous-firebase-deployment-with-travis.html
 after_success:
-  - mkdir /home/travis/tmp
-  - echo "${TRAVIS_PULL_REQUEST}"
+after_success:
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && sbt publish
+#  - mkdir /home/travis/tmp
+#  - echo "${TRAVIS_PULL_REQUEST}"
   #- firebase deploy
