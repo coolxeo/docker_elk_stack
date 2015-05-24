@@ -29,7 +29,7 @@ script:
 - echo "${TRAVIS_BRANCH}"
 - echo "${CODECLIMATE_REPO_TOKEN}"
 after_script:
-- codeclimate < ./coverage/**/lcov.info
+- CODECLIMATE_REPO_TOKEN=714d1312eddbb4b263501face4ca8dc2baa50c882abe5f606dc8c773e50257f8 codeclimate < ./coverage/**/lcov.info
 after_success:
 - if [[ "${TRAVIS_PULL_REQUEST}" != "false" ]]; then echo -e "not deployed since it's
   not a PR" | echo -e "it's a PR" ; fi
