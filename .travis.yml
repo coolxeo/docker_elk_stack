@@ -4,12 +4,12 @@ node_js:
   - 0.12
 
 #This means that only PRs and the master branch will be tested.
-branches:
-   except:
-     - /^wip\//
-     - /^blocked/
-  only:
-    - master
+#branches:
+#   except:
+#     - /^wip\//
+#     - /^blocked/
+#  only:
+#    - master
 
 #Code climate reporting for Travis build
 addons:
