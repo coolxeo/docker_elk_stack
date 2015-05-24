@@ -22,7 +22,7 @@
       
    5) Run in almost all devices and browsers(IE8+ and all the rest) and it's responsive
    
-   6) Integrated with Travis (even though i am struggling to make the build correctly)
+   6) Integrated with Travis CI, i havent's managed to do the CD yet, but I am pretty close
    
    7) Completely logicless form validation using new angular 1.3 directive ng-messages
    
