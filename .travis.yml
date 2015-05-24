@@ -43,11 +43,10 @@ install: npm test
 
 before_script:
    - grunt build
-   - echo "${TRAVIS_PULL_REQUEST}"
-   - echo "${TRAVIS_BRANCH}"
 
 script:
-  - firebase --silent
+   - echo "${TRAVIS_PULL_REQUEST}"
+   - echo "${TRAVIS_BRANCH}"
 
 #Code climate report coverage
 after_script:
@@ -55,7 +54,7 @@ after_script:
 
 #CI with firebase https://johnheroy.com/2014/10/17/continuous-firebase-deployment-with-travis.html
 after_success:
-  - if [[ "${TRAVIS_PULL_REQUEST}" == "false" ]]; then echo -e "not deployed since it's not a PR" | firebase deploy; fi
+  - if [[ "${TRAVIS_PULL_REQUEST}" == "false" ]]; then echo -e "not deployed since it's not a PR" | firebase -s deploy; fi
 #  - mkdir /home/travis/tmp
 #  - echo "${TRAVIS_PULL_REQUEST}"
   #- firebase deploy
