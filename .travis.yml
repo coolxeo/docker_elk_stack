@@ -54,7 +54,7 @@ after_script:
 
 #CI with firebase https://johnheroy.com/2014/10/17/continuous-firebase-deployment-with-travis.html
 after_success:
-  - if [[ "${TRAVIS_PULL_REQUEST}" == "false" ]]; then echo -e "not deployed since it's not a PR" | firebase -s deploy; fi
+  - if [[ "${TRAVIS_PULL_REQUEST}" == "false" ]]; then echo -e "not deployed since it's not a PR" | echo -e "it's a PR" ; fi
 #  - mkdir /home/travis/tmp
 #  - echo "${TRAVIS_PULL_REQUEST}"
   #- firebase deploy
