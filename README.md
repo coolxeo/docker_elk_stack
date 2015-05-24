@@ -78,7 +78,7 @@ container, plus the instructions to download and configure,USING the rest of the
 
 PULL AND PLAY!!!!
 
-(_̅_̅_̅(̅_̅_̅_̅_̅_̅_̅_̅_̅_̅_̅()ڪڪڪ
+(_̅_̅_̅_̅(̅_̅_̅_̅_̅_̅_̅_̅_̅_̅_̅_̅_̅()ڪڪ
 
 ###Keep it stupid!, simple.
 
@@ -93,7 +93,7 @@ doing all this with only 7 steps it's really a time saver, but also I am saying 
 that i noticed when installing sometimes problems with components, specially with grunt, when doing the steps
 when had to execute 'grunt serve' it gives an wierd error, and the project does not launch, this has happened
 several times with the testing of the 100x100 out of the box working installation, however, after deleting
-node_modules, .temp, dist and bower_componenets and reinstalling them again it simply started to work,
+node_modules, .temp, dist and bower_components and reinstalling them again it simply started to work,
 this is the only pitfall i can find in the instalation, just to make you aware. so if you see this try what
 told you and it will work
 
@@ -109,6 +109,7 @@ Prerequisites :
     > Karma
     > Grunt
     > Docker-compose
+    > Ruby
 
 ### To build:FIRST INSTALL!
     Notice that 1) it's intended for plain Ubuntu, if you have already java, npm and so on, 
@@ -167,11 +168,6 @@ Prerequisites :
     this is the way to go
     
     2)Start using rancher to manage jenkins slaves
-
-    2)Fix known bug when deploy the minified code,
-    you cannot log sometimes in firebase with mobile
-    devices for some voodoo reason because it does
-    not give any error
 
     3)Finish test coverage
            
