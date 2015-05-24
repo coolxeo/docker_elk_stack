@@ -13,7 +13,7 @@ branches:
 #Environment Variables
 env: CODECLIMATE_REPO_TOKEN=714d1312eddbb4b263501face4ca8dc2baa50c882abe5f606dc8c773e50257f8
 
-#Code climate reporting for Travis build
+#Code climate reporting for Travis build, This does not work for some reason, solved with env vars
 #addons:
 #  code_climate:
 #    repo_token:714d1312eddbb4b263501face4ca8dc2baa50c882abe5f606dc8c773e50257f8
@@ -45,15 +45,9 @@ before_script:
    - grunt build
    - echo "${TRAVIS_PULL_REQUEST}"
    - echo "${TRAVIS_BRANCH}"
-   - echo "${repo_token}"
-   - echo "${REPO_TOKEN}"
 
 script:
-  - test $TRAVIS_PULL_REQUEST == "false"
-  - echo "${TRAVIS_PULL_REQUEST}"
-  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master"
-  - echo "${TRAVIS_PULL_REQUEST}"
-  - echo "${TRAVIS_BRANCH}"
+  - firebase --silent
 
 #Code climate report coverage
 after_script:
@@ -62,7 +56,7 @@ after_script:
 
 #CI with firebase https://johnheroy.com/2014/10/17/continuous-firebase-deployment-with-travis.html
 after_success:
-  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master"
+  - if [[ "${TRAVIS_PULL_REQUEST}" == "false" ]]; then echo -e "not deployed since it's not a PR" | firebase deploy; fi
 #  - mkdir /home/travis/tmp
 #  - echo "${TRAVIS_PULL_REQUEST}"
   #- firebase deploy
