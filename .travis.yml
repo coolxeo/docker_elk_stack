@@ -4,12 +4,11 @@ node_js:
   - 0.12
 
 #This means that only PRs and the master branch will be tested.
-#branches:
-#   except:
-#     - /^wip\//
-#     - /^blocked/
-#  only:
-#    - master
+branches:
+  except:
+    - /-job-\d+/
+  only:
+    - master
 
 #Code climate reporting for Travis build
 addons:
@@ -34,8 +33,9 @@ before_install:
   - npm install
   - bower install
 
-install: true
- #- travis will do 'npm test' at this point and that will call
+install: npm test
+ #- travis will do 'npm test' even if we don't declare it
+ #  at this point and that will call
  #  our karma tests to be exec in phantomjs
 
 before_script:
@@ -52,7 +52,8 @@ script:
 
 #Code climate report coverage
 after_script:
-  - codeclimate < lcov.info
+  - echo 'sending coverage report to code climate...'
+  - codeclimate < ./coverage/PhantomJS\ 1.9.8\ \(Linux\)/lcov.info
 
 #CI with firebase https://johnheroy.com/2014/10/17/continuous-firebase-deployment-with-travis.html
 after_success:
