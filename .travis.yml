@@ -15,10 +15,10 @@ cache:
 env:
   global:
     secure: syFM8UViyuK9ELev1bgCpnFY5yMZ3m2QgqetO9jRsYOlSLXn1zN8FqXdq2NFGGepx6bDSUCjoHhDxBvh2RSbRbhJwid86airOfIHD07EnPlMAV4cZi70/vr4iioicxJFMSZn7u43Gzt48YL43NDkEa78z6IfBHw8cn/cjF1Xoz3V+3zFR76CfeNuw+DPiQcKvhM+9rjdn6Fc4qrY4q9Q1wfkDmcbJpfMYQhA6+jvGSWnA6JAOgTUqrmNDxcWVXewRT7t+MHNyAoJB4R/bLQxIqG5rl0GkamTk9giJyuNjn4rrhuDWAAGndBWUK0l3m6D7+zb459Uto5HG7cCN5B1l4xdPVN6Cf8IHZKE2t4OofQyD0T1wgdVykaxW88bzpzVeEOPUo8hsywqTKWghxuvzorFJZc3wf5peqwrAC+6i74OASoGVrnqHp8CrjsFVJaZ1+v5Ynv49WH4m5LnePcqBHePIFjwQVGMpn132vjFLMDtPrqSIztMq70c1z+MprBLczQ1cIk+kLWAfXqO+D8TQzoFdozGrZJh/sJthqPA0SLvcgjfq1K460yBmnrlfpzMsQz1RGFLjrZL76RQDugpoK9FWwEBaZ3E0ZgV/ZUjaHROQogdc5s7Rdq+yqTV+zSaNg3pdpJpinC6H5Af8IeWW74g7gPH+IO6O2giqEUyRkY=
-addons:
-  code_climate:
-    repo_token:
-      secure: syFM8UViyuK9ELev1bgCpnFY5yMZ3m2QgqetO9jRsYOlSLXn1zN8FqXdq2NFGGepx6bDSUCjoHhDxBvh2RSbRbhJwid86airOfIHD07EnPlMAV4cZi70/vr4iioicxJFMSZn7u43Gzt48YL43NDkEa78z6IfBHw8cn/cjF1Xoz3V+3zFR76CfeNuw+DPiQcKvhM+9rjdn6Fc4qrY4q9Q1wfkDmcbJpfMYQhA6+jvGSWnA6JAOgTUqrmNDxcWVXewRT7t+MHNyAoJB4R/bLQxIqG5rl0GkamTk9giJyuNjn4rrhuDWAAGndBWUK0l3m6D7+zb459Uto5HG7cCN5B1l4xdPVN6Cf8IHZKE2t4OofQyD0T1wgdVykaxW88bzpzVeEOPUo8hsywqTKWghxuvzorFJZc3wf5peqwrAC+6i74OASoGVrnqHp8CrjsFVJaZ1+v5Ynv49WH4m5LnePcqBHePIFjwQVGMpn132vjFLMDtPrqSIztMq70c1z+MprBLczQ1cIk+kLWAfXqO+D8TQzoFdozGrZJh/sJthqPA0SLvcgjfq1K460yBmnrlfpzMsQz1RGFLjrZL76RQDugpoK9FWwEBaZ3E0ZgV/ZUjaHROQogdc5s7Rdq+yqTV+zSaNg3pdpJpinC6H5Af8IeWW74g7gPH+IO6O2giqEUyRkY=
+#addons:
+#  code_climate:
+#    repo_token:
+#      secure: syFM8UViyuK9ELev1bgCpnFY5yMZ3m2QgqetO9jRsYOlSLXn1zN8FqXdq2NFGGepx6bDSUCjoHhDxBvh2RSbRbhJwid86airOfIHD07EnPlMAV4cZi70/vr4iioicxJFMSZn7u43Gzt48YL43NDkEa78z6IfBHw8cn/cjF1Xoz3V+3zFR76CfeNuw+DPiQcKvhM+9rjdn6Fc4qrY4q9Q1wfkDmcbJpfMYQhA6+jvGSWnA6JAOgTUqrmNDxcWVXewRT7t+MHNyAoJB4R/bLQxIqG5rl0GkamTk9giJyuNjn4rrhuDWAAGndBWUK0l3m6D7+zb459Uto5HG7cCN5B1l4xdPVN6Cf8IHZKE2t4OofQyD0T1wgdVykaxW88bzpzVeEOPUo8hsywqTKWghxuvzorFJZc3wf5peqwrAC+6i74OASoGVrnqHp8CrjsFVJaZ1+v5Ynv49WH4m5LnePcqBHePIFjwQVGMpn132vjFLMDtPrqSIztMq70c1z+MprBLczQ1cIk+kLWAfXqO+D8TQzoFdozGrZJh/sJthqPA0SLvcgjfq1K460yBmnrlfpzMsQz1RGFLjrZL76RQDugpoK9FWwEBaZ3E0ZgV/ZUjaHROQogdc5s7Rdq+yqTV+zSaNg3pdpJpinC6H5Af8IeWW74g7gPH+IO6O2giqEUyRkY=
 before_install:
 - npm install -g codeclimate-test-reporter grunt-cli bower firebase-tools karma-cli
 - cd angularclient
@@ -32,6 +32,6 @@ script:
 - echo "${TRAVIS_BRANCH}"
 - echo "${CODECLIMATE_REPO_TOKEN}"
 after_script:
-- "${CODECLIMATE_REPO_TOKEN}" codeclimate < ./coverage/**/lcov.info
+- codeclimate < ./coverage/**/lcov.info
 after_success:
 - if [[ "${TRAVIS_PULL_REQUEST}" != "false" ]]; then echo -e "not deployed since it's not a PR" | echo -e "it's a PR" ; fi
