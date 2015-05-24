@@ -6,6 +6,8 @@
   npm
   
   grunt-cli
+  
+  travis account (free)
 
 ##Run angularclient
   grunt serve
