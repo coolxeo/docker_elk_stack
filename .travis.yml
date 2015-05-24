@@ -4,6 +4,10 @@ node_js:
 #  - 0.12
 #  - 0.11
 
+branches:
+  only:
+    - master
+
 cache:
   - codeclimate-test-reporter
   - grunt-cli
@@ -22,8 +26,8 @@ install:
   - npm install
   - bower install
   - grunt build
- #- travis will do 'npm test' here and that will call
- # our karma tests to be exec in phantomjs
+ #- travis will do 'npm test' at this point and that will call
+ #  our karma tests to be exec in phantomjs
 
 #CI with firebase https://johnheroy.com/2014/10/17/continuous-firebase-deployment-with-travis.html
 after_success:
