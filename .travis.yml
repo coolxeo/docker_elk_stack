@@ -51,7 +51,6 @@ script:
 
 #Code climate report coverage
 after_script:
-  - echo 'sending coverage report to code climate...'
   - codeclimate < ./coverage/**/lcov.info
 
 #CI with firebase https://johnheroy.com/2014/10/17/continuous-firebase-deployment-with-travis.html
