@@ -3,9 +3,13 @@ language: node_js
 node_js:
   - 0.12
 
-#branches:
-#  only:
-#    - master
+#This means that only PRs and the master branch will be tested.
+branches:
+   except:
+     - /^wip\//
+     - /^blocked/
+  only:
+    - master
 
 #Code climate reporting for Travis build
 addons:
@@ -45,6 +49,10 @@ script:
   - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master"
   - echo "${TRAVIS_PULL_REQUEST}"
   - echo "${TRAVIS_BRANCH}"
+
+#Code climate report coverage
+after_script:
+  - codeclimate < lcov.info
 
 #CI with firebase https://johnheroy.com/2014/10/17/continuous-firebase-deployment-with-travis.html
 after_success:
