@@ -6,7 +6,7 @@ sudo apt-get install -y -qq nodejs npm wget curl git python ruby-full
 #Install travis command line to be able to encrypt api_keys in the Travis build
 sudo gem install travis
 #Encrypt your code climate key for Travis build and add it automatically to your .travis.yml
-travis encrypt CODECLIMATE_REPO_TOKEN=714d1312eddbb4b263501face4ca8dc2baa50c882abe5f606dc8c773e50257f8# --add
+travis encrypt CODECLIMATE_REPO_TOKEN=714d1312eddbb4b263501face4ca8dc2baa50c882abe5f606dc8c773e50257f8 --add
 
 #Fix for node first install http://stackoverflow.com/questions/21168141/can-not-install-packages-using-node-package-manager-in-ubuntu
 sudo ln -s /usr/bin/nodejs /usr/bin/node
@@ -38,4 +38,5 @@ docker --version
 nodejs -v
 npm -v
 git --version
+ruby -v
 uname -r
