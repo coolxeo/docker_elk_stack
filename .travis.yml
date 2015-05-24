@@ -1,13 +1,15 @@
 language: node_js
 node_js:
   - 0.12
-#  - 0.12
-#  - 0.11
 
 branches:
   only:
     - master
-
+#Code climate reporting for Travis build
+addons:
+  code_climate:
+    repo_token:714d1312eddbb4b263501face4ca8dc2baa50c882abe5f606dc8c773e50257f8
+#Caching resources to speed up the process
 cache:
   - codeclimate-test-reporter
   - grunt-cli
@@ -16,9 +18,8 @@ cache:
   - karma-cli
 
 sudo: required
-
+#Install dependencies for Travis build
 before_install:
-  #Code Climate coverage
   - npm install -g codeclimate-test-reporter grunt-cli bower firebase-tools karma-cli
 
 install:
@@ -29,16 +30,20 @@ install:
  #- travis will do 'npm test' at this point and that will call
  #  our karma tests to be exec in phantomjs
 
+before_script:
+   - echo "${TRAVIS_PULL_REQUEST}"
+   - echo "${TRAVIS_BRANCH}"
+
 script:
   - test $TRAVIS_PULL_REQUEST == "false"
   - echo "${TRAVIS_PULL_REQUEST}"
   - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master"
   - echo "${TRAVIS_PULL_REQUEST}"
+  - echo "${TRAVIS_BRANCH}"
 
 #CI with firebase https://johnheroy.com/2014/10/17/continuous-firebase-deployment-with-travis.html
 after_success:
-after_success:
-  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && sbt publish
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master"
 #  - mkdir /home/travis/tmp
 #  - echo "${TRAVIS_PULL_REQUEST}"
   #- firebase deploy
