@@ -5,16 +5,18 @@ node_js:
 
 #This means that only PRs and the master branch will be tested.
 branches:
-   except:
-     - /^wip\//
-     - /^blocked/
+  except:
+    - /-job-\d+/
   only:
     - master
 
+#Environment Variables
+env: CODECLIMATE_REPO_TOKEN=714d1312eddbb4b263501face4ca8dc2baa50c882abe5f606dc8c773e50257f8
+
 #Code climate reporting for Travis build
-addons:
-  code_climate:
-    repo_token:714d1312eddbb4b263501face4ca8dc2baa50c882abe5f606dc8c773e50257f8
+#addons:
+#  code_climate:
+#    repo_token:714d1312eddbb4b263501face4ca8dc2baa50c882abe5f606dc8c773e50257f8
 
 #Caching resources to speed up the process
 cache:
@@ -34,14 +36,17 @@ before_install:
   - npm install
   - bower install
 
-install: true
- #- travis will do 'npm test' at this point and that will call
+install: npm test
+ #- travis will do 'npm test' even if we don't declare it
+ #  at this point and that will call
  #  our karma tests to be exec in phantomjs
 
 before_script:
    - grunt build
    - echo "${TRAVIS_PULL_REQUEST}"
    - echo "${TRAVIS_BRANCH}"
+   - echo "${repo_token}"
+   - echo "${REPO_TOKEN}"
 
 script:
   - test $TRAVIS_PULL_REQUEST == "false"
@@ -52,7 +57,8 @@ script:
 
 #Code climate report coverage
 after_script:
-  - codeclimate < lcov.info
+  - echo 'sending coverage report to code climate...'
+  - codeclimate < ./coverage/**/lcov.info
 
 #CI with firebase https://johnheroy.com/2014/10/17/continuous-firebase-deployment-with-travis.html
 after_success:
