@@ -1,62 +1,34 @@
 language: node_js
-
 node_js:
-  - 0.12
-
-#This means that only PRs and the master branch will be tested.
+- 0.12
 branches:
   except:
-    - /-job-\d+/
+  - /-job-\d+/
   only:
-    - master
-
-#Environment Variables
-env: CODECLIMATE_REPO_TOKEN=714d1312eddbb4b263501face4ca8dc2baa50c882abe5f606dc8c773e50257f8
-
-#Code climate reporting for Travis build, This does not work for some reason, solved with env vars
-#addons:
-#  code_climate:
-#    repo_token:714d1312eddbb4b263501face4ca8dc2baa50c882abe5f606dc8c773e50257f8
-
-#Caching resources to speed up the process
+  - master
+env:
+  global:
+    secure: s3TvQUQSkxAG70yoze9LEgmhZSlb4Ie43huqCro+oix8iw7NMKTbFnWlDxu7c+SxCBnucWjz0PW5e/G6d7D5ABfa5fM86K1uw7cKvtsSC9UXqmkAwNkBAOrRB+AmJd6wVILyPAUXGtah1O7ul9V4BYg45jdCyxfSBtoV9gka8yfz7w8mAfNTtPvqFY636sgP5hqo0fG07WVwFy8XIEGxEoKrvGSMp645u8kZ2woGPc6ZkWNuqegAdFCqXmIUEjpX/TK1lwCiwxW910w0fVnRNfyd0hpT8N5VXXRTHXzk5PMRkNJP7OOBszic4azeERBdQerpCckOgGlnQl1I8v0JMyS4SJwsDUEcibA+h1Jn5UDBLseaWxtQM81FmKaVKCSWldK4jMKHDPFFdJ3wnt32u3dYOdfEE2S46gIynGxRXI6hodGR+HmoYF0Nk8g7p0W+/zeDgG6Gx/2mC+c7wXpAXsdhhSpXQYDJAckYgYcxtjcqPqS6d/iy1286eJww3dw/514lII0kYBx+2jMFWjp86GC579gONvuGynwlviM/w6tW5iNgxGgMILU8y+WIacoByO6Os2KhcWh6cS4XC3QyywHClAXVCSi7VaKQQMzJae3FB8R6yIMd+Ucu1KOeVDHYdWycLPLXQNTUZHWMr2APiwxw+H5VltmalYMGFJHdjWc=
 cache:
-  - codeclimate-test-reporter
-  - grunt-cli
-  - bower
-  - firebase-tools
-  - karma-cli
-
-#Optional
-#sudo: required
-
-#Install dependencies for Travis build
+- codeclimate-test-reporter
+- grunt-cli
+- bower
+- firebase-tools
+- karma-cli
 before_install:
-  - npm install -g codeclimate-test-reporter grunt-cli bower firebase-tools karma-cli
-  - cd angularclient
-  - npm install
-  - bower install
-
+- npm install -g codeclimate-test-reporter grunt-cli bower firebase-tools karma-cli
+- cd angularclient
+- npm install
+- bower install
 install: npm test
- #- travis will do 'npm test' even if we don't declare it
- #  at this point and that will call
- #  our karma tests to be exec in phantomjs
-
 before_script:
-   - grunt build
-   - echo "${TRAVIS_PULL_REQUEST}"
-   - echo "${TRAVIS_BRANCH}"
-
+- grunt build
 script:
-  - firebase --silent
-
-#Code climate report coverage
+- echo "${TRAVIS_PULL_REQUEST}"
+- echo "${TRAVIS_BRANCH}"
+- echo "${CODECLIMATE_REPO_TOKEN}"
 after_script:
-  - echo 'sending coverage report to code climate...'
-  - codeclimate < ./coverage/**/lcov.info
-
-#CI with firebase https://johnheroy.com/2014/10/17/continuous-firebase-deployment-with-travis.html
+- codeclimate < ./coverage/**/lcov.info
 after_success:
-  - if [[ "${TRAVIS_PULL_REQUEST}" == "false" ]]; then echo -e "not deployed since it's not a PR" | firebase deploy; fi
-#  - mkdir /home/travis/tmp
-#  - echo "${TRAVIS_PULL_REQUEST}"
-  #- firebase deploy
+- if [[ "${TRAVIS_PULL_REQUEST}" != "false" ]]; then echo -e "not deployed since it's
+  not a PR" | echo -e "it's a PR" ; fi

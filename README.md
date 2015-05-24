@@ -22,7 +22,7 @@
       
    5) Run in almost all devices and browsers(IE8+ and all the rest) and it's responsive
    
-   6) Integrated with Travis (even though i am struggling to make the build correctly)
+   6) Integrated with Travis CI, i havent's managed to do the CD yet, but I am pretty close
    
    7) Completely logicless form validation using new angular 1.3 directive ng-messages
    
@@ -78,7 +78,7 @@ container, plus the instructions to download and configure,USING the rest of the
 
 PULL AND PLAY!!!!
 
-(_̅_̅_̅(̅_̅_̅_̅_̅_̅_̅_̅_̅_̅_̅()ڪڪڪ
+(_̅_̅_̅_̅(̅_̅_̅_̅_̅_̅_̅_̅_̅_̅_̅_̅_̅()ڪڪ
 
 ###Keep it stupid!, simple.
 
@@ -93,7 +93,7 @@ doing all this with only 7 steps it's really a time saver, but also I am saying 
 that i noticed when installing sometimes problems with components, specially with grunt, when doing the steps
 when had to execute 'grunt serve' it gives an wierd error, and the project does not launch, this has happened
 several times with the testing of the 100x100 out of the box working installation, however, after deleting
-node_modules, .temp, dist and bower_componenets and reinstalling them again it simply started to work,
+node_modules, .temp, dist and bower_components and reinstalling them again it simply started to work,
 this is the only pitfall i can find in the instalation, just to make you aware. so if you see this try what
 told you and it will work
 
@@ -109,6 +109,7 @@ Prerequisites :
     > Karma
     > Grunt
     > Docker-compose
+    > Ruby
 
 ### To build:FIRST INSTALL!
     Notice that 1) it's intended for plain Ubuntu, if you have already java, npm and so on, 
@@ -119,6 +120,7 @@ Prerequisites :
 
     1) sudo sh prerequisites_install.sh
     2) sudo sh run_dockers.sh
+       if you get an error saying docker daemon is not up just do 'docker -d' and do 2) again
     3) cd angularclient && change ./script/constants.js 
        to match your values, basically after 2) you can discover 
        the docker ip doing ifconfig and such.
@@ -167,11 +169,6 @@ Prerequisites :
     this is the way to go
     
     2)Start using rancher to manage jenkins slaves
-
-    2)Fix known bug when deploy the minified code,
-    you cannot log sometimes in firebase with mobile
-    devices for some voodoo reason because it does
-    not give any error
 
     3)Finish test coverage
            

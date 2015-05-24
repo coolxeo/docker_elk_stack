@@ -1,35 +1,27 @@
 #!/bin/bash
 #Pre-requisites
-sudo apt-get install -y -qq nodejs
-sudo apt-get install -y -qq npm
-sudo apt-get install -y -qq wget
-sudo apt-get install -y -qq curl
-sudo apt-get install -y -qq git
+#sudo apt-get install -y -qq build-essential TODO check if mandatory
+sudo apt-get install -y -qq nodejs npm wget curl git python ruby-full
+
+#Install travis command line to be able to encrypt api_keys in the Travis build
+sudo gem install travis
+#Encrypt your code climate key for Travis build and add it automatically to your .travis.yml
+travis encrypt CODECLIMATE_REPO_TOKEN=<YOUR_CODE_CLIMATE_TOKEN> --add
 
 #Fix for node first install http://stackoverflow.com/questions/21168141/can-not-install-packages-using-node-package-manager-in-ubuntu
 sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 #Docker
 wget -qO- https://get.docker.com/ | sh
+#For not having to do 'sudo docker' but this represents a security issue so i am leaving it unset by default
 #sudo usermod -aG docker <YOUR_UBUNTU_USER>
 
 #Docker-Compose 
 sudo curl -L https://github.com/docker/compose/releases/download/1.2.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
-#Code Climate coverage
-sudo npm install -g codeclimate-test-reporter
-#Grunt
-sudo npm install -g grunt-cli
-#Bower
-sudo npm install -g bower
-#Firebase Tools
-sudo npm install -g firebase-tools
-#Yeoman
-sudo npm install -g yo generator-karma generator-angular
-#Karma
-sudo npm install -g karma-cli
-
+#Install npm -g dependencies
+sudo npm install -g codeclimate-test-reporter grunt-cli bower firebase-tools yo generator-karma generator-angular karma-cli
 
 # Add a repo where JDK can be found.
 sudo apt-get install -y software-properties-common
@@ -46,4 +38,5 @@ docker --version
 nodejs -v
 npm -v
 git --version
+ruby -v
 uname -r
