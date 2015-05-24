@@ -23,7 +23,6 @@ before_script:
 script:
 - echo "${TRAVIS_PULL_REQUEST}"
 - echo "${TRAVIS_BRANCH}"
-- echo "${CODECLIMATE_REPO_TOKEN}"
 after_script:
 - codeclimate < ./coverage/**/lcov.info
 after_success:
