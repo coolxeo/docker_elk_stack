@@ -42,6 +42,8 @@ before_script:
    - grunt build
    - echo "${TRAVIS_PULL_REQUEST}"
    - echo "${TRAVIS_BRANCH}"
+   - echo "${repo_token}"
+   - echo "${REPO_TOKEN}"
 
 script:
   - test $TRAVIS_PULL_REQUEST == "false"
