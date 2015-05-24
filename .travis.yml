@@ -10,10 +10,13 @@ branches:
   only:
     - master
 
+#Environment Variables
+env: CODECLIMATE_REPO_TOKEN=714d1312eddbb4b263501face4ca8dc2baa50c882abe5f606dc8c773e50257f8
+
 #Code climate reporting for Travis build
-addons:
-  code_climate:
-    repo_token:714d1312eddbb4b263501face4ca8dc2baa50c882abe5f606dc8c773e50257f8
+#addons:
+#  code_climate:
+#    repo_token:714d1312eddbb4b263501face4ca8dc2baa50c882abe5f606dc8c773e50257f8
 
 #Caching resources to speed up the process
 cache:
@@ -55,7 +58,7 @@ script:
 #Code climate report coverage
 after_script:
   - echo 'sending coverage report to code climate...'
-  - codeclimate < ./coverage/PhantomJS\ 1.9.8\ \(Linux\)/lcov.info
+  - codeclimate < ./coverage/**/lcov.info
 
 #CI with firebase https://johnheroy.com/2014/10/17/continuous-firebase-deployment-with-travis.html
 after_success:
