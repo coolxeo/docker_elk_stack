@@ -6,16 +6,15 @@ branches:
   - /-job-\d+/
   only:
   - master
+env:
+  global:
+    secure: s3TvQUQSkxAG70yoze9LEgmhZSlb4Ie43huqCro+oix8iw7NMKTbFnWlDxu7c+SxCBnucWjz0PW5e/G6d7D5ABfa5fM86K1uw7cKvtsSC9UXqmkAwNkBAOrRB+AmJd6wVILyPAUXGtah1O7ul9V4BYg45jdCyxfSBtoV9gka8yfz7w8mAfNTtPvqFY636sgP5hqo0fG07WVwFy8XIEGxEoKrvGSMp645u8kZ2woGPc6ZkWNuqegAdFCqXmIUEjpX/TK1lwCiwxW910w0fVnRNfyd0hpT8N5VXXRTHXzk5PMRkNJP7OOBszic4azeERBdQerpCckOgGlnQl1I8v0JMyS4SJwsDUEcibA+h1Jn5UDBLseaWxtQM81FmKaVKCSWldK4jMKHDPFFdJ3wnt32u3dYOdfEE2S46gIynGxRXI6hodGR+HmoYF0Nk8g7p0W+/zeDgG6Gx/2mC+c7wXpAXsdhhSpXQYDJAckYgYcxtjcqPqS6d/iy1286eJww3dw/514lII0kYBx+2jMFWjp86GC579gONvuGynwlviM/w6tW5iNgxGgMILU8y+WIacoByO6Os2KhcWh6cS4XC3QyywHClAXVCSi7VaKQQMzJae3FB8R6yIMd+Ucu1KOeVDHYdWycLPLXQNTUZHWMr2APiwxw+H5VltmalYMGFJHdjWc=
 cache:
 - codeclimate-test-reporter
 - grunt-cli
 - bower
 - firebase-tools
 - karma-cli
-#addons:
-#  code_climate:
-#    repo_token:
-#      secure: dwtWaJ7TuTRchs1d376VY6VtJjPZOsD+tEUjmScvWG9kO5UC3iU9yurp+feznKlppfRb2DzZeQ345NqGRpUbxaihPMBJsf4NHweR/axQzDoOWVSn+QyxMvjRG+4gfw1aJWAhpxzsrNetaL9WDvnGG2y1yGE6qVvXL+uNEOc36BYTsH2z/rUBJIWVaAHs7ceqeA06y1KwNcUNMvdad3nrI3vBw6BO/uXbkuSmxYFJmHu6kCK+zuKJRuMl0175Cz/U/bGbhUQcVimBuPRgARi8Xvy1RSqLJ9O4QV9xq1KbZNJIdKQaBR9lt63c68ZbWCB4R/jT1lXbNQ3L6wbwzU/LokAzkA5AnpP6N+Jm+/BX2V2LE+feaD42oulAP4yAWxtcSpiq/xqhTwKqcK/ZyWF2jywYKJWUPQ7F3zWPPamgDXHsLegfJ5SluBUjSowpfHuyWorMjoXk+o0U8F0QxyAceSbMkqbFB9y9sgbBrB4jZR24vlOe+MNsuie8saHqk5swmpBm3M1tlfLDnfuzOagutpFhpXB5nMkFHDHOPVAzT6+C6ZAHvbSsR0QBDtHoI/VgW4VI1nSmWqA3O9D9p/3/t7xzWpCldIv4xogaHV9L3UccyNklQ2vrM8Yl1fcT/tBugd/y3iwaS7g/SAmFx+Wzi3BLPm6YTImYOrC2JXh0Qw0=
 before_install:
 - npm install -g codeclimate-test-reporter grunt-cli bower firebase-tools karma-cli
 - cd angularclient
