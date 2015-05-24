@@ -29,6 +29,11 @@ install:
  #- travis will do 'npm test' at this point and that will call
  #  our karma tests to be exec in phantomjs
 
+script:
+  - echo "${TRAVIS_PULL_REQUEST}"
+  - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && bundle exec rake tests:integration || false'
+  - echo "${TRAVIS_PULL_REQUEST}"
+
 #CI with firebase https://johnheroy.com/2014/10/17/continuous-firebase-deployment-with-travis.html
 after_success:
   - mkdir /home/travis/tmp
