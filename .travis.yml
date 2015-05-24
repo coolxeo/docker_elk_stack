@@ -1,14 +1,17 @@
 language: node_js
+
 node_js:
   - 0.12
 
-branches:
-  only:
-    - master
+#branches:
+#  only:
+#    - master
+
 #Code climate reporting for Travis build
 addons:
   code_climate:
     repo_token:714d1312eddbb4b263501face4ca8dc2baa50c882abe5f606dc8c773e50257f8
+
 #Caching resources to speed up the process
 cache:
   - codeclimate-test-reporter
@@ -17,20 +20,22 @@ cache:
   - firebase-tools
   - karma-cli
 
-sudo: required
+#Optional
+#sudo: required
+
 #Install dependencies for Travis build
 before_install:
   - npm install -g codeclimate-test-reporter grunt-cli bower firebase-tools karma-cli
-
-install:
   - cd angularclient
   - npm install
   - bower install
-  - grunt build
+
+install: true
  #- travis will do 'npm test' at this point and that will call
  #  our karma tests to be exec in phantomjs
 
 before_script:
+   - grunt build
    - echo "${TRAVIS_PULL_REQUEST}"
    - echo "${TRAVIS_BRANCH}"
 
