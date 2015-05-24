@@ -12,10 +12,10 @@ cache:
 - bower
 - firebase-tools
 - karma-cli
-addons:
-  code_climate:
-    repo_token:
-      secure: dwtWaJ7TuTRchs1d376VY6VtJjPZOsD+tEUjmScvWG9kO5UC3iU9yurp+feznKlppfRb2DzZeQ345NqGRpUbxaihPMBJsf4NHweR/axQzDoOWVSn+QyxMvjRG+4gfw1aJWAhpxzsrNetaL9WDvnGG2y1yGE6qVvXL+uNEOc36BYTsH2z/rUBJIWVaAHs7ceqeA06y1KwNcUNMvdad3nrI3vBw6BO/uXbkuSmxYFJmHu6kCK+zuKJRuMl0175Cz/U/bGbhUQcVimBuPRgARi8Xvy1RSqLJ9O4QV9xq1KbZNJIdKQaBR9lt63c68ZbWCB4R/jT1lXbNQ3L6wbwzU/LokAzkA5AnpP6N+Jm+/BX2V2LE+feaD42oulAP4yAWxtcSpiq/xqhTwKqcK/ZyWF2jywYKJWUPQ7F3zWPPamgDXHsLegfJ5SluBUjSowpfHuyWorMjoXk+o0U8F0QxyAceSbMkqbFB9y9sgbBrB4jZR24vlOe+MNsuie8saHqk5swmpBm3M1tlfLDnfuzOagutpFhpXB5nMkFHDHOPVAzT6+C6ZAHvbSsR0QBDtHoI/VgW4VI1nSmWqA3O9D9p/3/t7xzWpCldIv4xogaHV9L3UccyNklQ2vrM8Yl1fcT/tBugd/y3iwaS7g/SAmFx+Wzi3BLPm6YTImYOrC2JXh0Qw0=
+#addons:
+#  code_climate:
+#    repo_token:
+#      secure: dwtWaJ7TuTRchs1d376VY6VtJjPZOsD+tEUjmScvWG9kO5UC3iU9yurp+feznKlppfRb2DzZeQ345NqGRpUbxaihPMBJsf4NHweR/axQzDoOWVSn+QyxMvjRG+4gfw1aJWAhpxzsrNetaL9WDvnGG2y1yGE6qVvXL+uNEOc36BYTsH2z/rUBJIWVaAHs7ceqeA06y1KwNcUNMvdad3nrI3vBw6BO/uXbkuSmxYFJmHu6kCK+zuKJRuMl0175Cz/U/bGbhUQcVimBuPRgARi8Xvy1RSqLJ9O4QV9xq1KbZNJIdKQaBR9lt63c68ZbWCB4R/jT1lXbNQ3L6wbwzU/LokAzkA5AnpP6N+Jm+/BX2V2LE+feaD42oulAP4yAWxtcSpiq/xqhTwKqcK/ZyWF2jywYKJWUPQ7F3zWPPamgDXHsLegfJ5SluBUjSowpfHuyWorMjoXk+o0U8F0QxyAceSbMkqbFB9y9sgbBrB4jZR24vlOe+MNsuie8saHqk5swmpBm3M1tlfLDnfuzOagutpFhpXB5nMkFHDHOPVAzT6+C6ZAHvbSsR0QBDtHoI/VgW4VI1nSmWqA3O9D9p/3/t7xzWpCldIv4xogaHV9L3UccyNklQ2vrM8Yl1fcT/tBugd/y3iwaS7g/SAmFx+Wzi3BLPm6YTImYOrC2JXh0Qw0=
 before_install:
 - npm install -g codeclimate-test-reporter grunt-cli bower firebase-tools karma-cli
 - cd angularclient
@@ -28,9 +28,8 @@ script:
 - echo "${TRAVIS_PULL_REQUEST}"
 - echo "${TRAVIS_BRANCH}"
 - echo "${CODECLIMATE_REPO_TOKEN}"
-- "${CODECLIMATE_REPO_TOKEN} codeclimate < ./coverage/**/lcov.info"
 after_script:
-- "${CODECLIMATE_REPO_TOKEN} codeclimate < ./coverage/**/lcov.info"
+- codeclimate < ./coverage/**/lcov.info
 after_success:
 - if [[ "${TRAVIS_PULL_REQUEST}" != "false" ]]; then echo -e "not deployed since it's
   not a PR" | echo -e "it's a PR" ; fi
