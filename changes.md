@@ -1,4 +1,4 @@
-## 0.0.6-feel-like-a-sir TBR
+## 0.0.7-feel-like-a-sir TBR
     KNOWN BUGS:
         * Nasty issue that i don't like, i will think what to do with this
           and prepare travis to test ONLY angular, because it seems he it's not able to test
