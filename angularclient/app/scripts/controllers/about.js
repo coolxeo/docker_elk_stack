@@ -13,5 +13,5 @@ angular.module('angularfireApp')
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
-    ];
-  }]);
+    ]
+  }])
