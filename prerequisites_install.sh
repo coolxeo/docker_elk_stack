@@ -6,7 +6,8 @@ sudo apt-get install -y -qq nodejs npm wget curl git python ruby-full
 #Install travis-cli command line to be able to encrypt api_keys in the Travis build
 sudo gem install travis
 #Encrypt your code climate key for Travis build and add it automatically to your .travis.yml
-#remember to add it as well in https://travis-ci.org/<YOUR_GIT_USER>/<YOUR_GIT_PROJECT_NAME>/settings/env_vars
+#remember explicitly declare this variables in
+#https://travis-ci.org/<YOUR_GIT_USER>/<YOUR_GIT_PROJECT_NAME>/settings/env_vars
 travis encrypt CODECLIMATE_REPO_TOKEN=<YOUR_CODE_CLIMATE_TOKEN> --add
 travis encrypt FIREBASE_USER=<YOUR_FIREBASE_USER> --add
 travis encrypt FIREBASE_PASSWORD=<YOUR_FIREBASE_PASSWORD> --add
