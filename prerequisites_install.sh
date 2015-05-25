@@ -3,11 +3,11 @@
 #sudo apt-get install -y -qq build-essential TODO check if mandatory
 sudo apt-get install -y -qq nodejs npm wget curl git python ruby-full
 
-#Install travis command line to be able to encrypt api_keys in the Travis build
+#Install travis-cli command line to be able to encrypt api_keys in the Travis build
 sudo gem install travis
 #Encrypt your code climate key for Travis build and add it automatically to your .travis.yml
 #remember to add it as well in https://travis-ci.org/<YOUR_GIT_USER>/<YOUR_GIT_PROJECT_NAME>/settings/env_vars
-travis encrypt CODECLIMATE_REPO_TOKEN=714d1312eddbb4b263501face4ca8dc2baa50c882abe5f606dc8c773e50257f8 --add
+travis encrypt CODECLIMATE_REPO_TOKEN=<YOUR_CODE_CLIMATE_TOKEN> --add
 
 #Fix for node first install http://stackoverflow.com/questions/21168141/can-not-install-packages-using-node-package-manager-in-ubuntu
 sudo ln -s /usr/bin/nodejs /usr/bin/node
@@ -21,7 +21,7 @@ wget -qO- https://get.docker.com/ | sh
 sudo curl -L https://github.com/docker/compose/releases/download/1.2.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
-#Install npm -g dependencies
+#Install npm global dependencies
 sudo npm install -g codeclimate-test-reporter grunt-cli bower firebase-tools yo generator-karma generator-angular karma-cli
 
 # Add a repo where JDK can be found.
