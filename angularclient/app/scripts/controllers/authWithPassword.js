@@ -12,10 +12,7 @@ angular.module('angularfireApp')
     function ($scope, $rootScope, firebaseServiceFactory, ngNotify) {
       $scope.authWithPassword = function (isValid) {
         if (isValid) {
-          firebaseServiceFactory.authWithPassword($scope, $rootScope, '/')
-            .then(function () {
-              $scope.showme = true;
-            })
+          firebaseServiceFactory.authWithPassword($scope, $rootScope, '/');
         } else {
           ngNotify.set('There are still invalid fields below');
         }

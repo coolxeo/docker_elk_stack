@@ -24,7 +24,7 @@ describe('RssFeederCtrl', function () {
       expect(rssFeederService.rssFeeder).toHaveBeenCalled();
       deferredSuccess.resolve();
       scope.$digest();           // This makes sure that all callbacks of promises will be called
-    })
+    });
     it('submit should call rssFeeder with a "random string query" and not fail', function () {
       var deferredSuccess = $q.defer();
       spyOn(rssFeederService, 'rssFeeder').and.returnValue(deferredSuccess.promise);
