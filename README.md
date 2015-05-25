@@ -54,7 +54,7 @@ IN REAL TIME
 This are the 3 separate parts :
 
 ##angularclient
-Implemented using Yeoman, mild default instalation, it uses Karma for testing and Grunt for building
+Implemented using Yeoman, mild default installation, it uses Karma for testing and Grunt for building
 Includes angular-fire a implementation of firebase client for angular, we use it as a Baas (Backend
 as service), this is much more than a database, you can deploy you project in production with 1
 command, it has a nice web interface to maintain the back-end, including non-google-web-analytics,
@@ -86,7 +86,7 @@ I only give Linux support for the moment, in the future I will probably cover Wi
 I want you to understand that this project it's literally building 4 servers, each one configured with
 1 different and complementary technology, which are visible between them with minimum configuration
 which at the same time integrates with a dockerized built CD and CI using jenkins, as you can imagine
-doing all this with only 7 steps it's really a time saver, but also I am saying this to make you understand
+doing all this with only 10 steps it's really a time saver, but also I am saying this to make you understand
 that i noticed when installing sometimes problems with components, specially with grunt, when doing the steps
 when had to execute 'grunt serve' it gives an wierd error, and the project does not launch, this has happened
 several times with the testing of the 100x100 out of the box working installation, however, after deleting
@@ -115,34 +115,34 @@ Prerequisites :
     pre-requisites it should work without 1) but i can't test so many scenarios so im not
     100% sure what would happen if you try to install it without 1)
 
-    1) sudo sh prerequisites_install.sh
-    2) sudo sh run_dockers.sh
+    1) modify prerequisites_install.sh to add your credentials
+    2) sudo sh prerequisites_install.sh
+    3) sudo sh run_dockers.sh
        if you get an error saying docker daemon is not up just do 'docker -d' and do 2) again
-    3) cd angularclient && change ./script/constants.js 
-       to match your values, basically after 2) you can discover 
-       the docker ip doing ifconfig and such.
-    4) sudo npm install;bower install
-    5) mkdir dist
+    4) change angularclient/script/constants.js to match your own values, 
+       basically after 2) you can discover the docker ip doing ifconfig and such.
+    5) sudo npm install;bower install
+    6) mkdir dist
        (to create the dist directory which we will use to deploy in firebase)
-    6) firebase init
-    7) grunt serve
-    8) Load rss in elasticsearch with fresh rss news:
+    7) firebase init
+    8) grunt serve
+    9) Load rss in elasticsearch with fresh rss news:
        http://localhost:8081/api/rssload
-    9) go to https://travis-ci.org/<YOUR_GIT_USER>/<YOUR_GIT_PROJECT_NAME>/settings/env_vars and create 3 env variables
+    10) go to https://travis-ci.org/<YOUR_GIT_USER>/<YOUR_GIT_PROJECT_NAME>/settings/env_vars and create 3 env variables
        and add this env vars
        - CODECLIMATE_REPO_TOKEN=<YOUR_CODECLIMATE_REPO_TOKEN>
        - FIREBASE_USER=<YOUR_FIREBASE_USER>
        - FIREBASE_PASSWORD=<YOUR_FIREBASE_PASSWORD>
        
     *NOTES:
-        1) removes the boiler plate of the dependencies
-        2) builds and runs the backend (ELK Stack)
-        3)4)7) it's for running the client, to visualize the data
+        2) removes the boiler plate of the dependencies
+        3) builds and runs the backend (ELK Stack)
+        4)5)8) it's for running the client, to visualize the data
            that came from nodeapi to elasticsearch, and from elastic 
            search to angular, if you can see the rss news in angular,
            it's complete correctly instaled
-        5) creates a release inside 'dist' folder, needed for firebase
-        6) initialize firebase (only first time, this is only 
+        6) creates a release inside 'dist' folder, needed for firebase
+        7) initialize firebase (only first time, this is only 
            needed for deploying angularclient in firebase hosting)
 
 ###To deploy in production:

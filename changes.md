@@ -1,5 +1,12 @@
 ## 0.0.6-feel-like-a-sir
 
+    KNOWN BUGS:
+        * Nasty issue that i don't like, i will think what to do with this
+          and prepare travis to test ONLY angular, because it seems he it's not able to test
+          the docker build, shame...
+          https://github.com/travis-ci/travis-ci/issues/1196
+          However we will fix this using Jenkins
+
     FEATURES ADDED:
         * Added full Travis CI and CD integration
 
