@@ -40,14 +40,14 @@ angular.module('angularfireApp')
           }, function (error, authData) {
             if (error) {
               ngNotify.set('Login Failed ' + error);
-              promiseService.reject($q, error);
+              promiseService.reject(def, error);
             } else {
               //ref.changePassword(email, $scope.user.password, authData.password.password).then(null, function(error) {
               //  console.log(error);
               //});
               ngNotify.set('Authenticated successfully ' + authData.password.email);
               $rootScope.authData = authData;
-              promiseService.resolve($q, authData);
+              promiseService.resolve(def, authData);
             }
             $scope.showme = false;
             _redirect($location, redirectTo);

@@ -2,13 +2,11 @@
 
 angular.module('angularfireApp')
   .service('promiseService', [function () {
-    this.reject = function reject($q, error) {
-      var def = $q.defer();
+    this.reject = function reject(def, error) {
       def.reject(error);
       return def.promise;
     }
-    this.resolve = function resolve($q, val) {
-      var def = $q.defer();
+    this.resolve = function resolve(def, val) {
       def.resolve(val);
       return def.promise;
     };
