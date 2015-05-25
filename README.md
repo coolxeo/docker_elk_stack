@@ -129,13 +129,15 @@ Prerequisites :
     8) grunt serve
     9) Load rss in elasticsearch with fresh rss news:
        http://localhost:8081/api/rssload
-    10) go to https://travis-ci.org/<YOUR_GIT_USER>/<YOUR_GIT_PROJECT_NAME>/settings/env_vars and 
-        create 3 env variables and add this env vars
+    10) go to https://travis-ci.org/<YOUR_GIT_USER>/<YOUR_GIT_PROJECT_NAME>/settings/env_vars 
+        and create 3 env variables and add this env vars
          - CODECLIMATE_REPO_TOKEN=<YOUR_CODECLIMATE_REPO_TOKEN>
          - FIREBASE_USER=<YOUR_FIREBASE_USER>
          - FIREBASE_PASSWORD=<YOUR_FIREBASE_PASSWORD>
        
     *NOTES:
+        0) It for removing my secure keys before you do 2) which
+           will automatically generate them and add them to your .travis.yml
         2) removes the boiler plate of the dependencies
         3) builds and runs the backend (ELK Stack)
         4)5)8) it's for running the client, to visualize the data
@@ -169,7 +171,6 @@ Prerequisites :
         3) http://localhost:8081/api   nodeapi
         4) http://localhost:9200       elasticsearch
         5) http://localhost:8080       jenkins
-
     
 ###Next steps:(Changed priorities 22-may-2015)
     1)Start using rancherOS for cooking the images, 
@@ -196,6 +197,10 @@ Prerequisites :
     nicely the feeds, because the real intention of this project is not
     displaying rss through a Elastic Search, but to analyze those rss
     to extract information using Spark or similar.
+    
+    7)I am studing to add a plug-in for Grunt for automatically 
+    resizing images, so we can avoid the boiler plate of having 
+    to manually resize images in our project using Photoshop or similar
     
 ###Info sources:
     https://johnheroy.com/2014/10/17/continuous-firebase-deployment-with-travis.html
