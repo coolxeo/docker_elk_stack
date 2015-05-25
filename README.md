@@ -131,6 +131,10 @@ Prerequisites :
     7) grunt serve
     8) Load rss in elasticsearch with fresh rss news:
        http://localhost:8081/api/rssload
+    9) go to https://travis-ci.org/<YOUR_GIT_USER>/<YOUR_GIT_PROJECT_NAME>/settings/env_vars and create 3 env variables
+       - CODECLIMATE_REPO_TOKEN=<YOUR_CODECLIMATE_REPO_TOKEN>
+       - FIREBASE_USER=<YOUR_FIREBASE_USER>
+       - FIREBASE_PASSWORD=<YOUR_FIREBASE_PASSWORD>
     *NOTES:
         1) removes the boiler plate of the dependencies
         2) builds and runs the backend (ELK Stack)
