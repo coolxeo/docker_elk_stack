@@ -28,7 +28,6 @@
       ]
     },
     {
-      // Sets the cache header for 404 pages to cache for 5 minutes
       "source": "404.html",
       "headers": [
         {
