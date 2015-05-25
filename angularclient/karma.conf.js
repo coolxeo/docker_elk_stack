@@ -66,7 +66,7 @@ module.exports = function(config) {
     reporters: ['progress', 'coverage'],
     coverageReporter: {
       // Nice HTML reports on developer machines, but not on Travis
-      type: process.env.TRAVIS ? "lcovonly" : "lcov",
+      type: process.env.TRAVIS ? 'lcovonly' : 'lcov',
       dir: 'coverage'
     },
 
