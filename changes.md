@@ -1,4 +1,4 @@
-## 0.0.8-feel-like-a-sir TBR
+## 0.0.9-feel-like-a-sir TBR
     KNOWN BUGS:
         * Nasty issue that i don't like, i will think what to do with this
           and prepare travis to test ONLY angular, because it seems he it's not able to test
@@ -9,8 +9,21 @@
           process, but it is just a minor
 
     FEATURES ADDED:
-            * 100% coverage integration test
-            * Protractor e2e test
+        * 100% coverage integration test
+        * Protractor e2e test
+
+## 0.0.8-feel-like-a-sir
+    KNOWN BUGS:
+        * Nasty issue that i don't like, i will think what to do with this
+          and prepare travis to test ONLY angular, because it seems he it's not able to test
+          the docker build, shame...
+          https://github.com/travis-ci/travis-ci/issues/1196
+          However we will fix this using Jenkins
+        * Failed to download bootstrap-sass-official dependency in the CD
+          process, but it is just a minor
+
+    FIXED BUGS:
+        * Incorrect Firebase params in constants.js
 
 ## 0.0.7-feel-like-a-sir
     KNOWN BUGS:
@@ -21,11 +34,11 @@
           However we will fix this using Jenkins
           
     FIXED BUGS:
-        Fixed bug when login because the promise was wrongly implemented
+        * Fixed bug when login because the promise was wrongly implemented
 
     FEATURES ADDED:
-            * Encrypted sensitive information in the Travis build
-            * Protractor e2e test
+        * Encrypted sensitive information in the Travis build
+        * Protractor e2e test
 
 ## 0.0.6-feel-like-a-sir
 
