@@ -11,7 +11,7 @@
 
 ##FEATURES SO FAR:
 1) CI and CD with Travis, Code climate and Firebase, plus code climate it's integrated with github issues
-   so he will automatically create a github issue when quality of code decreased after a PR
+   so you can create a github issue when quality of code decreased after a PR in 1 click
 
 2) Scaffolding of angular client done with Yeoman (default angular generator)
 
@@ -146,16 +146,19 @@ Prerequisites :
            needed for deploying angularclient in firebase hosting)
 
 ###To deploy in production:
-        This is a continuos delivery project, so there is no such 'deploy to prod anymore', however for learning
-        purposes here is how you do it handcraft:
+    This is a continuous delivery project, so there is no such 
+    'deploy to prod' anymore, however for learning purposes here 
+    is how you do it handcraft:
+    
+    Pre-requisites:
+        A) Firebase account (free)
+        B) 'firebase init' command executed in angularclient. he will 
+           promp you questions, i recommend to choose the folder ./dist 
+           as the folder firebase will deploy in prod since 'grunt build' 
+           will put the minified version of our js and css there
+        C) Change constants.js in angularclient to match your credentials
         
-        Pre-requisites:
-            A)Firebase account (free)
-            B)'firebase init' command executed in angularclient. he will promp you questions, i recommend to choose
-            the folder ./dist as the folder firebase will deploy in prod since 'grunt build' will put the minified
-            version of our js and css there
-            C)Change constants.js in angularclient to match your credentials
-            
+    To deploy:    
         1)grunt build
         2)firebase deploy
 

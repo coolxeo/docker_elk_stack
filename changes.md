@@ -1,3 +1,15 @@
+## 0.0.7-feel-like-a-sir TBR
+    KNOWN BUGS:
+        * Nasty issue that i don't like, i will think what to do with this
+          and prepare travis to test ONLY angular, because it seems he it's not able to test
+          the docker build, shame...
+          https://github.com/travis-ci/travis-ci/issues/1196
+          However we will fix this using Jenkins
+
+    FEATURES ADDED:
+            * 100% coverage integration test
+            * Protractor e2e test
+
 ## 0.0.6-feel-like-a-sir
 
     KNOWN BUGS:

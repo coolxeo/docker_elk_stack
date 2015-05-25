@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /**
  * @ngdoc function
@@ -7,15 +7,18 @@
  * # AuthWithPasswordCtrl
  * Controller of the angularfireApp
  */
-angular.module("angularfireApp")
-  .controller("AuthWithPasswordCtrl", ["$scope", "$rootScope", "ngNotify", "firebaseServiceFactory",
-    function ($scope, $rootScope, ngNotify, firebaseServiceFactory) {
-      $scope.createUser = function (isValid) {
+angular.module('angularfireApp')
+  .controller('AuthWithPasswordCtrl', ['$scope', '$rootScope', 'firebaseServiceFactory', 'ngNotify',
+    function ($scope, $rootScope, firebaseServiceFactory, ngNotify) {
+      $scope.authWithPassword = function (isValid) {
         if (isValid) {
-          firebaseServiceFactory.createUser($scope, $rootScope);
+          firebaseServiceFactory.authWithPassword($scope, $rootScope, '/')
+            .then(function () {
+              $scope.showme = true;
+            })
         } else {
-          ngNotify.set("There are still invalid fields below");
+          ngNotify.set('There are still invalid fields below');
         }
-      }
-    }])
+      };
+    }]);
 
