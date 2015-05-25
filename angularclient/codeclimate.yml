@@ -5,4 +5,6 @@ exclude_paths:
   - "bower_components"
   - "dist"
   - "node_modules"
+  - "coverage"
+  - "config"
 
