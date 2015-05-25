@@ -114,7 +114,8 @@ Prerequisites :
     try this is to use Virtual Box with a clean ubuntu install, If you met 
     pre-requisites it should work without 1) but i can't test so many scenarios so im not
     100% sure what would happen if you try to install it without 1)
-
+    
+    0) delete the 'env: global: secure:' section in .travis.yml 
     1) modify prerequisites_install.sh to add your credentials
     2) sudo sh prerequisites_install.sh
     3) sudo sh run_dockers.sh
