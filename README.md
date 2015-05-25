@@ -192,3 +192,12 @@ Prerequisites :
     nicely the feeds, because the real intention of this project is not
     displaying rss through a Elastic Search, but to analyze those rss
     to extract information using Spark or similar.
+    
+###Info sources:
+    https://johnheroy.com/2014/10/17/continuous-firebase-deployment-with-travis.html
+    http://adamwathan.me/2014/12/28/test-coverage-code-climate-travis-ci
+    http://docs.travis-ci.com/user/encryption-keys/
+    https://www.firebase.com/docs/hosting/command-line-tool.html
+    https://www.npmjs.com/package/codeclimate-test-reporter
+    http://docs.travis-ci.com/user/caching/
+    http://docs.travis-ci.com/user/notifications/#Webhook-notification
