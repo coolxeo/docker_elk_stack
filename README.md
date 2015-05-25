@@ -1,4 +1,4 @@
-## Angular + Firebase + Nodejs + ELK + Docker + Docker-Compose + RSS
+## Angular + Firebase + Nodejs + ELK + Docker + Docker-Compose + RSS + Travis
 [![Code Climate](https://codeclimate.com/github/sloppylopez/docker_elk_stack/badges/gpa.svg)](https://codeclimate.com/github/sloppylopez/docker_elk_stack) Flawless Victory, Fatality!
 
 [![Travis](https://travis-ci.org/sloppylopez/docker_elk_stack.svg)](https://travis-ci.org/sloppylopez/docker_elk_stack)
@@ -172,7 +172,7 @@ Prerequisites :
         4) http://localhost:9200       elasticsearch
         5) http://localhost:8080       jenkins
     
-###Next steps:(Changed priorities 22-may-2015)
+###Next steps:(Changed priorities 25-may-2015)
     1)Start using rancherOS for cooking the images, 
     so i will change Kibana, Logstash and EL to start
     using rancherOS(Dedicated docker OS) instead of
@@ -198,9 +198,10 @@ Prerequisites :
     displaying rss through a Elastic Search, but to analyze those rss
     to extract information using Spark or similar.
     
-    7)I am studing to add a plug-in for Grunt for automatically 
+    7)I am studying to add a plug-in for Grunt for automatically 
     resizing images, so we can avoid the boiler plate of having 
-    to manually resize images in our project using Photoshop or similar
+    to manually resize images in our project using Photoshop or 
+    similar on every image addition.
     
 ###Info sources:
     https://johnheroy.com/2014/10/17/continuous-firebase-deployment-with-travis.html
