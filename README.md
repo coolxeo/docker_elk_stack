@@ -11,7 +11,7 @@
 
 ##FEATURES SO FAR:
 1) CI and CD with Travis, Code climate and Firebase, plus code climate it's integrated with github issues
-   so he will automatically create a github issue when quality of code decreased after a PR
+   so you can create a github issue when quality of code decreased after a PR in 1 click
 
 2) Scaffolding of angular client done with Yeoman (default angular generator)
 
