@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * @ngdoc function
@@ -8,55 +8,14 @@
  * Controller of the angularfireApp
  */
 angular.module("angularfireApp")
-  .controller("AuthWithPasswordCtrl", ["$scope", "$rootScope", "firebaseServiceFactory", "ngNotify",
-    function ($scope, $rootScope, firebaseServiceFactory, ngNotify) {
-      $scope.authWithPassword = function (isValid) {
+  .controller("AuthWithPasswordCtrl", ["$scope", "$rootScope", "ngNotify", "firebaseServiceFactory",
+    function ($scope, $rootScope, ngNotify, firebaseServiceFactory) {
+      $scope.createUser = function (isValid) {
         if (isValid) {
-          firebaseServiceFactory.authWithPassword($scope, $rootScope, "/")
-            .then(function(){
-              $scope.showme=true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-              $scope.showme = true;
-            })
+          firebaseServiceFactory.createUser($scope, $rootScope);
         } else {
           ngNotify.set("There are still invalid fields below");
         }
-      };
-    }]);
+      }
+    }])
 
