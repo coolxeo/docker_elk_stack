@@ -33,6 +33,7 @@ angular.module('angularfireApp')
         },
         authWithPassword: function ($scope, $rootScope, redirectTo) {
           //console.log('authentication with password');
+          var def = $q.defer();
           ref.authWithPassword({
             email: $scope.user.email,
             password: $scope.user.password
@@ -53,6 +54,7 @@ angular.module('angularfireApp')
           }, {
             remember: 'sessionOnly'
           });
+          return def.promise;
         },
         createUser: function ($scope) {
           //console.log('creating user');
