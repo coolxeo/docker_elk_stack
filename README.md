@@ -146,6 +146,9 @@ Prerequisites :
            needed for deploying angularclient in firebase hosting)
 
 ###To deploy in production:
+        This is a continuos delivery project, so there is no such 'deploy to prod anymore', however for learning
+        purposes here is how you do it handcraft:
+        
         Pre-requisites:
             A)Firebase account (free)
             B)'firebase init' command executed in angularclient. he will promp you questions, i recommend to choose
