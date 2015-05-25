@@ -26,7 +26,7 @@ script:
 after_script:
 - codeclimate < ./coverage/**/lcov.info
 after_success:
-- if [[ "${TRAVIS_PULL_REQUEST}" == "false" ]]; then echo -e "${FIREBASE_USER}\n${FIREBASE_PASSWORD}" | firebase -s deploy; fi
+- if [[ "${TRAVIS_PULL_REQUEST}" == "false" ]]; then echo -e "${FIREBASE_USER}\n${FIREBASE_PASSWORD}" | firebase login;firebase deploy; fi
 env:
   global:
     secure: DO+4GTgI3h1xI9Ows4Zru2PmKtfAUpXR7aSXkBnshEMkXhk6faahoYIZUZT+uE11YSgth0H436J3b6KJ5eJFSA62XbdiV6QN2uW2smXHRbvrx6PngrcCAuzI2P1aI6UC/Svj/4774uFGb/ZYvfSfBxBYmbHzH1ofVCGn7zh0g6Hyb65jgYKD1sTye8xfiZx1TkXXRK8Pp4MdGDlNoONXO+7uTvT7qZTqT/2M3QFrNdFLN+MVoNDS4b8Vi4/GCoHdMzFcZwT7pDDrysCLeKBSva03OrA4AOE8qToNcUoma73frmcHgo9X7E4PyrR1xjYbNrGPSUFHfOfzcEYN6OrOAPU2k6w6yjJ0AWz2k0SxoiiH7xxpqbO15wI/YZTnAJYsuAQNcHJgB6W2083DyAAQ4A62UXeCPuA1VUmudc8nfR28SuBvbO9i7OVxRt4Rp0ZeI1zTZXOuFbfYvT/aCnaMFOVVcpskZF++QQ6c6oIB07BVZ3ebqNr3Uv/V6ojImKezyoyqcQ8Cy7zNlPFIHu7asyAQJpYaOnPGoGs8A6xQvsw0lPE+QZPrToAsoyD3TKYqYAmaEMCTFNeioiG5+FKF2rh9X4CoteYciNV2TBUZ8vTYd9JrPBjbJllLLwHbIC0TcoVHaTWUVHvi5H/vUJ1b6wukW04tER5Q7DnsM9u8uCI=

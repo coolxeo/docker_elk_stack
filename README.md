@@ -10,33 +10,33 @@
 ![alt tag](http://i3.kym-cdn.com/photos/images/original/000/161/140/feel-like-a-sir-template.jpg)
 
 ##FEATURES SO FAR:
-   1) 1 command deployment in production using Firebase Baas amazing capabilities
-   
-   2) Scaffolding of angular client done with Yeoman (default angular generator)
-   
-   3) User management, including email verification fully integrated using angularfire
-   
-   4) Plain default mild installation of all components, bower, npm, docker which
-      means the whole project is mainstreamed at maximum, no hacky shit, no wheel
-      reinventions (at least that i am aware of)
-      
-   5) Run in almost all devices and browsers(IE8+ and all the rest) and it's responsive
-   
-   6) Integrated with Travis CI, i havent's managed to do the CD yet, but I am pretty close
-   
-   7) Completely logicless form validation using new angular 1.3 directive ng-messages
-   
-   This 2 lines make all the validation, including displaying the custom error messages for each case
-   which completely erases the boiler plate of form validation, this is the so called 'angular way'
-   >< input id="username" type="email" name="email" class="form-control" ng-model="user.email" required email/>
+1) 1 command deployment in production using Firebase Baas amazing capabilities
 
-   >< div ng-messages="loginForm.email.$error" ng-messages-include="views/errors.html" class="errors"></div>
+2) Scaffolding of angular client done with Yeoman (default angular generator)
+
+3) User management, including email verification fully integrated using angularfire
+
+4) Plain default mild installation of all components, bower, npm, docker which
+  means the whole project is mainstreamed at maximum, no hacky shit, no wheel
+  reinventions (at least that i am aware of)
+  
+5) Run in almost all devices and browsers(IE8+ and all the rest) and it's responsive
+
+6) Integrated with Travis CI, i haven't managed to do the CD yet, but I am pretty close
+
+7) Completely logicless form validation using new angular 1.3 directive ng-messages
+
+This 2 lines make all the validation, including displaying the custom error messages for each case
+which completely erases the boiler plate of form validation, this is the so called 'angular way'
+>< input id="username" type="email" name="email" class="form-control" ng-model="user.email" required email/>
+
+>< div ng-messages="loginForm.email.$error" ng-messages-include="views/errors.html" class="errors"></div>
    
 ##INTENDED FEATURES:   
-   1)CI and CD in firebase and jenkins (i am using jenkins because Travis WILL NEVER
-     in the near future support docker builds because they use a pre-historic core version 2.6?! which is kind of          lame, however it's so good and so well integrated that i will keep it for running karma tests in the angularclient)
-     
-   2)Manage jenkins and docker cluster with rancher
+1)CI and CD in firebase and jenkins (i am using jenkins because Travis WILL NEVER
+ in the near future support docker builds because they use a pre-historic core version 2.6?! which is kind of          lame, however it's so good and so well integrated that i will keep it for running karma tests in the angularclient)
+ 
+2)Manage jenkins and docker cluster with rancher
 
 ##INTRO:
 Front-End Angular, Back-End Nodejs, Docker running 3 servers with ELK stack orchestrated with Docker-compose
@@ -50,7 +50,7 @@ There are 2 main goals in this project
 1)Create a 'seed' that can be reused everytime you need to build a web-app with similar characteristics
 like in this case angular, node and elk
 
-2)Use the finnished version of this project to build something over it, like for example without
+2)Use the finished version of this project to build something over it, like for example without
 entering yet in many details, extract info from the rss news stored with Spark or a similar technology
 IN REAL TIME
 
@@ -78,7 +78,7 @@ container, plus the instructions to download and configure,USING the rest of the
 
 PULL AND PLAY!!!!
 
-(_̅_̅_̅_̅(̅_̅_̅_̅_̅_̅_̅_̅_̅_̅_̅_̅_̅()ڪڪ
+(_̅_̅_̅_̅(̅_̅_̅_̅_̅_̅_̅_̅_̅_̅_̅_̅_̅()ڪ
 
 ###Keep it stupid!, simple.
 
@@ -132,9 +132,11 @@ Prerequisites :
     8) Load rss in elasticsearch with fresh rss news:
        http://localhost:8081/api/rssload
     9) go to https://travis-ci.org/<YOUR_GIT_USER>/<YOUR_GIT_PROJECT_NAME>/settings/env_vars and create 3 env variables
+       and add this env vars
        - CODECLIMATE_REPO_TOKEN=<YOUR_CODECLIMATE_REPO_TOKEN>
        - FIREBASE_USER=<YOUR_FIREBASE_USER>
        - FIREBASE_PASSWORD=<YOUR_FIREBASE_PASSWORD>
+       
     *NOTES:
         1) removes the boiler plate of the dependencies
         2) builds and runs the backend (ELK Stack)
