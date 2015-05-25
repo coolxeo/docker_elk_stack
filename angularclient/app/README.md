@@ -27,7 +27,7 @@
      over the commit again, and try to build again, however this time, if
      the build it's ok and the test pass he will do a 'grunt build' to 
      minify static resources and he will deploy the resulting 'dist' folder
-     to Firebase
+     to Firebase, this process is the CD
   6) After merging the PR into master another process get fired, this time
      code climate will jump over the commit to master and will run the quality
      code revision, if he finds some decrease in the quality, you can open a
