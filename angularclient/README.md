@@ -23,14 +23,18 @@
   7) In case of disaster(which it's almost impossible if we assume we have 100%
      coverage and good e2e test) we can always go to Firebase website and undo
      the last release with 1 click
+  NOTES) 1) Notice that the integration between code climate and github issues 
+         must be done manually by you, after that you will be able to open an 
+         issue with 1 click, here is how to: 
+         http://docs.codeclimate.com/article/226-github-issues-integration
      
-  NOTES) Notice that we do not have e2e test yet, I will do this using Protractor
-         but I believe we will have to modify .travis.yml to make it work, however
-         after releasing v0.0.6 my only goal it's to reach 100% coverage and add
-         protractor test, so in the next weeks it will be ready for action, and we
-         will have a truly bullet-proof project that can be used to build anything
-         you want on top of it with the security and confidence provided by our 
-         CI-CD cycle
+         2) Notice that we do not have e2e test yet, I will do this using 
+         Protractor but I believe we will have to modify .travis.yml to make 
+         it work, however after releasing v0.0.6 my only goal it's to reach 100% 
+         coverage and add protractor test, so in the next weeks it will be ready 
+         for action, and we will have a truly bullet-proof project that can be 
+         used to build anything you want on top of it with the security and 
+         confidence provided by our CI-CD cycle
 
 ##Prerequisites
   firebase account (free)
