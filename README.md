@@ -101,11 +101,11 @@ Prerequisites :
 
     > Linux
     > Python >=2.6
-    > Nodejs "node": ">=0.10.0"
+    > Nodejs >=0.12.0
     > Npm
     > Bower
     > Git
-    > Docker
+    > Docker >=1.6.0
     > Karma
     > Grunt
     > Docker-compose
