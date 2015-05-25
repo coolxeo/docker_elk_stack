@@ -23,6 +23,7 @@
   7) In case of disaster(which it's almost impossible if we assume we have 100%
      coverage and good e2e test) we can always go to Firebase website and undo
      the last release with 1 click
+     
   NOTES) 1) Notice that the integration between code climate and github issues 
          must be done manually by you, after that you will be able to open an 
          issue with 1 click, here is how to: 
