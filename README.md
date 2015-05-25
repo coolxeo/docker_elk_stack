@@ -5,7 +5,7 @@
 
 [![Test Coverage](https://codeclimate.com/github/sloppylopez/docker_elk_stack/badges/coverage.svg)](https://codeclimate.com/github/sloppylopez/docker_elk_stack/coverage) Fair enough :_(
 
-<a href="https://github.com/sloppylopez/docker_elk_stack/releases/tag/v0.0.6-feel-like-a-sir">v0.0.6-feel-like-a-sir</a> RELEASED! 
+<a href="https://github.com/sloppylopez/docker_elk_stack/releases/tag/v0.0.7-feel-like-a-sir">v0.0.7-feel-like-a-sir</a> Released! 
 
 ![alt tag](http://i3.kym-cdn.com/photos/images/original/000/161/140/feel-like-a-sir-template.jpg)
 
