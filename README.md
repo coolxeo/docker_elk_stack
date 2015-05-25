@@ -5,7 +5,7 @@
 
 [![Test Coverage](https://codeclimate.com/github/sloppylopez/docker_elk_stack/badges/coverage.svg)](https://codeclimate.com/github/sloppylopez/docker_elk_stack/coverage) Fair enough :_(
 
-<a href="https://github.com/sloppylopez/docker_elk_stack/releases/tag/v0.0.5-feel-like-a-sir">v0.0.5-feel-like-a-sir</a> RELEASED! 
+<a href="https://github.com/sloppylopez/docker_elk_stack/releases/tag/v0.0.6-feel-like-a-sir">v0.0.6-feel-like-a-sir</a> RELEASED! 
 
 ![alt tag](http://i3.kym-cdn.com/photos/images/original/000/161/140/feel-like-a-sir-template.jpg)
 
@@ -23,9 +23,7 @@
   
 5) Run in almost all devices and browsers(IE8+ and all the rest) and it's responsive
 
-6) Integrated with Travis CI, i haven't managed to do the CD yet, but I am pretty close
-
-7) Completely logicless form validation using new angular 1.3 directive ng-messages
+6) Completely logicless form validation using new angular 1.3 directive ng-messages
 
 This 2 lines make all the validation, including displaying the custom error messages for each case
 which completely erases the boiler plate of form validation, this is the so called 'angular way'
@@ -35,7 +33,7 @@ which completely erases the boiler plate of form validation, this is the so call
    
 ##INTENDED FEATURES:   
 
-2)Manage jenkins and docker cluster with rancher
+1)Manage jenkins and docker cluster with rancher
 
 ##INTRO:
 Front-End Angular, Back-End Nodejs, Docker running 3 servers with ELK stack orchestrated with Docker-compose
