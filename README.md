@@ -91,7 +91,7 @@ that i noticed when installing sometimes problems with components, specially wit
 when had to execute 'grunt serve' it gives an wierd error, and the project does not launch, this has happened
 several times with the testing of the 100x100 out of the box working installation, however, after deleting
 node_modules, .temp, dist and bower_components and reinstalling them again it simply started to work,
-this is the only pitfall i can find in the instalation, just to make you aware. so if you see this try what
+this is the only pitfall i can find in the instalation, just to make you aware. so if you see this try what i
 told you and it will work
 
 Prerequisites :
@@ -128,11 +128,11 @@ Prerequisites :
     8) grunt serve
     9) Load rss in elasticsearch with fresh rss news:
        http://localhost:8081/api/rssload
-    10) go to https://travis-ci.org/<YOUR_GIT_USER>/<YOUR_GIT_PROJECT_NAME>/settings/env_vars and create 3 env variables
-       and add this env vars
-       - CODECLIMATE_REPO_TOKEN=<YOUR_CODECLIMATE_REPO_TOKEN>
-       - FIREBASE_USER=<YOUR_FIREBASE_USER>
-       - FIREBASE_PASSWORD=<YOUR_FIREBASE_PASSWORD>
+    10) go to https://travis-ci.org/<YOUR_GIT_USER>/<YOUR_GIT_PROJECT_NAME>/settings/env_vars and 
+        create 3 env variables and add this env vars
+         - CODECLIMATE_REPO_TOKEN=<YOUR_CODECLIMATE_REPO_TOKEN>
+         - FIREBASE_USER=<YOUR_FIREBASE_USER>
+         - FIREBASE_PASSWORD=<YOUR_FIREBASE_PASSWORD>
        
     *NOTES:
         2) removes the boiler plate of the dependencies
