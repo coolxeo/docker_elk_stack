@@ -10,7 +10,8 @@
 ![alt tag](http://i3.kym-cdn.com/photos/images/original/000/161/140/feel-like-a-sir-template.jpg)
 
 ##FEATURES SO FAR:
-1) 1 command deployment in production using Firebase Baas amazing capabilities
+1) CI and CD with Travis, Code climate and Firebase, plus code climate it's integrated with github issues
+   so he will automatically create a github issue when quality of code decreased after a PR
 
 2) Scaffolding of angular client done with Yeoman (default angular generator)
 
@@ -33,9 +34,7 @@ which completely erases the boiler plate of form validation, this is the so call
 >< div ng-messages="loginForm.email.$error" ng-messages-include="views/errors.html" class="errors"></div>
    
 ##INTENDED FEATURES:   
-1)CI and CD in firebase and jenkins (i am using jenkins because Travis WILL NEVER
- in the near future support docker builds because they use a pre-historic core version 2.6?! which is kind of          lame, however it's so good and so well integrated that i will keep it for running karma tests in the angularclient)
- 
+
 2)Manage jenkins and docker cluster with rancher
 
 ##INTRO:
