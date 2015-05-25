@@ -6,12 +6,6 @@ branches:
   - /-job-\d+/
   only:
   - master
-cache:
-- codeclimate-test-reporter
-- grunt-cli
-- bower
-- firebase-tools
-- karma-cli
 before_install:
 - npm install -g codeclimate-test-reporter grunt-cli bower firebase-tools karma-cli
 - cd angularclient

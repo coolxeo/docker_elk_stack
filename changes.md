@@ -1,11 +1,7 @@
-## 0.0.6-feel-like-a-sir TBR
+## 0.0.6-feel-like-a-sir
 
     FEATURES ADDED:
-        * I will have to keep jenkins because of the bug mentioned
-          i want to be able to test the docker stack install,
-          but i will keep travis because apart from that BIG
-          limitation it's great and very easy, you only need to touch
-          1 file to configure the tests, the rest simply works out of the box
+        * Added full Travis CI and CD integration
 
 ## 0.0.5-feel-like-a-sir
 
