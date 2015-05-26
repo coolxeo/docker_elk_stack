@@ -5,7 +5,8 @@
     "firebase.json",
     "**/.*",
     "**/node_modules/**",
-    "coverage"
+    "coverage",
+    ".tmp"
   ],
   "rules": "config/firebase-rules.json",
   "headers": [
