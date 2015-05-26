@@ -14,7 +14,7 @@ describe('firebaseFactory Spec', function () {
     $q = _$q_;
   }));
 
-  it('is very true', function () {
+  it('should get the firebase ref', function () {
     var deferredSuccess = $q.defer();
     spyOn(firebaseFactory, 'getFireBaseRef').and.returnValue(deferredSuccess.promise);
     firebaseFactory.getFireBaseRef('dummy user', undefined);
