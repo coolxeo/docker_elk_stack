@@ -1,7 +1,7 @@
 'use strict';
 angular.module('angularfireApp')
-  .factory('firebaseServiceFactory', ['firebaseFactory', 'ngNotify', '$location', 'FB_USER', 'promiseService', '$q',
-    function (firebaseFactory, ngNotify, $location, FB_USER, promiseService, $q) {
+  .factory('firebaseServiceFactory', ['firebaseFactory', 'ngNotify', '$location', 'FB_USER', '$q',
+    function (firebaseFactory, ngNotify, $location, FB_USER, $q) {
       var ref = firebaseFactory.getFireBaseRef(FB_USER);
       ngNotify.config({theme: 'pure', position: 'bottom', duration: 3000, type: 'info', sticky: false});
 
@@ -18,18 +18,21 @@ angular.module('angularfireApp')
           ngNotify.set('Good bye');
           _redirect($location, redirectTo);
         },
-        resetPassword: function ($scope, redirectTo) {
+        resetPassword: function ($scope) {
           //console.log('reseting password');
+          var def = $q.defer();
           ref.resetPassword({
             email: $scope.user.email
           }, function (error) {
             if (error) {
               ngNotify.set('Error resetting password:' + error);
+              def.reject(error);
             } else {
               ngNotify.set('Password reset email sent successfully!');
-              _redirect($location, redirectTo);
+              def.resolve();
             }
           });
+          return def.promise;
         },
         authWithPassword: function ($scope, $rootScope, redirectTo) {
           //console.log('authentication with password');
@@ -40,14 +43,14 @@ angular.module('angularfireApp')
           }, function (error, authData) {
             if (error) {
               ngNotify.set('Login Failed ' + error);
-              promiseService.reject(def, error);
+              def.reject(error);
             } else {
               //ref.changePassword(email, $scope.user.password, authData.password.password).then(null, function(error) {
               //  console.log(error);
               //});
               ngNotify.set('Authenticated successfully ' + authData.password.email);
               $rootScope.authData = authData;
-              promiseService.resolve(def, authData);
+              def.resolve(authData);
             }
             $scope.showme = false;
             _redirect($location, redirectTo);
