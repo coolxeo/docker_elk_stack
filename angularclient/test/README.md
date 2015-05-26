@@ -11,4 +11,6 @@
   When using ngMock, Angular will automatically strip away 
   leading and trailing underscores from the function we pass for 
   the injector to invoke.
-  'expect' comes from Chai for checking correct values are in place
+  'expect' comes from Jasmine for checking correct values are in place
+
+http://stackoverflow.com/questions/23991003/mock-angular-service-promise-in-a-karma-jasmine-test

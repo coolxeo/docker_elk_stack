@@ -5,18 +5,12 @@ angular.module('angularfireApp')
       var ref = firebaseFactory.getFireBaseRef(FB_USER);
       ngNotify.config({theme: 'pure', position: 'bottom', duration: 3000, type: 'info', sticky: false});
 
-      var _redirect = function ($location, redirectTo) {//TODO put this in a service
-        if (typeof redirectTo !== 'undefined') {
-          //console.log('redirecting to ' + redirectTo);
-          $location.path(redirectTo);
-        }
-      };
       return {
         logout: function ($scope, redirectTo) {
           //console.log('loggin out');
           ref.unauth();
           ngNotify.set('Good bye');
-          _redirect($location, redirectTo);
+          $location.path(redirectTo);
         },
         resetPassword: function ($scope) {
           //console.log('reseting password');
@@ -34,7 +28,7 @@ angular.module('angularfireApp')
           });
           return def.promise;
         },
-        authWithPassword: function ($scope, $rootScope, redirectTo) {
+        authWithPassword: function ($scope, $rootScope) {
           //console.log('authentication with password');
           var def = $q.defer();
           ref.authWithPassword({
@@ -53,7 +47,6 @@ angular.module('angularfireApp')
               def.resolve(authData);
             }
             $scope.showme = false;
-            _redirect($location, redirectTo);
           }, {
             remember: 'sessionOnly'
           });

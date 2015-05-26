@@ -17,7 +17,7 @@ describe('firebaseServiceFactory Spec', function () {
 
   it('should call mocked firebaseServiceFactory resetPassword factory', function () {
     var deferredSuccess = $q.defer();
-    spyOn(firebaseFactory, 'resetPassword').and.returnValue(deferredSuccess.promise);
+    spyOn(firebaseServiceFactory, 'resetPassword').and.returnValue(deferredSuccess.promise);
     scope.user = {email: 'dummy@email.com'};
     firebaseServiceFactory.resetPassword(scope);
     expect(firebaseServiceFactory.resetPassword).toHaveBeenCalled();

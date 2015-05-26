@@ -1,6 +1,6 @@
 {
   "name": "angularClient",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "private": false,
   "dependencies": {
     "angular": "^1.3.0",

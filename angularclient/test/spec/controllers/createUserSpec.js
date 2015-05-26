@@ -22,16 +22,13 @@ describe('CreateUserCtrl', function () {
       spyOn(firebaseServiceFactory, 'createUser').and.returnValue(deferredSuccess.promise);
       scope.createUser(true);
       expect(firebaseServiceFactory.createUser).toHaveBeenCalled();
-      deferredSuccess.resolve();
-      scope.$digest();           // This makes sure that all callbacks of promises will be called
+
     });
     it('submit should fail when called with invalid parameters', function () {
       var deferredSuccess = $q.defer();
       spyOn(ngNotify, 'set').and.returnValue(deferredSuccess.promise);
       scope.createUser(false);
       expect(ngNotify.set).toHaveBeenCalled();
-      deferredSuccess.reject();
-      scope.$digest();           // This makes sure that all callbacks of promises will be called
     });
   });
 });

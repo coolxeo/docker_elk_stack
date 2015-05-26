@@ -24,22 +24,18 @@ describe('LogoutCtrl', function () {
     it('submit should call the firebaseServiceFactory with email and password and fail to authenticate', function () {
       var deferredSuccess = $q.defer();
       $window.authData = 'Dummy Token Imaginary Data';
-      //spyOn(scope, 'logout').and.returnValue(deferredSuccess.promise);
-
+      spyOn(firebaseServiceFactory, 'logout').and.returnValue(deferredSuccess.promise);
       scope.logout();
-
-      //expect(scope.logout).toHaveBeenCalled();
+      expect(firebaseServiceFactory.logout).toHaveBeenCalled();
       deferredSuccess.resolve();
       scope.$digest();           // This makes sure that all callbacks of promises will be called
     });
     it('submit should fail when called with invalid parameters', function () {
       var deferredSuccess = $q.defer();
-      //spyOn(scope, 'logout').and.returnValue(deferredSuccess.promise);
+      spyOn(firebaseServiceFactory, 'logout').and.returnValue(deferredSuccess.promise);
       $window.authData = undefined;
       scope.logout();
-
-      //expect(scope.logout).toHaveBeenCalled();
-
+      expect(firebaseServiceFactory.logout).not.toHaveBeenCalled();
       deferredSuccess.reject();
       scope.$digest();           // This makes sure that all callbacks of promises will be called
     });

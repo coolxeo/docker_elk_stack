@@ -8,8 +8,8 @@
  * Controller of the angularfireApp
  */
 angular.module('angularfireApp')
-  .controller('RssFeederCtrl', ['$scope', 'rssFeederService', 'ngNotify',
-    function ($scope, rssFeederService, ngNotify) {
+  .controller('RssFeederCtrl', ['$scope', 'rssFeederService',
+    function ($scope, rssFeederService) {
       $scope.rssFeeder = function (queryTerm) {
         rssFeederService.rssFeeder(queryTerm)
           .then(function (data) {

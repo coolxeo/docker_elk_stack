@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 //angular.module('angularfireApp')
 //  .factory('ngNotifyFactory', ['ngNotify', function (ngNotify) {
 //    return {
