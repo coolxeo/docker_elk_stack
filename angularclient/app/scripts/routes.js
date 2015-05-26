@@ -34,10 +34,5 @@ angular.module('angularfireApp')
         loginRequired: true,
         resetCredentials: true
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        loginRequired: true
-      })
       .otherwise({redirectTo: '/'});
   }]);

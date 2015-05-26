@@ -15,12 +15,12 @@ describe('firebaseServiceFactory Spec', function () {
     $q = _$q_;
   }));
 
-  it('should call mocked firebase login service', function () {
+  it('should call mocked firebaseServiceFactory resetPassword factory', function () {
     var deferredSuccess = $q.defer();
-    spyOn(firebaseFactory, 'getFireBaseRef').and.returnValue(deferredSuccess.promise);
+    spyOn(firebaseFactory, 'resetPassword').and.returnValue(deferredSuccess.promise);
     scope.user = {email: 'dummy@email.com'};
     firebaseServiceFactory.resetPassword(scope);
-    expect(firebaseFactory.getFireBaseRef).toHaveBeenCalled();
+    expect(firebaseServiceFactory.resetPassword).toHaveBeenCalled();
     deferredSuccess.resolve();
     scope.$digest();
   });

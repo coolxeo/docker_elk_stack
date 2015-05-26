@@ -43,7 +43,7 @@ angular.module('angularfireApp')
               deferred.resolve(resp.hits.hits);
             }, function (err) {
               ngNotify.set(err.message);
-              deferred.reject();
+              deferred.reject(null);
             });
           return deferred.promise;
         }
