@@ -1,7 +1,7 @@
 'use strict';
 angular.module('angularfireApp')
-  .factory('firebaseServiceFactory', ['firebaseFactory', 'ngNotify', '$location', 'FB_USER',
-    function (firebaseFactory, ngNotify, $location, FB_USER) {
+  .factory('firebaseServiceFactory', ['firebaseFactory', 'ngNotify', '$location', 'FB_USER', 'promiseService', '$q',
+    function (firebaseFactory, ngNotify, $location, FB_USER, promiseService, $q) {
       var ref = firebaseFactory.getFireBaseRef(FB_USER);
       ngNotify.config({theme: 'pure', position: 'bottom', duration: 3000, type: 'info', sticky: false});
 
@@ -33,28 +33,28 @@ angular.module('angularfireApp')
         },
         authWithPassword: function ($scope, $rootScope, redirectTo) {
           //console.log('authentication with password');
-          //var def = $q.defer();
+          var def = $q.defer();
           ref.authWithPassword({
             email: $scope.user.email,
             password: $scope.user.password
           }, function (error, authData) {
             if (error) {
               ngNotify.set('Login Failed ' + error);
-              //promiseService.reject($q, error);
+              promiseService.reject(def, error);
             } else {
               //ref.changePassword(email, $scope.user.password, authData.password.password).then(null, function(error) {
               //  console.log(error);
               //});
               ngNotify.set('Authenticated successfully ' + authData.password.email);
               $rootScope.authData = authData;
-              //promiseService.resolve($q, authData);
+              promiseService.resolve(def, authData);
             }
             $scope.showme = false;
             _redirect($location, redirectTo);
           }, {
             remember: 'sessionOnly'
           });
-          //return def.promise;
+          return def.promise;
         },
         createUser: function ($scope) {
           //console.log('creating user');
