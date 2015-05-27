@@ -22,8 +22,6 @@ module.exports = function (grunt) {
     dist: 'dist'
   };
 
-  //grunt.loadNpmTasks('grunt-karma');
-
   // Define the configuration for all the tasks
   grunt.initConfig({
 
@@ -139,16 +137,6 @@ module.exports = function (grunt) {
         '!<%= config.app %>/scripts/vendor/*',
         'test/spec/{,*/}*.js'
       ]
-    },
-
-    // Mocha testing framework configuration options
-    mocha: {
-      all: {
-        options: {
-          run: true,
-          urls: ['http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/index.html']
-        }
-      }
     },
 
     // Compiles Sass to CSS and generates necessary files if requested
@@ -381,14 +369,16 @@ module.exports = function (grunt) {
         'svgmin'
       ]
     }
-    //,
-    //
-    //karma: {
-    //  unit: {
-    //    configFile: 'karma.conf.js',
-    //    autoWatch: true
-    //  }
-    //}
+    ,
+    karma: {
+      unit: {
+        configFile: 'karma.conf.js',
+        // run karma in the background
+        background: process.env.TRAVIS ? true : false,
+        // which browsers to run the tests on
+        browsers: ['Chrome', 'Firefox']
+      }
+    }
   });
 
   grunt.registerTask('serve', 'start the server and preview your app, --allow-remote for remote access', function (target) {
@@ -414,21 +404,6 @@ module.exports = function (grunt) {
     grunt.task.run([target ? ('serve:' + target) : 'serve']);
   });
 
-  grunt.registerTask('test', function (target) {
-    if (target !== 'watch') {
-      grunt.task.run([
-        'clean:server',
-        'concurrent:test',
-        'autoprefixer'
-      ]);
-    }
-
-    grunt.task.run([
-      'connect:test',
-      'mocha'
-    ]);
-  });
-
   grunt.registerTask('build', [
     'clean:dist',
     'wiredep',
@@ -447,7 +422,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'newer:jshint',
-    'test',
     'build'
   ]);
 
